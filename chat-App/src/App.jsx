@@ -1,6 +1,5 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import {ChatEngine} from "react-chat-engine";
 import './App.css'
 
 function App() {
@@ -9,7 +8,12 @@ function App() {
   return (
     <>
   <div className="App">
-    <h1>Hello Wolrd</h1>
+    <ChatEngine
+    height="100vh"
+    projectID="692aa9c2-d73e-4086-8798-4b1eded86b08"
+    userName="ram"
+    userSecret="qwerty"
+    />
   </div>
     </>
   )
