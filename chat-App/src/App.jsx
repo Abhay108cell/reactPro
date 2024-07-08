@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import {ChatEngine} from "react-chat-engine";
 import './App.css'
+import ChatFeed from './component/chatFeed.jsx';
+
 
 function App() {
   const [count, setCount] = useState(0)
