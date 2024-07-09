@@ -21,6 +21,13 @@
 : <TheirMessages message={message} lastMessage={messages[lastMessageKey]}/>
   }
 </div>
+ 
+ <div className="read-reciepts" style={{marginRight: isMyMessage ?"18px" : "0px" ,marginLeft : isMyMessage ? "0px" :  "68px"}}>
+
+
+ </div>
+
+
         </div>
       )
     })
