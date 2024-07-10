@@ -38,7 +38,10 @@
           <div className="chat-subtitle">
           </div>
             {renderMessages()}
-            
+            <div style={{height : "100px"}}/>
+            <div className="message-form-container">
+              <MessagesForm {...props} chatId={activeChat} />
+            </div>
         </div>
       </div>
     </div>
