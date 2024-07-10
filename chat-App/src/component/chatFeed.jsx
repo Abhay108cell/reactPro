@@ -23,8 +23,6 @@
 </div>
  
  <div className="read-reciepts" style={{marginRight: isMyMessage ?"18px" : "0px" ,marginLeft : isMyMessage ? "0px" :  "68px"}}>
-
-
  </div>
 
 
@@ -34,7 +32,15 @@
   }
   return(
     <div>
-      chat feed
+      <div className="chat-feed">
+        <div className="chat-title-container">
+          <div className="chat-title">{chat?.title}</div>
+          <div className="chat-subtitle">
+          </div>
+            {renderMessages()}
+            
+        </div>
+      </div>
     </div>
   )
  }
