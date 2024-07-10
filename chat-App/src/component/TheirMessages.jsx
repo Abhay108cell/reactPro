@@ -1,4 +1,4 @@
-const TheirMessages =()=>{
+const TheirMessages =({lastMessage, message})=>{
   return(
     <div>
     <h1>Their Messages</h1>
