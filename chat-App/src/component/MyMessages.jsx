@@ -1,16 +1,16 @@
 const MyMessages =({message})=>{
-  if (message.attachments && message.attachments.length>0{
+  if (message.attachments && message.attachments.length>0){
     return(
       <img src={message.attachments[0].file} 
       alt="message-attachments"
-      style={{maxWidth: '100px'}}
+      style={{float: 'right'}}
       className="message-image"
       />
     )
-  })
+  }
   return(
-    <div>
-    <h1>My Messages</h1>
+    <div className="message" style={{float: "right", marginRight:"18", color: "white", backgroundColor: "#3B2A50"}}>
+      {message.text}
     </div>
   )
 }
