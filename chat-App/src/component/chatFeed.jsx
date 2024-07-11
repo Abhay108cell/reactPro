@@ -22,8 +22,11 @@
   }
 </div>
  
- <div className="read-reciepts" style={{marginRight: isMyMessage ?"18px" : "0px" ,marginLeft : isMyMessage ? "0px" :  "68px"}}>
+ <div className="read-reciepts" style={{marginRight: isMyMessage ?"18px" : "0px" ,marginLeft : isMyMessage ? "0px" :  "68px"}}>{renderReadReceipts(message,isMyMessage)}
  </div>
+--+
+.56*/\
+
 
 
         </div>
