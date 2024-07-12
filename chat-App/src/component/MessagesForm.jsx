@@ -6,6 +6,13 @@ const MessagesForm =(props)=>{
   const [value,setValue]=useState('');
   const {chatId,creds}=props;
 
+  const handleSubmit=(e)=>{
+    setValue(e.target.value);
+    isTyping(props,chatId)
+    };
+    const handleChange=(e)=>{
+      e.pre
+
   return(
     <div>
       <form className="message-form" onSubmit={handleSubmit}>
@@ -28,6 +35,9 @@ const MessagesForm =(props)=>{
          style={{display:"none" }}
          onChange={handleUpload.bind(this)}
          />
+         <button type="submit" className="send-button">
+          <SendOutlined className="send-icon"/>
+         </button>
       </form>
     </div>
   )
