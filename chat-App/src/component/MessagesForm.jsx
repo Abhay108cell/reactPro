@@ -11,7 +11,7 @@ const MessagesForm =(props)=>{
     isTyping(props,chatId)
     };
     const handleChange=(e)=>{
-      e.pre
+      e.preventDefault();
 
   return(
     <div>
