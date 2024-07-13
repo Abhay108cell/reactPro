@@ -51,6 +51,6 @@ const MessagesForm =(props)=>{
       </form>
     </div>
   )
-}
+}}
 
-export default MessagesForm;
+export default MessagesForm
