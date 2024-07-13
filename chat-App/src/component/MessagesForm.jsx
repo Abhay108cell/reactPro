@@ -12,6 +12,13 @@ const MessagesForm =(props)=>{
     };
     const handleChange=(e)=>{
       e.preventDefault();
+      const text = value.trim()
+      if(text.length>0){
+        sendMessage(creds,chatId,{text})
+        setValue('')
+        }
+
+
 
   return(
     <div>
