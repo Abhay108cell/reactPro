@@ -5,9 +5,11 @@ import axios from "axios"
 const ProjectId = "692aa9c2-d73e-4086-8798-4b1eded86b08"
  const LoginForm = () =>{
 
-  const [username setUsername ] = useState('')
+  const [username setUserName ] = useState('')
 
   const [password, setPassword] = useState('')
+
+  const [error, setError] = useState('')
   
       return(
         <div className="wrapper">
@@ -16,6 +18,11 @@ const ProjectId = "692aa9c2-d73e-4086-8798-4b1eded86b08"
             <form onSubmit={HandleSubmit}>
               <input type="text" value={username} onChange={(e) => setUserName(e.target.value)} className="input" placeholder="userName" required />
               <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className="input" placeholder="password" required />
+              <div align="center">
+                <button className="button">
+                  <span>start chatting</span>
+                </button>
+              </div>
 
             </form>
           </div>
