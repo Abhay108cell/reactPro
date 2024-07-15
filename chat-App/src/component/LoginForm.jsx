@@ -23,7 +23,13 @@ const ProjectId = "692aa9c2-d73e-4086-8798-4b1eded86b08"
 
       localStorage.setItem('username', username)
       localStorage.setItem('password', password)
-      
+
+      window.location.reload();
+      setError('')
+      }catch(error){
+        setError('Incorrect username or password')
+        }
+
 
   }
   
@@ -31,7 +37,7 @@ const ProjectId = "692aa9c2-d73e-4086-8798-4b1eded86b08"
         <div className="wrapper">
           <div className="form">
             <h1 className="title">Chat Application</h1>
-            <form onSubmit={HandleSubmit}>
+            <form onSubmit={handleSubmit}>
               <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} className="input" placeholder="userName" required />
               <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className="input" placeholder="password" required />
               <div align="center">
