@@ -18,6 +18,13 @@ const ProjectId = "692aa9c2-d73e-4086-8798-4b1eded86b08"
 
     const authObject = {'Project-ID': ProjectId, 'User-Name': username, 'User-Secret': password}
 
+    try{
+      await axios.get('https://api.chatengine.io/chats', {headers: authObject})
+
+      localStorage.setItem('username', username)
+      localStorage.setItem('password', password)
+      
+
   }
   
       return(
