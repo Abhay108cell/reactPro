@@ -12,6 +12,13 @@ const ProjectId = "692aa9c2-d73e-4086-8798-4b1eded86b08"
   const [password, setPassword] = useState('')
 
   const [error, setError] = useState('')
+
+  const handleSubmit = async (e) =>{
+    e.preventDefault()
+
+    const authObject = {'Project-ID': ProjectId, 'User-Name': username, 'User-Secret': password}
+
+  }
   
       return(
         <div className="wrapper">
@@ -27,6 +34,7 @@ const ProjectId = "692aa9c2-d73e-4086-8798-4b1eded86b08"
               </div>
 
             </form>
+            <h1>{error}</h1>
           </div>
         </div>
       )
