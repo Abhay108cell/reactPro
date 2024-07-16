@@ -66,3 +66,12 @@ ce-text-input {
 .ce-chat-avatars-row {
   display: none !important;
 }
+
+/* CUSTOM FEED */
+
+.chat-feed {
+  height: 100%;
+  width: 100%;
+  overflow: scroll;
+  background-color: rgb(240, 240, 240);
+}
