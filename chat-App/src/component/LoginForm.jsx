@@ -4,7 +4,7 @@ import axios from "axios"
 
 
 const ProjectId = "692aa9c2-d73e-4086-8798-4b1eded86b08"
- const LoginForm = () =>{
+ const Modal = () =>{
 
   const [username, setUsername] = useState('');
 
@@ -53,4 +53,4 @@ const ProjectId = "692aa9c2-d73e-4086-8798-4b1eded86b08"
 
  }
 
- export default LoginForm;
+ export default Modal;
