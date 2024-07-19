@@ -2,10 +2,11 @@ import { useState } from 'react'
 import {ChatEngine} from "react-chat-engine";
 import './App.css'
 import ChatFeed from './component/chatFeed.jsx';
+import LoginForm from './component/loginForm.jsx';
 
 
 function App() {
-  const [count, setCount] = useState(0)
+  if(!localStorage.getItem('username')) return <LoginForm/>
 
   return (
     
