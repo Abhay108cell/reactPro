@@ -2,7 +2,7 @@ import { useState } from 'react'
 import {ChatEngine} from "react-chat-engine";
 import './App.css'
 import ChatFeed from './component/chatFeed.jsx';
-import LoginForm from './component/loginForm.jsx';
+import LoginForm from './component/LoginForm.jsx';
 
 
 function App() {
