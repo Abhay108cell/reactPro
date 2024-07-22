@@ -1,0 +1,7 @@
+const MovieList = (props) =>{
+  return(
+    <>
+    
+    </>
+  )
+}
