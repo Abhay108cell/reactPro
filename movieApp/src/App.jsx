@@ -25,13 +25,16 @@ function App() {
       "imdbID": "tt0086190",
       "Type": "movie",
       "Poster": "https://m.media-amazon.com/images/M/MV5BOWZlMjFiYzgtMTUzNC00Y2IzLTk1NTMtZmNhMTczNTk0ODk1XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg"
-  }
+  },
   ]);
 
   return (
-      <div>
-        hello world
-      </div> 
+    <div className="container-fluid movie-app">
+      <div className="row">
+        <MovieList
+        movies={movies}/>
+      </div>
+    </div>
   )
 }
 
