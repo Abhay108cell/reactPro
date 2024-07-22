@@ -1,7 +1,8 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import './App.css'
+import './App.css';
+import MovieList from './components/MovieList';
 
 function App() {
   const [movies, setMovies] = useState([
