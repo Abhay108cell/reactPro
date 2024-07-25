@@ -26,6 +26,10 @@ function App() {
     getMovieRequest(searchValue);
     },[searchValue]);
 
+    const AddFavouriteMovie = (movie)=>{
+      
+    }
+
   return (
     <div className="container-fluid movie-app">
       <div className="row d-flex align-items-center mt-4 mb-4" >
@@ -35,7 +39,10 @@ function App() {
       </div>
       <div className="row">
         <MovieList
-        movies={movies}/>
+        movies={movies}
+        handleFavouritesClick={AddFavouriteMovie}
+        FavouriteComponent={AddFavourite}
+        />
       </div>
     </div>
   )
