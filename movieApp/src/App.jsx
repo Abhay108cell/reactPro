@@ -5,7 +5,7 @@ import './App.css';
 import MovieList from './components/MovieList';
 import SearchBox from './components/SearchBox';
 import MovieListHeading from './components/MovieListHeading';
-import AddFavourites from './components/AddFavourites';
+import AddFavourite from './components/AddFavourite';
 
 
 function App() {
