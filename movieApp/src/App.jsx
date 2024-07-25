@@ -17,8 +17,14 @@ function App() {
     3a1fba89`;
     const response = await fetch(url);
     const responseJson = await response.json();
-    
+    if(responseJson.Search){
+      setMovies(responseJson.Search);
+      }
   }
+
+  useEffect(()=>{
+    getMovieRequest(searchValue);
+    },[searchValue]);
 
   return (
     <div className="container-fluid movie-app">
