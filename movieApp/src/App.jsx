@@ -27,8 +27,9 @@ function App() {
     },[searchValue]);
 
     const AddFavouriteMovie = (movie)=>{
-      
-    }
+      const newFavouriteList = [...favourites, movie];
+      setFavourites(newFavouriteList);
+      }
 
   return (
     <div className="container-fluid movie-app">
@@ -43,6 +44,9 @@ function App() {
         handleFavouritesClick={AddFavouriteMovie}
         FavouriteComponent={AddFavourite}
         />
+      </div>
+      <div className="row d-flex align-items-centre mt-4 mb-4">
+        <MovieListHeading heading="Favourites"/>
       </div>
     </div>
   )
