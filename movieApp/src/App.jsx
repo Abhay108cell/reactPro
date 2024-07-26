@@ -10,6 +10,7 @@ import AddFavourite from './components/AddFavourite';
 
 function App() {
   const [movies, setMovies] = useState([]);
+  const [favourites, setFavourites] = useState([]);
   const [searchValue, setSearchValue] = useState('');
 
 
