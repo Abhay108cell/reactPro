@@ -20,3 +20,5 @@ const RemoveFavourites = () => {
     </>
   );
 };
+
+export default RemoveFavourites;
