@@ -33,6 +33,12 @@ function App() {
       setFavourites(newFavouriteList);
       }
 
+      const removeFavouriteMovie=(movie)=>{
+          const newFavouriteList = favourites.filter(
+            (favourite) => favourite.imdbID !== movie.imdbID
+          )
+      }
+
   return (
     <div className="container-fluid movie-app">
       <div className="row d-flex align-items-center mt-4 mb-4" >
@@ -53,7 +59,8 @@ function App() {
       <div className="row">
         <MovieList
         movies={favourites}
-        handleFavouritesClick={RemoveFavourites}
+        handleFavouritesClick={removeFavouriteMovie}
+        FavouriteComponent={RemoveFavourites}
         />
       </div>
     </div>
