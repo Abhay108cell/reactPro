@@ -28,6 +28,10 @@ function App() {
     getMovieRequest(searchValue);
     },[searchValue]);
 
+    const saveToLocalStorage = (item)=>{
+      localStorage.setItem("react-movie-app-favourites", JSON.stringify(item))
+    }
+
     const AddFavouriteMovie = (movie)=>{
       const newFavouriteList = [...favourites, movie];
       setFavourites(newFavouriteList);
