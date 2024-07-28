@@ -6,6 +6,7 @@ import MovieList from './components/MovieList';
 import SearchBox from './components/SearchBox';
 import MovieListHeading from './components/MovieListHeading';
 import AddFavourite from './components/AddFavourite';
+import RemoveFavourites from './components/RemoveFavourites';
 
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
       <div className="row">
         <MovieList
         movies={favourites}
+        handleFavouritesClick={RemoveFavourites}
         />
       </div>
     </div>
