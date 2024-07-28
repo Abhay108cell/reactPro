@@ -24,6 +24,7 @@ function App() {
       }
   }
 
+  
   useEffect(()=>{
     getMovieRequest(searchValue);
     },[searchValue]);
@@ -35,12 +36,15 @@ function App() {
     const AddFavouriteMovie = (movie)=>{
       const newFavouriteList = [...favourites, movie];
       setFavourites(newFavouriteList);
+      saveToLocalStorage(newFavouriteList);
       }
 
       const removeFavouriteMovie=(movie)=>{
           const newFavouriteList = favourites.filter(
             (favourite) => favourite.imdbID !== movie.imdbID
           )
+          setFavourites(newFavouriteList);
+          saveToLocalStorage(newFavouriteList);
       }
 
   return (
