@@ -2,9 +2,9 @@ import React from 'react'
 
 function App() {
   return (
-    <div>
-      
-    </div>
+   <div className="App">
+    <h1>Video Sharing App</h1>
+   </div>
   )
 }
 
