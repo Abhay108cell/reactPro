@@ -1,6 +1,7 @@
 import React from 'react'
 import './App.css'
 import {Grid} from "@material-ui/core"
+import SearchBar from './Components/SearchBar'
 
 function App() {
   return (
@@ -8,7 +9,7 @@ function App() {
     <Grid item xs={11}>
       <Grid container spacing={10}>
         <Grid item xs={12} >
-          {/* {SearchBar} */}
+          {SearchBar}
         </Grid>
         <Grid item xs={8}>
           {/* {VideoDetails} */}
