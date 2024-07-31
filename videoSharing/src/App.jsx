@@ -10,7 +10,7 @@ function App() {
     <Grid item xs={11}>
       <Grid container spacing={10}>
         <Grid item xs={12} >
-          <SearchBar onsubmit={handleSubmit}/>
+          <SearchBar onSubmit={handleSubmit}/>
         </Grid>
         <Grid item xs={8}>
           {/* {VideoDetails} */}
