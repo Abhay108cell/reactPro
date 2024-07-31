@@ -30,7 +30,8 @@ function App() {
         maxResults:5,
         key: "AIzaSyBSeeHSZ5zass86MHFS7aBrerZqHwc4to8"
         }
-    })
+    });
+    console.log(response.data.items);
   }
 }
 export default App
