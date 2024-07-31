@@ -25,3 +25,5 @@ const SearchBar =() =>{
     </Paper>
   )
 }
+
+export default SearchBar;
