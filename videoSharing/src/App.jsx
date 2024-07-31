@@ -2,6 +2,7 @@ import React from 'react'
 import './App.css'
 import {Grid} from "@material-ui/core"
 import SearchBar from './Components/SearchBar'
+import youtube from './api/youtube'
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
     <Grid item xs={11}>
       <Grid container spacing={10}>
         <Grid item xs={12} >
-          {SearchBar}
+          <SearchBar onsubmit={handleSubmit}/>
         </Grid>
         <Grid item xs={8}>
           {/* {VideoDetails} */}
@@ -21,6 +22,15 @@ function App() {
     </Grid>
    </Grid>
   )
+  async function handleSubmit(searchItem){
+    const response = await youtube.get("search",{
+      params:{
+        q:searchItem,
+        part :"snippet",
+        maxResults:5,
+        key: "AIzaSyBSeeHSZ5zass86MHFS7aBrerZqHwc4to8"
+        }
+    })
+  }
 }
-
 export default App
