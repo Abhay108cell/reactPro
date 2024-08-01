@@ -1,4 +1,7 @@
-import { Paper, Typography } from '@material-ui/core';
+import React from 'react';
+import Paper from '@mui/material/Paper';
+import Typography from '@mui/material/Typography';
+
 
 const VideoDetails = ({video: {id:{videoId}, snippet:{title, channelTitle, description}}})=>{
    if (!videoId) return <div>Loading...</div>
@@ -28,3 +31,5 @@ const VideoDetails = ({video: {id:{videoId}, snippet:{title, channelTitle, descr
    </ React.Fragment>
    )
 }
+
+export default VideoDetails;

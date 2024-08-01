@@ -1,9 +1,11 @@
 import React from 'react'
 import './App.css'
-import {Grid} from "@material-ui/core"
+import Grid from '@mui/material/Grid';
+
 import SearchBar from './Components/SearchBar'
 import youtube from './api/youtube'
 import { useState } from 'react'
+import VideoDetails from './Components/VideoDetails'
 
 function App() {
   const [videos, setVideos] =useState([]);
