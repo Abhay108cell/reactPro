@@ -13,7 +13,18 @@ const VideoDetails = ({video: {id:{videoId}, snippet:{title, channelTitle, descr
       title='Video Player'
       />
     </Paper>
-    
+    <Paper elevation={6} style={{padding: "15px"}}> 
+      <Typography variant="h4">
+        {title} - {channelTitle}
+      </Typography>
+      <Typography variant="subtitle1">
+        {channelTitle}
+      </Typography>
+      <Typography variant="subtitle2">
+        {description}
+      </Typography>
+    </Paper>
+
    </ React.Fragment>
    )
 }
