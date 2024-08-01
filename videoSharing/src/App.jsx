@@ -8,7 +8,7 @@ import { useState } from 'react'
 function App() {
   const [videos, setVideos] =useState([]);
 
-  const [selectedVideo, setSelectedVideo]= useState({id:{}})
+  const [selectedVideo, setSelectedVideo]= useState({id:{}, snippet:{}})
 
   return (
    <Grid style={{justifyContent :  "centre"}} container spacing={10}>
@@ -18,7 +18,7 @@ function App() {
           <SearchBar onSubmit={handleSubmit}/>
         </Grid>
         <Grid item xs={8}>
-          {/* {VideoDetails} */}
+          <VideoDetails video={selectedVideo}/>
         </Grid>
         <Grid item xs={4}>
           {/* {VideoList} */}
@@ -37,6 +37,7 @@ function App() {
         }
     });
     setVideos(videos )
+    setSelectedVideo(videos[0])
   }
 }
 export default App
