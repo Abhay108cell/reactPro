@@ -7,6 +7,9 @@ import { useState } from 'react'
 
 function App() {
   const [videos, setVideos] =useState([]);
+
+  const [selectedVideo, setSelectedVideo]= useState({id:{}})
+
   return (
    <Grid style={{justifyContent :  "centre"}} container spacing={10}>
     <Grid item xs={11}>
@@ -25,7 +28,7 @@ function App() {
    </Grid>
   )
   async function handleSubmit(searchItem){
-    const response = await youtube.get("search",{
+    const {data : {items: videos}} = await youtube.get("search",{
       params:{
         q:searchItem,
         part :"snippet",
@@ -33,7 +36,7 @@ function App() {
         key: "AIzaSyBSeeHSZ5zass86MHFS7aBrerZqHwc4to8"
         }
     });
-    console.log(response.data.items);
+    setVideos(videos )
   }
 }
 export default App
