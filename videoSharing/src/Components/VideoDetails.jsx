@@ -4,7 +4,9 @@ import Typography from '@mui/material/Typography';
 
 
 const VideoDetails = ({video: {id:{videoId}, snippet:{title, channelTitle, description}}})=>{
-   if (!videoId) return <div>Loading...</div>
+
+   const videoSrc = `https.//www.youtube.com/embed/${videoId}`
+
    return(
    < React.Fragment>
     <Paper elevation={6} style={{height: "70%"}}>
