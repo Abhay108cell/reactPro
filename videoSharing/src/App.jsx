@@ -6,7 +6,7 @@ import SearchBar from './Components/SearchBar'
 import youtube from './api/youtube'
 import { useState } from 'react'
 import VideoDetails from './Components/VideoDetails'
-import VideoLists from './Components/VideoList'
+import VideoLists from './Components/VideoLists'
 
 function App() {
   const [videos, setVideos] =useState([]);
