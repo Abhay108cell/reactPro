@@ -16,3 +16,5 @@ const VideoLists = ({videos ,onVideoSelect}) =>{
     </Grid>
   )
 }
+
+export default VideoLists;
