@@ -15,3 +15,4 @@ const VideoItem = () => {
       </Paper>
   </Grid>;
 };
+export default VideoItem;
