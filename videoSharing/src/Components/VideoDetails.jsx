@@ -12,7 +12,7 @@ const VideoDetails = ({video: {id:{videoId}, snippet:{title, channelTitle, descr
     <Paper elevation={6} style={{height: "70%"}}>
       <iframe 
       src={videoSrc} 
-      frameborder="0"
+      frameBorder="0"
       height="100%"
       width="100%"
       title='Video Player'
