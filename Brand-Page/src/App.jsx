@@ -6,7 +6,11 @@ function App() {
 
   return (
     <>
-    
+    <nav>
+      <div className="logo">
+        <img src="/images/brand_logo.png" alt="" />
+      </div>
+    </nav>
     </>
   )
 }
