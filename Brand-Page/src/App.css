@@ -8,4 +8,14 @@ body{
 
 nav{
   display: flex;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 72px;
+}
+
+nav ul{
+  display: flex;
+  list-style: none;
+  gap: 24px;
 }
