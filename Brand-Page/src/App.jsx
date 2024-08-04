@@ -11,11 +11,14 @@ function App() {
         <img src="/images/brand_logo.png" alt="" />
       </div>
       <ul>
-        <li>MENU</li>
-        <li>LOCATION</li>
-        <li>ABOUT</li>
-        <li>CONTACT</li>
+        <li   href="#">MENU</li>
+        <li   href="#">LOCATION</li>
+        <li   href="#">ABOUT</li>
+        <li   href="#">CONTACT</li>
       </ul>
+      <button>
+        Login
+      </button>
     </nav>
     </>
   )
