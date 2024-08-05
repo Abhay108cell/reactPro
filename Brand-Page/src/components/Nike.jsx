@@ -22,4 +22,4 @@ const Nike=()=> {
   )
 }
 
-export default Nike
+export default Nike;
