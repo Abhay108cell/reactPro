@@ -59,4 +59,13 @@ nav ul{
   color: var(--gray);
  }
 
- 
+ .nike-btn{
+  display: flex;
+  gap: 40px;
+ }
+
+ .secondry-btn{
+  color: var(--gray);
+  background: transparent;
+  border: 1px solid grey;
+ }

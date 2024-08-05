@@ -10,7 +10,7 @@ const Nike=()=> {
       </p>
       <div className="nike-btn">
         <button>SHOP NOW</button>
-        <button>Category</button>
+        <button className='secondry-btn' >Category</button>
       </div>
       <div className="shopping">
         <p>Also Available On</p>
