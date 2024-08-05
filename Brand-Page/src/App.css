@@ -66,6 +66,9 @@ gap: 36px;
   max-width: 400px;
  }
 
+ .nike-btn button{
+font-size: 24px;
+ }
  .nike-btn{
   display: flex;
   gap: 40px;
