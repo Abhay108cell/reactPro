@@ -41,6 +41,12 @@ nav ul{
  height: 32px;
  }
 
+ .nike-content{
+  display: flex;
+flex-direction: column;
+gap: 36px;
+ }
+
  .nike{
     display: flex;
     align-items: center;
@@ -57,6 +63,7 @@ nav ul{
  .nike p{
   font-weight: 600;
   color: var(--gray);
+  max-width: 400px;
  }
 
  .nike-btn{
@@ -69,3 +76,14 @@ nav ul{
   background: transparent;
   border: 1px solid grey;
  }
+
+ .shopping p{
+  margin-bottom: 10px;
+  font-size: 14px;
+ }
+
+ .brand-icons{
+  gap: 16px;
+  display: flex;
+ }
+
