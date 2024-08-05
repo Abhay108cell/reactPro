@@ -14,10 +14,15 @@ const Nike=()=> {
       </div>
       <div className="shopping">
         <p>Also Available On</p>
-        
+        <div className="brand-icons">
+          <img src="/images/amazon.png" alt="amazon" />
+          <img src="/images/flipkart.png" alt="flipkart" />
+        </div>
       </div>
     </div>
-    <div className="nike-image"></div>
+    <div className="nike-image">
+      <img src="/images/shoe_image.png" alt="nike" />
+    </div>
    </main>
   )
 }
