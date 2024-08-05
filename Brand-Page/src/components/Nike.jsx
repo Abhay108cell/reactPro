@@ -2,7 +2,7 @@ import React from 'react'
 
 const Nike=()=> {
   return (
-   <main className="nike">
+   <main className="nike container">
     <div className="nike-content">
       <h1>YOUR FEET DESERVE THE BEST</h1>
       <p>
