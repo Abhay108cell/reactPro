@@ -24,3 +24,11 @@ body {
   height: 72px;
 }
 
+nav ul{
+  display: flex;
+  gap: 24px;
+  list-style-type: none;
+  font-weight: 500;
+}
+
+
