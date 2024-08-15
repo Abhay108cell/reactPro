@@ -1,20 +1,19 @@
-import React from 'react'
+
+import React from 'react';
+import './NavBar.Module.css';
 
 const NavBar = () => {
   return (
-    
-      <nav className='container'>
-        <div className="logo">
-          <img src="/images/logo.png" alt="do some coding logo" />
-        </div>
-        <ul>
-          <li>HOME</li>
-          <li>ABOUT</li>
-          <li>CONTACT</li>
-        </ul>
-      </nav>
-  
-  )
-}
+    <nav className="navigation">
+      <div className="logo">
+         <img src="/images/logo.png" alt="do some coding logo" />      </div>
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+  );
+};
 
-export default NavBar
+export default NavBar;
