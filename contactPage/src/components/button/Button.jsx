@@ -2,11 +2,11 @@ import React from 'react'
 import styles from './Button.module.css'
 
 
-const Button = (props) => {
+const Button = (isOutLine, icon, text) => {
   return (
-    <button className={props.isOutLine ? styles.outLine_btn : styles.primary_btn}>
-      {props.text}
-      {props.icon}
+    <button className={isOutLine ? styles.outLine_btn : styles.primary_btn}>
+      {text}
+      {icon}
     </button>
   )
 }
