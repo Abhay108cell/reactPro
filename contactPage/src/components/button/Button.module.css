@@ -4,9 +4,10 @@
   padding: 18px 10px;
   display: flex;
   align-items: center;
-  max-width: 220px;
+  min-width: 220px;
   justify-content: center;
   gap: 8px;
   border-radius: 5px;
   font-size: 16px;
 }
+
