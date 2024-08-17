@@ -11,8 +11,10 @@ function App() {
   return (
     <>
      <NavBar/>
+     <main className="main_container">
      <ContactHeader/>
      <ContactForm/>
+     </main>
      
      </>
   )
