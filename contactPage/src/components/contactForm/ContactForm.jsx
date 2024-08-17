@@ -21,6 +21,14 @@ const ContactForm = () => {
         <label htmlFor="name">Name</label>
         <input type="text" name="name" />
         </div>
+        <div className={styles.form_cntrl}>
+        <label htmlFor="email">email</label>
+        <input type="email" name="email" />
+        </div>
+        <div className={styles.form_cntrl}>
+        <label htmlFor="text">Text</label>
+        <input  name="text" />
+        </div>
       </form>
 
     </div>
