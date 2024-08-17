@@ -3,6 +3,7 @@
   max-width: 1000px;
   margin: 0 auto;
   margin: 40px;
+  align-items: end;
 }
 
 .top_btn{
@@ -19,6 +20,7 @@
 .contact_form form {
   display: flex;
   flex-direction: column;
+  padding-bottom: 20px;
   gap: 20px;
 
 }
