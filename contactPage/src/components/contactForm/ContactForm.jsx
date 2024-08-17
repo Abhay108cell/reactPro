@@ -29,7 +29,15 @@ const ContactForm = () => {
         <label htmlFor="text">Text</label>
         <input  name="text" />
         </div>
+      <div style={{
+        display: 'flex',
+        justifyContent: 'end',
+
+      }}>
+        <Button text='SUBMIT' />
+      </div>
       </form>
+
 
     </div>
     <div className={styles.contact_image}></div>
