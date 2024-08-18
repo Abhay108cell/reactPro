@@ -9,10 +9,17 @@ import { MdEmail } from "react-icons/md";
 
 const ContactForm = () => {
 
+  let name;
+  let email;
+  let text;
+
   const onSubmit=(event)=>{
     event.preventDefault()
-    console.log(event.target[0]);
-  }
+    name = event.target[0].value;
+    email = event.target[1].value;
+    text = event.target[2].value;
+    }
+
 
   return <section className={styles.container}>
     <div className={styles.contact_form}>
@@ -46,6 +53,7 @@ const ContactForm = () => {
       }}>
         <Button text='SUBMIT' />
       </div>
+      <div>{name + " " + email + " " + text}</div>
       </form>
 
 
