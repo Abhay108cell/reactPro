@@ -4,22 +4,26 @@ import Button from '../button/Button'
 import { MdMessage } from "react-icons/md";
 import { FaPhone } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
+import { useState } from 'react';
 
 
 
 const ContactForm = () => {
+  const [name, setName] = useState('ram');
+  const [email, setEmail] = useState('ram@gmail.com');
+  const [text, setText] = useState('ram');
 
-  let name;
-  let email;
-  let text;
+
 
   const onSubmit=(event)=>{
     event.preventDefault()
-    name = event.target[0].value;
-    email = event.target[1].value;
-    text = event.target[2].value;
+    setName(event.target[0].value)
+    setEmail(event.target[1].value)
+    setText(event.target[2].value)
+    
     }
 
+   
 
   return <section className={styles.container}>
     <div className={styles.contact_form}>
