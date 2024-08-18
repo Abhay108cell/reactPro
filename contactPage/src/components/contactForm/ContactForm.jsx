@@ -4,14 +4,16 @@ import Button from '../button/Button'
 import { MdMessage } from "react-icons/md";
 import { FaPhone } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
+import { useState } from 'react';
 
 
 
 const ContactForm = () => {
+  const [name, setName] = useState('');
 
-  let name;
-  let email;
-  let text;
+  let email = "abhay@gmail.com";
+  let text = "hare krishna";
+
 
   const onSubmit=(event)=>{
     event.preventDefault()
@@ -20,6 +22,11 @@ const ContactForm = () => {
     text = event.target[2].value;
     }
 
+    console.log({
+      name,
+      email,
+      text
+    })
 
   return <section className={styles.container}>
     <div className={styles.contact_form}>
