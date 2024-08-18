@@ -53,6 +53,7 @@ const ContactForm = () => {
       }}>
         <Button text='SUBMIT' />
       </div>
+      <div>{name + " " + email + " " + text}</div>
       </form>
 
 
