@@ -9,24 +9,21 @@ import { useState } from 'react';
 
 
 const ContactForm = () => {
-  const [name, setName] = useState('');
+  const [name, setName] = useState('ram');
+  const [email, setEmail] = useState('ram@gmail.com');
+  const [text, setText] = useState('ram');
 
-  let email = "abhay@gmail.com";
-  let text = "hare krishna";
 
 
   const onSubmit=(event)=>{
     event.preventDefault()
-    name = event.target[0].value;
-    email = event.target[1].value;
-    text = event.target[2].value;
+    setName(event.target[0].value)
+    setEmail(event.target[1].value)
+    setText(event.target[2].value)
+    
     }
 
-    console.log({
-      name,
-      email,
-      text
-    })
+   
 
   return <section className={styles.container}>
     <div className={styles.contact_form}>
