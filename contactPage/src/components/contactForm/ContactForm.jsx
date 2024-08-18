@@ -11,8 +11,11 @@ const ContactForm = () => {
 
   const onSubmit=(event)=>{
     event.preventDefault()
-    console.log(event.target[0]);
-  }
+    console.log("name",event.target[0].value);
+    console.log("email",event.target[1].value);
+    console.log("text",event.target[2].value);
+    }
+
 
   return <section className={styles.container}>
     <div className={styles.contact_form}>
