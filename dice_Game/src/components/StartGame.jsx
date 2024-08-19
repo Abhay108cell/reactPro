@@ -1,7 +1,17 @@
+import styled from "styled-components";
 
 const StartGame = () => {
-  return <div> start game </div>
+  return (
+    <Container>
+      <img src="/images/dices.png" alt=""  />
+    </Container>
+  )
+  
   
 }
 
-export default StartGame
+export default StartGame;
+
+ const Container = styled.div`
+  
+ `
