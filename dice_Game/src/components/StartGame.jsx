@@ -1,10 +1,7 @@
 
 const StartGame = () => {
-  return (
-    <div>
-      
-    </div>
-  )
+  return <div> start game </div>
+  
 }
 
 export default StartGame
