@@ -2,9 +2,12 @@ import React from 'react'
 
 const GamePlay = () => {
   return (
+   <main>
     <div>
-      <h1>Game Play</h1>
+      <h1>0</h1>
+      <p>Total Score</p>
     </div>
+   </main>
   )
 }
 
