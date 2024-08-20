@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StartGame = () => {
+const StartGame = ({toogle}) => {
   return (
     <Container>
       <div>
@@ -8,7 +8,9 @@ const StartGame = () => {
       </div>
       <div className="content">
         <h1>DICE GAME</h1>
-        <Button>Play Now</Button>
+        <Button
+        onClick={toogle}
+        >Play Now</Button>
       </div>
     </Container>
   );
