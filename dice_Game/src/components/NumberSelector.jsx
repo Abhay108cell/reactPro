@@ -3,9 +3,14 @@ import styled from "styled-components";
 
 
 const NumberSelector = () => {
+
+  const arrNumber = [1,2,3,4,5]
+
   return (
     <div>
-      <Box>1</Box>
+      {arrNumber.map((value,i)=>(
+        <Box key={i}>{value}</Box>
+        ))}
     </div>
   )
 }
@@ -20,5 +25,5 @@ const Box = styled.div`
   place-items: center;
   font-size: 24px;
   font-weight:700;
-  
+
 `
