@@ -1,18 +1,26 @@
 import React from 'react'
+import { useState } from 'react';
 import styled from "styled-components";
+useState
 
 
 const NumberSelector = () => {
 
-  const arrNumber = [1,2,3,4,5]
+  const arrNumber = [1,2,3,4,5,6];
+  const [selectedNumber, setSelectedNumber] = useState();
+
+  console.log(selectedNumber);
+  
 
   return (
     <div>
       {arrNumber.map((value,i)=>(
-        <Box key={i}>{value}</Box>
+        <Box key={i} onClick={()=>setSelectedNumber(value)}>
+          {value}
+          </Box>
         ))}
     </div>
-  )
+  );
 }
 
 export default NumberSelector;
