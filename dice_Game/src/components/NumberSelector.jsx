@@ -15,7 +15,9 @@ const NumberSelector = () => {
   return (
     <div>
       {arrNumber.map((value,i)=>(
-        <Box key={i} onClick={()=>setSelectedNumber(value)}>
+        <Box key={i}
+         isSelected ={value=== selectedNumber}
+         onClick={()=>setSelectedNumber(value)}>
           {value}
           </Box>
         ))}
@@ -33,5 +35,6 @@ const Box = styled.div`
   place-items: center;
   font-size: 24px;
   font-weight:700;
+  background-color: ${(props)=>props.isSelected ? "black" : "white"}
 
 `
