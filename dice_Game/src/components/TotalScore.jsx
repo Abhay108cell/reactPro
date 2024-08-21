@@ -17,4 +17,8 @@ const ScoreContainer = styled.div`
   h1{
     font-size: 100px;
   }
+  p{
+    font-size: 24px;
+    font-weight:500px
+  }
 `
