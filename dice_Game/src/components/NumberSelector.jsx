@@ -13,7 +13,9 @@ const NumberSelector = () => {
   
 
   return (
-    <div>
+    
+    <NumberSelectorConatiner>
+      <div className='flex'>
       {arrNumber.map((value,i)=>(
         <Box key={i}
          isSelected ={value=== selectedNumber}
@@ -21,11 +23,17 @@ const NumberSelector = () => {
           {value}
           </Box>
         ))}
-    </div>
+      </div>
+      <p>Select Number</p>
+    </NumberSelectorConatiner>
   );
 }
 
 export default NumberSelector;
+
+const NumberSelectorConatiner = styled.div`
+  
+`
 
 const Box = styled.div`
   height:72px;
@@ -35,6 +43,8 @@ const Box = styled.div`
   place-items: center;
   font-size: 24px;
   font-weight:700;
-  background-color: ${(props)=>props.isSelected ? "black" : "white"}
+  background-color: ${(props)=>(props.isSelected ? "black" : "white")};
+  color: ${(props)=>(!props.isSelected ? "black" : "white")};
+
 
 `
