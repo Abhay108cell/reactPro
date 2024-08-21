@@ -1,12 +1,10 @@
 import React from 'react'
+import TotalScore from './TotalScore'
 
 const GamePlay = () => {
   return (
    <main>
-    <div>
-      <h1>0</h1>
-      <p>Total Score</p>
-    </div>
+   <TotalScore/>
    </main>
   )
 }
