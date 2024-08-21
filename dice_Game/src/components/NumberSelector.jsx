@@ -32,7 +32,14 @@ const NumberSelector = () => {
 export default NumberSelector;
 
 const NumberSelectorConatiner = styled.div`
-  
+  .flex{
+    display: flex;
+    gap: 24px;
+  }
+  .p{
+    font-size:24px;
+    font-weight:700px
+  }
 `
 
 const Box = styled.div`
