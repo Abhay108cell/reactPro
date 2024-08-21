@@ -8,8 +8,8 @@ const GamePlay = () => {
   return (
     <MainContainer>
       <div className="top_section">
-        <NumberSelector />
         <TotalScore />
+        <NumberSelector />
       </div>
     </MainContainer>
   );
@@ -20,6 +20,9 @@ export default GamePlay;
 const MainContainer = styled.main`
 .top_section{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: end;
+  
+
 }
 `;
