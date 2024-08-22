@@ -3,9 +3,8 @@ import { useState } from "react";
 import styled from "styled-components";
 useState;
 
-const NumberSelector = () => {
+const NumberSelector = ({setSelectedNumber, selectedNumber}) => {
   const arrNumber = [1, 2, 3, 4, 5, 6];
-  const [selectedNumber, setSelectedNumber] = useState();
 
   console.log(selectedNumber);
 
