@@ -1,11 +1,17 @@
-import React from 'react'
+
+import styled from "styled-components";
 
 const RollDice = () => {
   return (
-    <div>
-      <h1>roll dice</h1>
-    </div>
+    <DiceContainer>
+      <div>
+        <img src="/images/dice/dice_1.png" alt="" />
+      </div>
+    </DiceContainer>
   )
 }
 
 export default RollDice
+
+const DiceContainer = styled.div`
+`
