@@ -8,32 +8,37 @@ import { useState } from "react";
 const GamePlay = () => {
   const [selectedNumber, setSelectedNumber] = useState();
   const [currentDice, setCurrentDice] = useState(1);
-const [score,setScore] = useState()
+  const [score, setScore] = useState();
 
+  const generateRandomNumber = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  };
 
-const generateRandomeNumber = (min, max) => {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-};
+  const roleDice = () => {
+    const randomNumber = generateRandomNumber(1, 6);
 
-const roleDice = () => {
-  const randomDice = generateRandomeNumber(1, 6);
+    setCurrentDice((prev) => randomNumber);
+  };
 
-  setCurrentDice((prev) => randomDice);
-};
-
+  if (selectedNumber === randomNumber) { 
+    setScore((prev) => prev + randomNumber);
+  } else {
+    setScore((prev) => prev - 2);
+  }
 
   return (
     <MainContainer>
       <div className="top_section">
-        <TotalScore />
+        <TotalScore
+        
+        score={score}
+         />
         <NumberSelector
           selectedNumber={selectedNumber}
           setSelectedNumber={setSelectedNumber}
         />
       </div>
-      <RollDice 
-      currentDice={currentDice}
-      roleDice={roleDice} />
+      <RollDice currentDice={currentDice} roleDice={roleDice} />
     </MainContainer>
   );
 };
