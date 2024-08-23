@@ -9,13 +9,18 @@ const GamePlay = () => {
   const [selectedNumber, setSelectedNumber] = useState();
   const [currentDice, setCurrentDice] = useState(1);
   const [score, setScore] = useState(0);
+  const [error, setError] = useState()
 
   const generateRandomNumber = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   };
 
   const roleDice = () => {
-    if(!selectedNumber) return;
+    if(!selectedNumber) {
+      setError("Please select a number")
+      return;
+    }
+    setError("")
     const randomNumber = generateRandomNumber(1, 7);
     setCurrentDice((prev) => randomNumber);
 
@@ -38,6 +43,8 @@ const GamePlay = () => {
         score={score}
          />
         <NumberSelector
+
+        error={error}
           selectedNumber={selectedNumber}
           setSelectedNumber={setSelectedNumber}
         />
