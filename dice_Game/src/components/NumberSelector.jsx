@@ -3,13 +3,14 @@ import { useState } from "react";
 import styled from "styled-components";
 useState;
 
-const NumberSelector = ({setSelectedNumber, selectedNumber}) => {
+const NumberSelector = ({setSelectedNumber, selectedNumber, error}) => {
   const arrNumber = [1, 2, 3, 4, 5, 6];
 
   console.log(selectedNumber);
 
   return (
     <NumberSelectorConatiner>
+      <p>{error}</p>
       <div className="flex">
         {arrNumber.map((value, i) => (
           <Box
