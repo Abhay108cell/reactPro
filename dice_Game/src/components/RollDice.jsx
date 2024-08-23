@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const RollDice = ({setCurrentDice, currentDice}) => {
+const RollDice = ({roleDice, currentDice}) => {
 
   
 
