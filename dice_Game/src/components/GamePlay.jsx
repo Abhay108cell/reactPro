@@ -32,7 +32,7 @@ const roleDice = () => {
         />
       </div>
       <RollDice 
-      setCurrentDice={setCurrentDice}
+      currentDice={currentDice}
       roleDice={roleDice} />
     </MainContainer>
   );
