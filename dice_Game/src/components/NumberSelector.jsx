@@ -10,7 +10,7 @@ const NumberSelector = ({setSelectedNumber, selectedNumber, error}) => {
 
   return (
     <NumberSelectorConatiner>
-      <p>{error}</p>
+      <p className="error">{error}</p>
       <div className="flex">
         {arrNumber.map((value, i) => (
           <Box
@@ -31,6 +31,10 @@ export default NumberSelector;
 
 const NumberSelectorConatiner = styled.div`
 
+.error{
+  color: red;
+  font-weight: 500;
+}
 
 display: flex;
 flex-direction: column;
