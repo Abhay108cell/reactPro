@@ -5,20 +5,23 @@ import styled from "styled-components";
 import RollDice from "./RollDice";
 import { useState } from "react";
 
-
 const GamePlay = () => {
   const [selectedNumber, setSelectedNumber] = useState();
+  const [currentDice, setCurrentDice] = useState(1);
+
 
   return (
     <MainContainer>
       <div className="top_section">
         <TotalScore />
-        <NumberSelector 
-        selectedNumber={selectedNumber}
-        setSelectedNumber={setSelectedNumber}
+        <NumberSelector
+          selectedNumber={selectedNumber}
+          setSelectedNumber={setSelectedNumber}
         />
       </div>
-      <RollDice/>
+      <RollDice 
+      setCurrentDice={setCurrentDice}
+      currentDice={currentDice} />
     </MainContainer>
   );
 };
@@ -26,12 +29,10 @@ const GamePlay = () => {
 export default GamePlay;
 
 const MainContainer = styled.main`
-padding-top:70px;
-.top_section{
-  display: flex;
-  justify-content: space-around;
-  align-items: end;
-  
-
-}
+  padding-top: 70px;
+  .top_section {
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+  }
 `;
