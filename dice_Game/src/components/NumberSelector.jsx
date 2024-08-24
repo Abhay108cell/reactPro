@@ -3,10 +3,18 @@ import { useState } from "react";
 import styled from "styled-components";
 useState;
 
-const NumberSelector = ({setSelectedNumber, selectedNumber, error}) => {
+const NumberSelector = ({
+  setSelectedNumber,
+  selectedNumber,
+  error,
+  setError,
+}) => {
   const arrNumber = [1, 2, 3, 4, 5, 6];
 
-  console.log(selectedNumber);
+      const numberSelectorHandler = (value) =>{
+        setSelectedNumber(value)
+        setError("");
+      }
 
   return (
     <NumberSelectorConatiner>
@@ -16,7 +24,7 @@ const NumberSelector = ({setSelectedNumber, selectedNumber, error}) => {
           <Box
             key={i}
             isSelected={value === selectedNumber}
-            onClick={() => setSelectedNumber(value)}
+            onClick={() => numberSelectorHandler(value)}
           >
             {value}
           </Box>
@@ -30,15 +38,14 @@ const NumberSelector = ({setSelectedNumber, selectedNumber, error}) => {
 export default NumberSelector;
 
 const NumberSelectorConatiner = styled.div`
+  .error {
+    color: red;
+    font-weight: 500;
+  }
 
-.error{
-  color: red;
-  font-weight: 500;
-}
-
-display: flex;
-flex-direction: column;
-align-items: end;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
 
   .flex {
     display: flex;
