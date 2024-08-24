@@ -5,6 +5,7 @@ import styled from "styled-components";
 import RollDice from "./RollDice";
 import { useState } from "react";
 import { Button, OutLine } from "../styled/Button";
+import Rules from "./Rules";
 
 const GamePlay = () => {
   const [selectedNumber, setSelectedNumber] = useState();
@@ -55,6 +56,7 @@ const GamePlay = () => {
         >Reset</OutLine>
         <Button>Show Rules</Button>
       </div>
+      <Rules/>
     </MainContainer>
   );
 };
