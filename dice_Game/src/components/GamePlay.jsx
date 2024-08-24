@@ -4,7 +4,7 @@ import NumberSelector from "./NumberSelector";
 import styled from "styled-components";
 import RollDice from "./RollDice";
 import { useState } from "react";
-import { Button } from "../styled/Button";
+import { Button, OutLine } from "../styled/Button";
 
 const GamePlay = () => {
   const [selectedNumber, setSelectedNumber] = useState();
@@ -46,7 +46,7 @@ const GamePlay = () => {
       </div>
       <RollDice currentDice={currentDice} roleDice={roleDice} />
       <div className="btns">
-        <Button>Reset</Button>
+        <OutLine>Reset</OutLine>
         <Button>Show Rules</Button>
       </div>
     </MainContainer>
@@ -63,6 +63,8 @@ const MainContainer = styled.main`
     align-items: end;
   }
 .btns{
+  margin-top: 40px;
+  gap:10px;
   display: flex;
   justify-content: center;
   align-items: center;

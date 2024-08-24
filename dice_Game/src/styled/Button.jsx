@@ -20,3 +20,17 @@ export const Button = styled.button`
   }
 
 `;
+
+export const OutLine = styled(Button)`
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+  
+  &:hover{
+    background-color: black;
+    border: 1px solid transparent;
+    color: white;
+
+  }
+
+`;
