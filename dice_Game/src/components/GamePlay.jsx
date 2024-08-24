@@ -33,6 +33,10 @@ const GamePlay = () => {
     setSelectedNumber(undefined);
   };
 
+  const resetScore = () => {
+    setScore(0)
+  }
+
   return (
     <MainContainer>
       <div className="top_section">
@@ -46,7 +50,9 @@ const GamePlay = () => {
       </div>
       <RollDice currentDice={currentDice} roleDice={roleDice} />
       <div className="btns">
-        <OutLine>Reset</OutLine>
+        <OutLine
+        onClick={resetScore}
+        >Reset</OutLine>
         <Button>Show Rules</Button>
       </div>
     </MainContainer>
