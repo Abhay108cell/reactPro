@@ -12,6 +12,7 @@ const GamePlay = () => {
   const [currentDice, setCurrentDice] = useState(1);
   const [score, setScore] = useState(0);
   const [error, setError] = useState();
+  const [showRules, setShowRules] = useState(false)
 
   const generateRandomNumber = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -54,10 +55,12 @@ const GamePlay = () => {
         <OutLine
         onClick={resetScore}
         >Reset</OutLine>
-        <Button>Show Rules</Button>
+        <Button>
+          {showRules ? "Hide" : "Show"}
+          Show Rules</Button>
       </div>
-      <Rules/>
-    </MainContainer>
+{   showRules &&   <Rules/>}  
+ </MainContainer>
   );
 };
 
