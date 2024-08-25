@@ -51,7 +51,7 @@ const NumberSelectorConatiner = styled.div`
     display: flex;
     gap: 24px;
   }
-  .p {
+  p {
     font-size: 24px;
     font-weight: 700px;
   }
