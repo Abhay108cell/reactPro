@@ -6,7 +6,7 @@ import { Box } from '@chakra-ui/react'
 const Sidenav = () => {
   return (
     <Box as='aside'>
-      
+      ram
     </Box>
   )
 }
