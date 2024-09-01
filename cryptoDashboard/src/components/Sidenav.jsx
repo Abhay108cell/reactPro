@@ -1,6 +1,7 @@
 import React from 'react'
 import { HStack, Icon, Stack, Text } from '@chakra-ui/react'
 import { RxDashboard } from "react-icons/rx";
+import { BsArrowDownUp } from 'react-icons/bs';
 
 const Sidenav = () => {
   const navLink = [
@@ -9,7 +10,7 @@ const Sidenav = () => {
       text: 'Dashboard', 
        path: '/' },
     {
-      icon: RxDashboard ,
+      icon: BsArrowDownUp ,
       text: 'Transactions', 
        path: '/transaction' },
   ]
