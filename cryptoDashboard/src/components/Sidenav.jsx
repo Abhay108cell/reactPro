@@ -16,7 +16,7 @@ const Sidenav = () => {
   ]
 
   return (
-   <Stack>
+   <Stack boxShadow="sm" maxW="16rem" h="100vh" bg="red">
     {navLink.map((nav)=>(
       <HStack
       key={nav.text}
