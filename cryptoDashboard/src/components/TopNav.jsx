@@ -12,7 +12,7 @@ import {
 import React from "react";
 import { FaCircleUser } from "react-icons/fa6";
 
-const TopNav = () => {
+const TopNav = ({title}) => {
   return (
     <Box>
       <HStack
@@ -24,7 +24,7 @@ const TopNav = () => {
       >
         <Heading fontSize="28px"
         fontWeight="medium" 
-        >Dashboard </Heading>
+        >{title} </Heading>
         <Menu>
           <MenuButton as={Button}>
             <Icon
