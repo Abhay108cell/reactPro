@@ -1,11 +1,13 @@
-import { Container, Flex, Heading,Menu, MenuButton,MenuList, MenuItem, Button } from '@chakra-ui/react'
+import {  Heading,Menu, MenuButton,MenuList, MenuItem, Button, HStack, Box } from '@chakra-ui/react'
 import React from 'react'
 
 const TopNav = () => {
   return (
-   <Flex boxShadow="xl">
-        <Container>
-          <Heading>Dashboard </Heading>
+    <Box>
+
+   <HStack maxWidth="60rem" mx="auto" boxShadow="xl" h="16px" justify="space-between" px="32">
+        
+          <Heading >Dashboard </Heading>
           <Menu>
   <MenuButton as={Button}>
     Actions
@@ -18,8 +20,9 @@ const TopNav = () => {
     <MenuItem>Attend a Workshop</MenuItem>
   </MenuList>
 </Menu>
-        </Container>
-   </Flex>
+        
+   </HStack>
+    </Box>
   )
 }
 
