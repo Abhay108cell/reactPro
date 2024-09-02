@@ -34,17 +34,18 @@ const Sidenav = () => {
            px="4"
            _hover={{
             bg: "#f3f3f7",
-            color:"#171717"
+            color:"#171717",
            }}
+           color="#797E82"
           >
             <Icon as={nav.icon} />
-            <Text fontSize="14px">{nav.text}</Text>
+            <Text fontWeight="medium" fontSize="14px">{nav.text}</Text>
           </HStack>
         ))}
       </Box>
       </Box>
 
-      <Box mt="6" mx="3">
+      <Box mt="6" mx="3" mb="6">
       <HStack  
           borderRadius="10px"
           py="3" 
