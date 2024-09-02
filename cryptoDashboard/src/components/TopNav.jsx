@@ -16,24 +16,25 @@ const TopNav = () => {
   return (
     <Box boxShadow="xl">
       <HStack
-        maxWidth="60rem"
+        maxWidth="80rem"
         mx="auto"
         h="16px"
         justify="space-between"
         px="32"
       >
-        <Heading fontSize="28px">Dashboard </Heading>
+        <Heading fontSize="28px"
+        fontWeight="medium" 
+        >Dashboard </Heading>
         <Menu>
           <MenuButton as={Button}>
             <Icon
-            as={FaCircleUser}           />
+            as={FaCircleUser} 
+            fontSize="24px"
+            />
           </MenuButton>
           <MenuList>
-            <MenuItem>Download</MenuItem>
-            <MenuItem>Create a Copy</MenuItem>
-            <MenuItem>Mark as Draft</MenuItem>
-            <MenuItem>Delete</MenuItem>
-            <MenuItem>Attend a Workshop</MenuItem>
+            <MenuItem>Support</MenuItem>
+            <MenuItem>Logout</MenuItem>
           </MenuList>
         </Menu>
       </HStack>
