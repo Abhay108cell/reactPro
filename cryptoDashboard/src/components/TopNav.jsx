@@ -16,11 +16,11 @@ const TopNav = ({title}) => {
   return (
     <Box>
       <HStack
-        maxWidth="80rem"
+        maxWidth="70rem"
         mx="auto"
         h="16px"
         justify="space-between"
-        px="32"
+        
       >
         <Heading fontSize="28px"
         fontWeight="medium" 
