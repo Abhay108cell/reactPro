@@ -14,7 +14,7 @@ import { FaCircleUser } from "react-icons/fa6";
 
 const TopNav = () => {
   return (
-    <Box boxShadow="xl">
+    <Box>
       <HStack
         maxWidth="80rem"
         mx="auto"
