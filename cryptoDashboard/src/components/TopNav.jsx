@@ -11,10 +11,12 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { FaCircleUser } from "react-icons/fa6";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { MdOutlineOpenInFull } from "react-icons/md";
 
-const TopNav = ({title}) => {
+const TopNav = ({title, onOpen}) => {
   return (
-    <Box>
+    <Box px="4">
       <HStack
         maxWidth="70rem"
         mx="auto"
@@ -22,6 +24,7 @@ const TopNav = ({title}) => {
         justify="space-between"
         
       >
+        <Icon as={GiHamburgerMenu} onClick={onOpen}/>
         <Heading fontSize="28px"
         fontWeight="medium" 
         >{title} </Heading>
