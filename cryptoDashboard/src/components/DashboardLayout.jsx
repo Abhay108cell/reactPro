@@ -5,10 +5,10 @@ import TopNav from "./TopNav";
 import SideDrawer from "./SideDrawer";
 
 const DashboardLayout = ({ title, children }) => {
-  const { isOpen, OnClose, OnOpen } = useDisclosure;
+  const { isOpen, OnClose, OnOpen } = useDisclosure();
 
   return (
-    <Box>
+    
       <Flex>
         <Box
           display={{
@@ -26,7 +26,6 @@ const DashboardLayout = ({ title, children }) => {
           </Container>
         </Box>
       </Flex>
-    </Box>
   );
 };
 
