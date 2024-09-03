@@ -12,7 +12,7 @@ import {
 import React from "react";
 import { FaCircleUser } from "react-icons/fa6";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { MdOutlineOpenInFull } from "react-icons/md";
+
 
 const TopNav = ({title, onOpen}) => {
   return (
@@ -24,7 +24,12 @@ const TopNav = ({title, onOpen}) => {
         justify="space-between"
         
       >
-        <Icon as={GiHamburgerMenu} onClick={onOpen}/>
+        <Icon as={GiHamburgerMenu} onClick={onOpen}
+        display={{
+          base: "none",
+          lg: "block"
+        }}
+        />
         <Heading fontSize="28px"
         fontWeight="medium" 
         >{title} </Heading>
