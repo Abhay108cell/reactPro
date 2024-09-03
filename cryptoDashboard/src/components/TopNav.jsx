@@ -19,7 +19,7 @@ const TopNav = ({ title, onOpen }) => {
       <HStack maxWidth="70rem" mx="auto" h="16" justify="space-between">
         <Icon
           as={FaBars}
-          onClick={onOpen}
+         onClick={onOpen}
           display={{
             base: "block",
             lg: "none",
