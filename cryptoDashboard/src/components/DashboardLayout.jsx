@@ -17,4 +17,4 @@ const DashboardLayout = ({title, children}) => {
   )
 }
 
-export default DashboardLayout
+export default DashboardLayout;

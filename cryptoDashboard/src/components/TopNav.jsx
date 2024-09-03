@@ -18,7 +18,7 @@ const TopNav = ({title}) => {
       <HStack
         maxWidth="70rem"
         mx="auto"
-        h="16px"
+        h="16"
         justify="space-between"
         
       >
