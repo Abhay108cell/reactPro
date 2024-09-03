@@ -11,10 +11,10 @@ const DashboardLayout = ({title, children}) => {
   return (
    <Box>
        <Flex>
-      <Sidenav OnOpen={OnOpen}/>
+      <Sidenav />
         <SideDrawer isOpen={isOpen} OnClose={OnClose}  />
       <Box flexGrow="1">
-      <TopNav title={title}/> 
+      <TopNav title={title} OnOpen={OnOpen}/> 
       <Container maxW="70rem" bg="red">{children}</Container>
       </Box>
       </Flex>
