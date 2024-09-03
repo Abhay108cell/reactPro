@@ -9,20 +9,14 @@ import {
   DrawerCloseButton,
 } from '@chakra-ui/react'
 
-const SideDrawer = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure()
-  const btnRef = React.useRef()
+const SideDrawer = ({isOpen, onClose}) => {
 
   return (
     <>
-      <Button ref={btnRef} colorScheme='teal' onClick={onOpen}>
-        Open
-      </Button>
       <Drawer
         isOpen={isOpen}
         placement='right'
         onClose={onClose}
-        finalFocusRef={btnRef}
       >
         <DrawerOverlay />
         <DrawerContent>
