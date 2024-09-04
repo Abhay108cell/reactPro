@@ -7,12 +7,12 @@ const PortfolioSection = () => {
     <HStack bg="white" borderRadius="xl" p="6">
       <Stack>
         <HStack color="black.80">
-          <Text fontSize="14px">Total Portfolio Value</Text>
+          <Text fontSize="sm">Total Portfolio Value</Text>
         <Icon
         as={AiOutlineInfoCircle}
         /> 
         </HStack>
-        <Text fontSize="24px">$122,23.54 </Text>
+        <Text textStyle="h2">$122,23.54 </Text>
       </Stack>
     </HStack>
   )

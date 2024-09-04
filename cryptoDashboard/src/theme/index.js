@@ -79,6 +79,16 @@ export const theme  = extendTheme({
     },
   },
 
+  fontSizes: {
+    xs: "12px",
+    sm: "14px",
+    base: { base: "16px", md: "18px" },
+    lg: { base: "18px", md: "20px" },
+    xl: { base: "20px", md: "22px" },
+    "2xl": { base: "22px", md: "24px" },
+    "3xl": { base: "24px", md: "28px" },
+    "4xl": { base: "30px", md: "32px" },
+  },
 
   fonts: {
     heading:"Ubuntu" ,
