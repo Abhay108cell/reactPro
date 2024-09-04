@@ -4,14 +4,14 @@ import { AiOutlineInfoCircle } from 'react-icons/ai'
 
 const PortfolioSection = () => {
   return (
-    <HStack>
+    <HStack bg="white" borderRadius="xl" p="6">
       <Stack>
-        <HStack>
-          <Text>Total Portfolio Value</Text>
-        </HStack>
+        <HStack color="535D66">
+          <Text fontSize="14px">Total Portfolio Value</Text>
         <Icon
         as={AiOutlineInfoCircle}
         /> 
+        </HStack>
       </Stack>
     </HStack>
   )
