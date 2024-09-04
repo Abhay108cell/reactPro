@@ -1,10 +1,12 @@
-import { HStack, Stack, Icon, Text } from "@chakra-ui/react";
+import { HStack, Stack, Icon, Text, Tag, Button } from "@chakra-ui/react";
 import React from "react";
 import { AiOutlineInfoCircle } from "react-icons/ai";
+import { PiArrowLineDownBold } from "react-icons/pi";
+import { TbArrowBarToUp } from "react-icons/tb";
 
 const PortfolioSection = () => {
   return (
-    <HStack bg="white" borderRadius="xl" p="6">
+    <HStack bg="white" borderRadius="xl" p="6" spacing="16">
       <Stack>
         <HStack color="black.80">
           <Text fontSize="sm">Total Portfolio Value</Text>
@@ -21,10 +23,18 @@ const PortfolioSection = () => {
             <Text textStyle="h2">22.39401000 </Text> <Tag>BTC</Tag>
           </HStack>
           <HStack>
-            <Text textStyle="h2">1300.00 </Text> <Tag>Inr</Tag>
+            <Text textStyle="h2">1300.00 </Text> <Tag>INR</Tag>
           </HStack>
         </HStack>
       </Stack>
+      <HStack>
+          <Button>
+            <PiArrowLineDownBold /> Deposite
+          </Button>
+        <Button>
+        <TbArrowBarToUp />
+           Withdraw</Button>
+      </HStack>
     </HStack>
   );
 };
