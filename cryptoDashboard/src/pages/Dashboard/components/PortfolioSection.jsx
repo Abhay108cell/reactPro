@@ -6,12 +6,13 @@ const PortfolioSection = () => {
   return (
     <HStack bg="white" borderRadius="xl" p="6">
       <Stack>
-        <HStack color="535D66">
+        <HStack color="black.80">
           <Text fontSize="14px">Total Portfolio Value</Text>
         <Icon
         as={AiOutlineInfoCircle}
         /> 
         </HStack>
+        <Text fontSize="24px">$122,23.54 </Text>
       </Stack>
     </HStack>
   )
