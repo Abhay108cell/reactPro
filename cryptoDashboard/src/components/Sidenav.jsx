@@ -19,7 +19,9 @@ const Sidenav = () => {
   ];
 
   return (
-    <Stack justifyContent="space-between" 
+    <Stack
+    bg="white"
+    justifyContent="space-between" 
     boxShadow={{
       base: "none",
       lg: "lg", 
