@@ -1,4 +1,5 @@
 import { extendTheme, withDefaultColorScheme } from "@chakra-ui/react";
+import { Component } from "react";
 
 export const theme  = extendTheme({
   colors: {
@@ -102,6 +103,14 @@ export const theme  = extendTheme({
       },
     },
   },
+  Components:{
+    Button:{
+      baseStyle: {
+        fontWeight: "bold",
+        borderRadius: "10px",
+      }
+    }
+  }
 
 },
 withDefaultColorScheme({ colorScheme: "purple" })
