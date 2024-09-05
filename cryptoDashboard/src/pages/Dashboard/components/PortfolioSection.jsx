@@ -6,7 +6,8 @@ import { TbArrowBarToUp } from "react-icons/tb";
 
 const PortfolioSection = () => {
   return (
-    <HStack bg="white" borderRadius="xl" p="6" spacing="16">
+    <HStack justify="space-between" bg="white" borderRadius="xl" p="6" spacing="16">
+      <HStack>
       <Stack>
         <HStack color="black.80">
           <Text fontSize="sm">Total Portfolio Value</Text>
@@ -27,11 +28,13 @@ const PortfolioSection = () => {
           </HStack>
         </HStack>
       </Stack>
+
+      </HStack>
       <HStack>
-          <Button>
+          <Button gap="10px">
             <PiArrowLineDownBold /> Deposite
           </Button>
-        <Button>
+        <Button gap="10px">
         <TbArrowBarToUp />
            Withdraw</Button>
       </HStack>
