@@ -1,5 +1,6 @@
 import React from 'react'
 import { CustomCard } from '../../../chakra/CustomCard'
+import { Stack, HStack,Text,Tag } from '@chakra-ui/react'
 
 const PriceSection = () => {
   return (
