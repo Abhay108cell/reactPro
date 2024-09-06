@@ -51,9 +51,9 @@ const PriceSection = () => {
       </HStack>
 
       </Flex>
-      <Image w="100%" src="/Vector1.png"/>
+      <Image w="100%" src="/Vector1.png" mt={"3rem"}/>
       {/* <Image src="/Vector.png"/> */}
-      <HStack>
+      <HStack justify={"space-between"}>
         {timeStamps.map((timeStamps)=>(
           <Text key={timeStamps} fontSize="sm" color="black.80">{timeStamps}</Text>
         ))}
