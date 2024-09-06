@@ -6,6 +6,9 @@ import { BsArrowUpRight } from "react-icons/bs";
 import { FaCircleMinus, FaCirclePlus } from "react-icons/fa6";
 
 const PriceSection = () => {
+
+  const timeStamps = ["6:55 PM", "7:55 PM", "8:55 PM", "9:55 PM", "10:55 PM", "11:55 PM"]
+
   return (
     <CustomCard>
       <Flex justify="space-between" align="start">
@@ -48,8 +51,13 @@ const PriceSection = () => {
       </HStack>
 
       </Flex>
-      <Image src="/Vector1.png"/>
-      <Image src="/Vector.png"/>
+      <Image w="100%" src="/Vector1.png"/>
+      {/* <Image src="/Vector.png"/> */}
+      <HStack>
+        {timeStamps.map((timeStamps)=>(
+          <Text key={timeStamps} fontSize="sm" color="black.80">{timeStamps}</Text>
+        ))}
+      </HStack>
     </CustomCard>
   );
 };
