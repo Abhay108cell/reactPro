@@ -60,12 +60,14 @@ const PriceSection = () => {
           <Button leftIcon={<Icon as={FaCircleMinus} />}>Sell</Button>
         </HStack>
       </Flex>
-      <Tabs variant="soft-rounded" colorScheme="green">
+      <Tabs variant="soft-rounded" >
         <Flex justify="end" >
           <TabList bg="black.5" p="3px">
             {
               ["1H", "1D", "1W", "1M"].map((tab)=>(
-                <Tab key={tab} p="6px" fontSize="sm" borderRadius="4" >
+                <Tab _active={{
+                  bg:"white",
+                }} key={tab} p="6px" fontSize="sm" borderRadius="4" >
                   {tab}
                   </Tab>
               ))
