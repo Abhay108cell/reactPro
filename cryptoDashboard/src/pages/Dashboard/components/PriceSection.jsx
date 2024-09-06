@@ -2,6 +2,7 @@ import React from "react";
 import { CustomCard } from "../../../chakra/CustomCard";
 import { Stack, HStack, Text, Button, Icon,Flex, Image } from "@chakra-ui/react";
 import { BsArrowUpRight } from "react-icons/bs";
+import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
 
 import { FaCircleMinus, FaCirclePlus } from "react-icons/fa6";
 
@@ -51,13 +52,27 @@ const PriceSection = () => {
       </HStack>
 
       </Flex>
-      <Image w="100%" src="/Vector1.png" mt={"3rem"}/>
+      <Tabs variant='soft-rounded' colorScheme='green'>
+  <TabList>
+    <Tab>Tab 1</Tab>
+    <Tab>Tab 2</Tab>
+  </TabList>
+  <TabPanels>
+    <TabPanel>
+    <Image w="100%" src="/Vector1.png" mt={"3rem"}/>
       {/* <Image src="/Vector.png"/> */}
       <HStack justify={"space-between"}>
         {timeStamps.map((timeStamps)=>(
           <Text key={timeStamps} fontSize="sm" color="black.80">{timeStamps}</Text>
         ))}
       </HStack>
+    </TabPanel>
+    <TabPanel>
+      <p>two!</p>
+    </TabPanel>
+  </TabPanels>
+</Tabs>
+     
     </CustomCard>
   );
 };
