@@ -12,11 +12,12 @@ const Dashboard = ({}) => {
         md: "repeat(2, 1fr)",
 
       }}
+      gap={6}
       >
-        <GridItem>
+        <GridItem colSpan={2}>
       <PortfolioSection/>
         </GridItem>
-        <GridItem>
+        <GridItem colSpan={1}>
         <PriceSection/>
         </GridItem>
       </Grid>
