@@ -1,7 +1,9 @@
 import React from "react";
 import { CustomCard } from "../../../chakra/CustomCard";
-import { Stack, HStack, Text, Tag, Icon } from "@chakra-ui/react";
+import { Stack, HStack, Text, Button, Icon } from "@chakra-ui/react";
 import { BsArrowUpRight } from "react-icons/bs";
+import { PiArrowLineDownBold } from "react-icons/pi";
+import { TbArrowBarToUp } from "react-icons/tb";
 
 const PriceSection = () => {
   return (
@@ -39,6 +41,10 @@ const PriceSection = () => {
           </HStack>
         </HStack>
       </Stack>
+      <HStack>
+        <Button leftIcon={<Icon as={PiArrowLineDownBold} />}>Deposite</Button>
+        <Button leftIcon={<Icon as={TbArrowBarToUp} />}>Withdraw</Button>
+      </HStack>
     </CustomCard>
   );
 };
