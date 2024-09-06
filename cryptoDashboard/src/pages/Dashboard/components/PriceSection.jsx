@@ -1,13 +1,14 @@
 import React from "react";
 import { CustomCard } from "../../../chakra/CustomCard";
-import { Stack, HStack, Text, Button, Icon } from "@chakra-ui/react";
+import { Stack, HStack, Text, Button, Icon,Flex } from "@chakra-ui/react";
 import { BsArrowUpRight } from "react-icons/bs";
-import { PiArrowLineDownBold } from "react-icons/pi";
-import { TbArrowBarToUp } from "react-icons/tb";
+
+import { FaCircleMinus, FaCirclePlus } from "react-icons/fa6";
 
 const PriceSection = () => {
   return (
     <CustomCard>
+      <Flex justify="space-between" align="start">
       <Stack>
         <HStack color="black.80">
           <Text fontSize="sm">Wallet Balance</Text>
@@ -42,9 +43,11 @@ const PriceSection = () => {
         </HStack>
       </Stack>
       <HStack>
-        <Button leftIcon={<Icon as={PiArrowLineDownBold} />}>Deposite</Button>
-        <Button leftIcon={<Icon as={TbArrowBarToUp} />}>Withdraw</Button>
+        <Button leftIcon={<Icon as={FaCirclePlus} />}>Buy</Button>
+        <Button leftIcon={<Icon as={FaCircleMinus} />}>Sell</Button>
       </HStack>
+
+      </Flex>
     </CustomCard>
   );
 };
