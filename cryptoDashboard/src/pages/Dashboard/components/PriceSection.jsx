@@ -63,8 +63,13 @@ const PriceSection = () => {
       <Tabs variant="soft-rounded" colorScheme="green">
         <Flex justify="end" >
           <TabList bg="black.5" p="3px">
-            <Tab fontSize="sm" px="6px" borderRadius="4">Tab 2</Tab>
-            <Tab fontSize="sm" >Tab 1</Tab>
+            {
+              ["1H", "1D", "1W", "1M"].map((tab)=>(
+                <Tab key={tab} p="6px" fontSize="sm" borderRadius="4" >
+                  {tab}
+                  </Tab>
+              ))
+            }
           </TabList>
         </Flex>
 
