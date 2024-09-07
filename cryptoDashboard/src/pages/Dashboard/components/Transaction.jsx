@@ -49,6 +49,13 @@ const Transaction = () => {
               <Grid  bg="black.5" boxSize={10} borderRadius="full" placeItems="center">
                 <Icon as={transaction.icon}  />
               </Grid>
+              <Flex justify="space-between">
+                <Stack>
+                  <Text fontSize="sm" color="black.80">{transaction.text}</Text>
+                  <Text fontSize="sm" color="black.40">{transaction.date}</Text>
+
+                </Stack>
+              </Flex>
           </Flex>
         ))}
       </Stack>
