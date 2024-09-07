@@ -10,7 +10,7 @@ import {
   Image,
 } from "@chakra-ui/react";
 import { BsArrowUpRight } from "react-icons/bs";
-import { Tabs, TabList, TabPanels, Tab, TabPanel, } from "@chakra-ui/react";
+import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
 
 import { FaCircleMinus, FaCirclePlus } from "react-icons/fa6";
 
@@ -60,18 +60,20 @@ const PriceSection = () => {
           <Button leftIcon={<Icon as={FaCircleMinus} />}>Sell</Button>
         </HStack>
       </Flex>
-      <Tabs variant="soft-rounded" >
-        <Flex justify="end" >
+      <Tabs variant="soft-rounded">
+        <Flex justify="end">
           <TabList bg="black.5" p="3px">
-            {
-              ["1H", "1D", "1W", "1M"].map((tab)=>(
-                <Tab _active={{
-                  bg:"white",
-                }} key={tab} p="6px" fontSize="sm" borderRadius="4" >
-                  {tab}
-                  </Tab>
-              ))
-            }
+            {["1H", "1D", "1W", "1M"].map((tab) => (
+              <Tab
+                _selected={{ color: "white", bg: "blue.500" }}
+                key={tab}
+                p="6px"
+                fontSize="sm"
+                borderRadius="4"
+              >
+                {tab}
+              </Tab>
+            ))}
           </TabList>
         </Flex>
 
