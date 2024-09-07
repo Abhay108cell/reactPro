@@ -42,19 +42,21 @@ const Transaction = () => {
 
   return (
     <CustomCard>
-      <Text fontSize="sm" color="black.80">Recent Transaction</Text>
+      <Text mb="6" fontSize="sm" color="black.80">Recent Transaction</Text>
       <Stack direction="column" spacing={4}>
         {transaction.map((transaction) => (
           <Flex key={transaction.id} gap="4">
               <Grid  bg="black.5" boxSize={10} borderRadius="full" placeItems="center">
                 <Icon as={transaction.icon}  />
               </Grid>
-              <Flex justify="space-between">
+              <Flex justify="space-between" w="full">
                 <Stack spacing={0}>
                   <Text textStyle="h6">{transaction.text}</Text>
                   <Text fontSize="sm" color="black.40">{transaction.date}</Text>
 
                 </Stack>
+                <Text textStyle="h6">{transaction.amount}</Text>
+
               </Flex>
           </Flex>
         ))}
