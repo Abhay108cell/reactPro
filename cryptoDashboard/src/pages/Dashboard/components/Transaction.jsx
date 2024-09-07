@@ -8,29 +8,33 @@ import {
   Icon,
   Flex,
   Image,
+  Box,
+  Grid,
 } from "@chakra-ui/react";
+import { FaBtc } from 'react-icons/fa6';
+import { HiCurrencyDollar } from 'react-icons/hi';
 
 const Transaction = () => {
 
   const transaction =[
     {
       id: 1,
-      icon: "",
-      text: "INR Deposit",
+      icon: HiCurrencyDollar,
+      text: "Dollar Deposit",
       amount: "+$81,1000",
       date: "2022-01-01 7:06 PM",
       },
     {
       id: 2,
-      icon: "",
+      icon: FaBtc,
       text: "BTC Sell",
       amount: "-$8110.20",
       date: "2022-01-01 8:06 PM",
       },
     {
       id: 3,
-      icon: "",
-      text: "INR Deposit",
+      icon: HiCurrencyDollar,
+      text: "Dollar Deposit",
       amount: "+$95,5000",
       date: "2022-01-01 11:06 PM",
       },
@@ -42,7 +46,9 @@ const Transaction = () => {
       <Stack direction="column" spacing={4}>
         {transaction.map((transaction) => (
           <Flex key={transaction.id}>
-
+              <Grid  bg="black.5" boxSize={10} borderRadius="full" placeItems="center">
+                <Icon as={transaction.icon}  />
+              </Grid>
           </Flex>
         ))}
       </Stack>
