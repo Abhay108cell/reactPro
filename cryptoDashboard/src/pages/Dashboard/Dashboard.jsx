@@ -28,11 +28,15 @@ const Dashboard = ({}) => {
         <GridItem colSpan={1}>
         <InfoCard
         imgURL="public\Loans.svg"
+        text="Learn more about Loans – Keep your Bitcoin, access it’s value without selling it"
+        tagText="Loan"
         />
         </GridItem>
         <GridItem colSpan={1}>
         <InfoCard
-        imgURL="public\Loans.svg"
+        imgURL="public\Visual.svg"
+        text="Learn more about Loans – Keep your Bitcoin, access it’s value without selling it"
+        tagText="Contact"
         />
         </GridItem>
       </Grid>
