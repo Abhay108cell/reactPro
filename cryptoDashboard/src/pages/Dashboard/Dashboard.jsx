@@ -26,7 +26,14 @@ const Dashboard = ({}) => {
         <Transaction/>
         </GridItem>
         <GridItem colSpan={1}>
-        <InfoCard/>
+        <InfoCard
+        imgURL="public\Loans.svg"
+        />
+        </GridItem>
+        <GridItem colSpan={1}>
+        <InfoCard
+        imgURL="public\Loans.svg"
+        />
         </GridItem>
       </Grid>
   </DashboardLayout>
