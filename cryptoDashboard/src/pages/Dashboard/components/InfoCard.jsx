@@ -1,13 +1,17 @@
 import React from 'react'
 import { CustomCard } from '../../../chakra/CustomCard'
-import { Tag } from '@chakra-ui/react'
+import { Tag, Text } from '@chakra-ui/react'
 
-const InfoCard = ({imgURL}) => {
+const InfoCard = ({imgURL, text, tagText}) => {
   return (
     <CustomCard bgImg={imgURL} bgSize="cover" bgRepeat="no-repeat">
 
-      <Tag bg="p.purple" color="white" borderRadius="full">Loan</Tag>
+      <Tag bg="p.purple" color="white" borderRadius="full">{tagText}</Tag>
+      <Text mt="4" fontWeight="medium" textStyle="h5">
+        {text}
+      </Text>
     </CustomCard>
+
   )
 }
 
