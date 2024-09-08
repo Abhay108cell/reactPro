@@ -1,8 +1,13 @@
 import React from 'react'
+import { CustomCard } from '../../../chakra/CustomCard'
 
 const InfoCard = () => {
   return (
-    <div>InfoCard</div>
+    <CustomCard>
+      <Tag>
+        
+      </Tag>
+    </CustomCard>
   )
 }
 
