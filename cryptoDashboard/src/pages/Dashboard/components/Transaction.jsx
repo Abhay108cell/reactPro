@@ -41,10 +41,10 @@ const Transaction = () => {
       <Text mb="6" fontSize="sm" color="black.80">
         Recent Transaction
       </Text>
-      <Stack  >
+      <Stack spacing={4} >
         {transaction.map((transaction, i) => (
           <Fragment key={transaction.id}>
-            {i   !== 0 && <Divider />}
+            {i   !== 0 && <Divider  />}
             <Flex gap="4">
               <Grid
                 bg="black.5"
