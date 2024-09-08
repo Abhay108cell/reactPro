@@ -30,6 +30,7 @@ const Dashboard = ({}) => {
         imgURL="public\Loans.svg"
         text="Learn more about Loans – Keep your Bitcoin, access it’s value without selling it"
         tagText="Loan"
+        inverted={false}
         />
         </GridItem>
         <GridItem colSpan={1}>
@@ -37,6 +38,7 @@ const Dashboard = ({}) => {
         imgURL="public\Visual.svg"
         text="Learn more about Loans – Keep your Bitcoin, access it’s value without selling it"
         tagText="Contact"
+        inverted={true}
         />
         </GridItem>
       </Grid>
