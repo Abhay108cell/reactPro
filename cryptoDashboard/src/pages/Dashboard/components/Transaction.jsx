@@ -7,6 +7,7 @@ import {
   Flex,
   Grid,
   Divider,
+  Button,
 } from "@chakra-ui/react";
 import { FaBtc } from "react-icons/fa6";
 import { HiCurrencyDollar } from "react-icons/hi";
@@ -37,7 +38,7 @@ const Transaction = () => {
   ];
 
   return (
-    <CustomCard>
+    <CustomCard h="full">
       <Text mb="6" fontSize="sm" color="black.80">
         Recent Transaction
       </Text>
@@ -67,6 +68,7 @@ const Transaction = () => {
           </Fragment>
         ))}
       </Stack>
+      <Button w="full" mt="6" colorScheme="gray" >View All</Button>
     </CustomCard>
   );
 };
