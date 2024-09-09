@@ -14,6 +14,9 @@ import {
 const TransactionPage = () => {
   return (
     <DashboardLayout>
+      <Flex justify="end" mt="6">
+        <Button>Export CSV</Button>
+      </Flex>
       <Card>
       transaction page
     </Card>
