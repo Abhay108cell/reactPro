@@ -1,10 +1,11 @@
 import React from 'react'
+import Dashboard from '../Dashboard/Dashboard'
 
 const Support = () => {
   return (
-    <div>
+    <Dashboard>
       support
-    </div>
+    </Dashboard>
   )
 }
 

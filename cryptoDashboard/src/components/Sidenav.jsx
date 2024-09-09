@@ -60,7 +60,8 @@ const Sidenav = () => {
       </Box>
 
       <Box mt="6" mx="3" mb="6">
-        <HStack
+          <Link to="/support">
+          <HStack
           borderRadius="10px"
           py="3"
           px="4"
@@ -71,6 +72,7 @@ const Sidenav = () => {
           <Icon as={BiSupport} />
           <Text fontSize="14px">Support</Text>
         </HStack>
+          </Link>
       </Box>
     </Stack>
   );
