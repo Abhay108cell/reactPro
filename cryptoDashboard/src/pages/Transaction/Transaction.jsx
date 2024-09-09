@@ -1,10 +1,23 @@
 import React from 'react'
+import DashboardLayout from '../../components/DashboardLayout'
+import {
+  Stack,
+  Text,
+  Icon,
+  Flex,
+  Grid,
+  Divider,
+  Button,
+  Card
+} from "@chakra-ui/react";
 
 const TransactionPage = () => {
   return (
-    <div>
+    <DashboardLayout>
+      <Card>
       transaction page
-    </div>
+    </Card>
+    </DashboardLayout>
   )
 }
 
