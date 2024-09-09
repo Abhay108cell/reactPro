@@ -6,16 +6,16 @@ import { BiSupport } from "react-icons/bi";
 import { Link } from "react-router-dom";
 
 const Sidenav = () => {
-  const navLink = [
+  const navLinks = [
     {
       icon: RxDashboard,
       text: "Dashboard",
-      path: "/",
+      link: "/",
     },
     {
       icon: BsArrowDownUp,
-      text: "Transactions",
-      path: "/transaction",
+      text: "Transaction",
+      link: "/transaction",
     },
   ];
 
@@ -37,7 +37,7 @@ const Sidenav = () => {
           Crypto Project
         </Heading>
         <Box mt="6" mx="3">
-          {navLink.map((nav) => (
+          {navLinks.map((nav) => (
             <Link to={nav.link} key={nav.text}>
             <HStack
               borderRadius="10px"
