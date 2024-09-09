@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Transaction = () => {
+const TransactionPage = () => {
   return (
     <div>
-      
+      transaction page
     </div>
   )
 }
 
-export default Transaction
+export default TransactionPage
