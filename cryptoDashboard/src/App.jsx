@@ -2,14 +2,13 @@ import { useState } from 'react'
 import './App.css'
 import Dashboard from './pages/Dashboard/Dashboard'
 import React from 'react'
-import * as React from "react";
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 import "./index.css";
-import Transaction from './pages/Dashboard/components/Transaction';
 import Support from './pages/Support/Support';
+import TransactionPage from './pages/Transaction/Transaction';
 
 const router = createBrowserRouter([
   {
@@ -18,7 +17,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/transaction",
-    element: <Transaction/>,
+    element: <TransactionPage/>,
   },
   {
     path: "/support",
