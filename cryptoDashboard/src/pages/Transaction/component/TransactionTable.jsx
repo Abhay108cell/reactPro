@@ -82,7 +82,7 @@ const TransactionTable = () => {
   ];
   return (
     <TableContainer>
-      <Table variant="simple">
+      <Table variant="simple" colorScheme="gray">
         <TableCaption>Imperial to metric conversion factors</TableCaption>
         <Thead>
           <Tr>
@@ -96,22 +96,22 @@ const TransactionTable = () => {
         <Tbody>
           {tableData.map((data) => (
             <Tr key={data.id}>
-              <Td>{data.id}</Td>
+              <Td fontSize="sm" fontWeight="medium">{data.id}</Td>
               <Td>
                 <Stack>
-                  <Text>{data.date}</Text>
+                  <Text fontSize="sm" fontWeight="medium">{data.date}</Text>
                   <Text>{data.time}</Text>
                 </Stack>
               </Td>
               <Td>
                 {" "}
                 <Stack>
-                  <Text>{data.type.name}</Text>
+                  <Text fontSize="sm" fontWeight="medium">{data.type.name}</Text>
                   <Text>{data.type?.tag}</Text>
                 </Stack>
               </Td>
-              <Td>{data.amount}</Td>
-              <Td>{data.status}</Td>
+              <Td fontSize="sm" fontWeight="medium">{data.amount}</Td>
+              <Td fontSize="sm" fontWeight="medium">{data.status}</Td>
             </Tr>
           ))}
         </Tbody>
