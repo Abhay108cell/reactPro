@@ -14,6 +14,26 @@ import {
 import { TiDownload } from 'react-icons/ti';
 
 const TransactionPage = () => {
+  const tabs = [
+    {
+      name : "All",
+      count: 349
+    },
+    {
+      name : "Deposit",
+      count: 114
+    },
+    {
+      name : "Withdraw",
+      count: 55
+    },
+    {
+      name : "Trade",
+      count: 92
+
+    },
+
+  ]
   return (
     <DashboardLayout>
       <Flex justify="end" mt="6" mb="3">
@@ -22,6 +42,12 @@ const TransactionPage = () => {
       <Card>
       <Tabs>
   <TabList>
+    {tabs.map((tab) => (
+      <Tab key={tab.name}>
+        {tab.name}
+        <Tag>{tab.count}</Tag>
+      </Tab>
+    ))}
     <Tab>One</Tab>
     <Tab>Two</Tab>
     <Tab>Three</Tab>
