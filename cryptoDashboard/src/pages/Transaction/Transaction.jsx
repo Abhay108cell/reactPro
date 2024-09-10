@@ -12,6 +12,7 @@ import {
   Card
 } from "@chakra-ui/react";
 import { TiDownload } from 'react-icons/ti';
+import TransactionTable from './component/TransactionTable';
 
 const TransactionPage = () => {
   const tabs = [
@@ -52,7 +53,7 @@ const TransactionPage = () => {
 
   <TabPanels>
     <TabPanel>
-      <p>one!</p>
+     <TransactionTable/>
     </TabPanel>
     <TabPanel>
       <p>two!</p>
