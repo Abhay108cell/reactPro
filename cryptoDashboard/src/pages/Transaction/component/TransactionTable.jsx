@@ -94,21 +94,24 @@ const TransactionTable = () => {
           </Tr>
         </Thead>
         <Tbody>
-          {tableData.map((data)=>(
+          {tableData.map((data) => (
             <Tr key={data.id}>
-              <Td>
-                {data.id}
-              </Td>
+              <Td>{data.id}</Td>
               <Td>
                 <Stack>
                   <Text>{data.date}</Text>
                   <Text>{data.time}</Text>
                 </Stack>
               </Td>
-              <Td>{data.id}</Td>
-              <Td>{data.id}</Td>
-              <Td>{data.id}</Td>
-              <Td>{data.id}</Td>
+              <Td>
+                {" "}
+                <Stack>
+                  <Text>{data.type.name}</Text>
+                  <Text>{data.type?.tag}</Text>
+                </Stack>
+              </Td>
+              <Td>{data.amount}</Td>
+              <Td>{data.status}</Td>
             </Tr>
           ))}
         </Tbody>
