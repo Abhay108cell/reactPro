@@ -80,10 +80,17 @@ const TransactionTable = () => {
       status: "completed",
     },
   ];
+
+  const statusColor = {
+    pending: "#797E82",
+    processing: "#F5A50B",
+    completed: "#059669",
+    cancelled: "#DC2626",
+  };
+
   return (
     <TableContainer>
       <Table variant="simple" colorScheme="gray">
-        <TableCaption>Imperial to metric conversion factors</TableCaption>
         <Thead>
           <Tr>
             <Th>ID</Th>
@@ -96,22 +103,36 @@ const TransactionTable = () => {
         <Tbody color="p.black">
           {tableData.map((data) => (
             <Tr key={data.id}>
-              <Td fontSize="sm" fontWeight="medium">{data.id}</Td>
+              <Td fontSize="sm" fontWeight="medium">
+                {data.id}
+              </Td>
               <Td>
-                <Stack>
-                  <Text fontSize="sm" fontWeight="medium">{data.date}</Text>
-                  <Text fontSize="xs" color="black.60">{data.time}</Text>
+                <Stack spacing={0}>
+                  <Text fontSize="sm" fontWeight="medium">
+                    {data.date}
+                  </Text>
+                  <Text fontSize="xs" color="black.60">
+                    {data.time}
+                  </Text>
                 </Stack>
               </Td>
               <Td>
                 {" "}
-                <Stack>
-                  <Text fontSize="sm" fontWeight="medium">{data.type.name}</Text>
-                  <Text fontSize="xs" color="black.60">{data.type?.tag}</Text>
+                <Stack spacing={0}>
+                  <Text fontSize="sm" fontWeight="medium">
+                    {data.type.name}
+                  </Text>
+                  <Text fontSize="xs" color="black.60">
+                    {data.type?.tag}
+                  </Text>
                 </Stack>
               </Td>
-              <Td fontSize="sm" fontWeight="medium">{data.amount}</Td>
-              <Td fontSize="sm" fontWeight="medium">{data.status}</Td>
+              <Td fontSize="sm" fontWeight="medium">
+                {data.amount}
+              </Td>
+              <Td fontSize="sm" fontWeight="medium">
+                {data.status}
+              </Td>
             </Tr>
           ))}
         </Tbody>
