@@ -41,7 +41,7 @@ const TransactionPage = () => {
       </Flex>
       <Card>
       <Tabs>
-  <TabList py="4">
+  <TabList pt="4">
     {tabs.map((tab) => (
       <Tab key={tab.name} display="flex" gap="2">
         {tab.name}
