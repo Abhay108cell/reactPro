@@ -1,5 +1,5 @@
 import React from 'react'
-import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
+import { Tabs, TabList, TabPanels, Tab, Tag, TabPanel } from '@chakra-ui/react'
 import DashboardLayout from '../../components/DashboardLayout'
 import {
   Stack,
@@ -41,16 +41,13 @@ const TransactionPage = () => {
       </Flex>
       <Card>
       <Tabs>
-  <TabList>
+  <TabList py="4">
     {tabs.map((tab) => (
-      <Tab key={tab.name}>
+      <Tab key={tab.name} display="flex" gap="2">
         {tab.name}
-        <Tag>{tab.count}</Tag>
+        <Tag colorScheme='gray' borderRadius="full">{tab.count}</Tag>
       </Tab>
     ))}
-    <Tab>One</Tab>
-    <Tab>Two</Tab>
-    <Tab>Three</Tab>
   </TabList>
 
   <TabPanels>
