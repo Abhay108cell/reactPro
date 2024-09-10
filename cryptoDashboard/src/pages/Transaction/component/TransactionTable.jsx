@@ -93,21 +93,21 @@ const TransactionTable = () => {
             <Th>Status</Th>
           </Tr>
         </Thead>
-        <Tbody>
+        <Tbody color="p.black">
           {tableData.map((data) => (
             <Tr key={data.id}>
               <Td fontSize="sm" fontWeight="medium">{data.id}</Td>
               <Td>
                 <Stack>
                   <Text fontSize="sm" fontWeight="medium">{data.date}</Text>
-                  <Text>{data.time}</Text>
+                  <Text fontSize="xs" color="black.60">{data.time}</Text>
                 </Stack>
               </Td>
               <Td>
                 {" "}
                 <Stack>
                   <Text fontSize="sm" fontWeight="medium">{data.type.name}</Text>
-                  <Text>{data.type?.tag}</Text>
+                  <Text fontSize="xs" color="black.60">{data.type?.tag}</Text>
                 </Stack>
               </Td>
               <Td fontSize="sm" fontWeight="medium">{data.amount}</Td>
