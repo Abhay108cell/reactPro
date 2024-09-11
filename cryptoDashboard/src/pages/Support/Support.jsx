@@ -1,10 +1,11 @@
 import React from 'react'
 import DashboardLayout from '../../components/DashboardLayout'
+import SupportCard from './component/SupportCard'
 
 const Support = () => {
   return (
     <DashboardLayout>
-      support
+      <SupportCard/>
     </DashboardLayout>
   )
 }
