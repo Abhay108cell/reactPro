@@ -1,4 +1,4 @@
-import { Flex, Icon, Text } from '@chakra-ui/react'
+import { Flex, Icon, Text,Stack } from '@chakra-ui/react'
 import React from 'react'
 import { IoMail } from 'react-icons/io5'
 
@@ -6,12 +6,12 @@ const SupportCard = () => {
   return (
     <Flex>
       <Stack>
-        <Icon as={IoMail}/>
-        <Text as="h2" textStyle="h2" >Contact Us</Text>
+        <Icon as={IoMail} boxSize={6} color="p.purple"/>
+        <Text fontWeight="sm" as="h1" textStyle="h2" >Contact Us</Text>
         <Text fontSize="sm" color="black.60" >Have a question or just want to know more? Feel free to reach out to us.</Text>
       </Stack>
     </Flex>
-  )
+  ) 
 }
 
 export default SupportCard
