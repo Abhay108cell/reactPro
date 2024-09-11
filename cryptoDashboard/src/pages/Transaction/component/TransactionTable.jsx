@@ -132,7 +132,8 @@ const TransactionTable = () => {
                 {data.amount}
               </Td>
               <Td fontSize="sm" fontWeight="medium">
-                <Tag bg={statusColor[data.status]} color="white">{data.status}</Tag>
+                <Tag bg={statusColor[data.status]} color="white"
+                borderRadius="full">{data.status}</Tag>
               </Td>
             </Tr>
           ))}

@@ -56,10 +56,12 @@ const TransactionPage = () => {
      <TransactionTable/>
     </TabPanel>
     <TabPanel>
-      <p>two!</p>
+    <TransactionTable/>    </TabPanel>
+    <TabPanel>
+    <TransactionTable/>
     </TabPanel>
     <TabPanel>
-      <p>three!</p>
+    <TransactionTable/>
     </TabPanel>
   </TabPanels>
 </Tabs>
