@@ -1,5 +1,5 @@
 import React from 'react'
-import { Tabs, TabList, TabPanels, Tab, Tag, TabPanel } from '@chakra-ui/react'
+import { Tabs, TabList, TabPanels, Tab,PhoneIcon, Tag, TabPanel, InputGroup, InputLeftElement, Input } from '@chakra-ui/react'
 import DashboardLayout from '../../components/DashboardLayout'
 import {
   Stack,
@@ -40,7 +40,7 @@ const TransactionPage = () => {
       <Flex justify="end" mt="6" mb="3">
         <Button leftIcon={<Icon as={TiDownload}/>}>Export CSV</Button>
       </Flex>
-      <Card>
+      <Card borderRadius="1rem">
       <Tabs>
   <TabList pt="4">
     {tabs.map((tab) => (
@@ -49,6 +49,12 @@ const TransactionPage = () => {
         <Tag colorScheme='gray' borderRadius="full">{tab.count}</Tag>
       </Tab>
     ))}
+     <InputGroup>
+    <InputLeftElement pointerEvents='none'>
+      <PhoneIcon color='gray.300' />
+    </InputLeftElement>
+    <Input type='tel' placeholder='Phone number' />
+  </InputGroup>
   </TabList>
 
   <TabPanels>
