@@ -7,7 +7,8 @@ const SupportCard = () => {
     <Flex>
       <Stack>
         <Icon as={IoMail}/>
-        <Text textStyle="h2" >Contact Us</Text>
+        <Text as="h2" textStyle="h2" >Contact Us</Text>
+        <Text fontSize="sm" color="black.60" >Have a question or just want to know more? Feel free to reach out to us.</Text>
       </Stack>
     </Flex>
   )
