@@ -46,7 +46,7 @@ const TransactionPage = () => {
     },
   ];
   return (
-    <DashboardLayout>
+    <DashboardLayout title="Transaction">
       <Flex justify="end" mt="6" mb="3">
         <Button leftIcon={<Icon as={TiDownload} />}>Export CSV</Button>
       </Flex>
@@ -55,7 +55,7 @@ const TransactionPage = () => {
           <TabList pt="4" display="flex" w="full" justifyContent="space-between">
             <HStack>
               {tabs.map((tab) => (
-                <Tab key={tab.name} display="flex" gap="2">
+                <Tab key={tab.name} display="flex" gap="2" pb="4">
                   {tab.name}
                   <Tag colorScheme="gray" borderRadius="full">
                     {tab.count}
@@ -63,7 +63,7 @@ const TransactionPage = () => {
                 </Tab>
               ))}
             </HStack>
-            <InputGroup maxW="200px" pb="2" pr="2">
+            <InputGroup maxW="200px"  pr="6">
               <InputLeftElement pointerEvents="none">
                 <Icon as={IoSearch} />
               </InputLeftElement>
