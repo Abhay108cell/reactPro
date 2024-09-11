@@ -1,6 +1,17 @@
-import React from 'react'
-import { Tabs, TabList, TabPanels, Tab,PhoneIcon, Tag, TabPanel, InputGroup, InputLeftElement, Input } from '@chakra-ui/react'
-import DashboardLayout from '../../components/DashboardLayout'
+import React from "react";
+import {
+  Tabs,
+  TabList,
+  TabPanels,
+  Tab,
+  HStack,
+  Tag,
+  TabPanel,
+  InputGroup,
+  InputLeftElement,
+  Input,
+} from "@chakra-ui/react";
+import DashboardLayout from "../../components/DashboardLayout";
 import {
   Stack,
   Text,
@@ -9,71 +20,75 @@ import {
   Grid,
   Divider,
   Button,
-  Card
+  Card,
 } from "@chakra-ui/react";
-import { TiDownload } from 'react-icons/ti';
-import TransactionTable from './component/TransactionTable';
+import { TiDownload } from "react-icons/ti";
+import TransactionTable from "./component/TransactionTable";
+import { IoSearch } from "react-icons/io5";
 
 const TransactionPage = () => {
   const tabs = [
     {
-      name : "All",
-      count: 349
+      name: "All",
+      count: 349,
     },
     {
-      name : "Deposit",
-      count: 114
+      name: "Deposit",
+      count: 114,
     },
     {
-      name : "Withdraw",
-      count: 55
+      name: "Withdraw",
+      count: 55,
     },
     {
-      name : "Trade",
-      count: 92
-
+      name: "Trade",
+      count: 92,
     },
-
-  ]
+  ];
   return (
     <DashboardLayout>
       <Flex justify="end" mt="6" mb="3">
-        <Button leftIcon={<Icon as={TiDownload}/>}>Export CSV</Button>
+        <Button leftIcon={<Icon as={TiDownload} />}>Export CSV</Button>
       </Flex>
       <Card borderRadius="1rem">
-      <Tabs>
-  <TabList pt="4">
-    {tabs.map((tab) => (
-      <Tab key={tab.name} display="flex" gap="2">
-        {tab.name}
-        <Tag colorScheme='gray' borderRadius="full">{tab.count}</Tag>
-      </Tab>
-    ))}
-     <InputGroup>
-    <InputLeftElement pointerEvents='none'>
-      <PhoneIcon color='gray.300' />
-    </InputLeftElement>
-    <Input type='tel' placeholder='Phone number' />
-  </InputGroup>
-  </TabList>
+        <Tabs>
+          <TabList pt="4" display="flex" w="full" justifyContent="space-between">
+            <HStack>
+              {tabs.map((tab) => (
+                <Tab key={tab.name} display="flex" gap="2">
+                  {tab.name}
+                  <Tag colorScheme="gray" borderRadius="full">
+                    {tab.count}
+                  </Tag>
+                </Tab>
+              ))}
+            </HStack>
+            <InputGroup maxW="200px" pb="2" pr="2">
+              <InputLeftElement pointerEvents="none">
+                <Icon as={IoSearch} />
+              </InputLeftElement>
+              <Input type="tel" placeholder="search..." />
+            </InputGroup>
+          </TabList>
 
-  <TabPanels>
-    <TabPanel>
-     <TransactionTable/>
-    </TabPanel>
-    <TabPanel>
-    <TransactionTable/>    </TabPanel>
-    <TabPanel>
-    <TransactionTable/>
-    </TabPanel>
-    <TabPanel>
-    <TransactionTable/>
-    </TabPanel>
-  </TabPanels>
-</Tabs>
-    </Card>
+          <TabPanels>
+            <TabPanel>
+              <TransactionTable />
+            </TabPanel>
+            <TabPanel>
+              <TransactionTable />{" "}
+            </TabPanel>
+            <TabPanel>
+              <TransactionTable />
+            </TabPanel>
+            <TabPanel>
+              <TransactionTable />
+            </TabPanel>
+          </TabPanels>
+        </Tabs>
+      </Card>
     </DashboardLayout>
-  )
-}
+  );
+};
 
-export default TransactionPage
+export default TransactionPage;
