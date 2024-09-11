@@ -11,6 +11,7 @@ import {
   TableCaption,
   TableContainer,
   Text,
+  Tag,
 } from "@chakra-ui/react";
 
 const TransactionTable = () => {
@@ -131,7 +132,7 @@ const TransactionTable = () => {
                 {data.amount}
               </Td>
               <Td fontSize="sm" fontWeight="medium">
-                {data.status}
+                <Tag bg={statusColor[data.status]} color="white">{data.status}</Tag>
               </Td>
             </Tr>
           ))}
