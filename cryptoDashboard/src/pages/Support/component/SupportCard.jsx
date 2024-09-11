@@ -1,8 +1,13 @@
+import { Flex } from '@chakra-ui/react'
 import React from 'react'
 
 const SupportCard = () => {
   return (
-    <div>SupportCard</div>
+    <Flex>
+      <Stack>
+        
+      </Stack>
+    </Flex>
   )
 }
 
