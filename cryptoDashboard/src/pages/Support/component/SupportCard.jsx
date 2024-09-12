@@ -19,7 +19,7 @@ import { IoMail } from "react-icons/io5";
 const SupportCard = () => {
   return (
     <Flex>
-      <Stack>
+      <Stack >
         <Icon as={IoMail} boxSize={6} color="p.purple" />
         <Text fontWeight="sm" as="h1" textStyle="h2">
           Contact Us
@@ -29,7 +29,10 @@ const SupportCard = () => {
           us.
         </Text>
       </Stack>
+      
       <Card p="6" borderRadius="1rem">
+        <Stack spacing={6}>
+
         <Text fontWeight="medium" fontSize="sm">
           You will receive response within 24 hours of time of submit.
         </Text>
@@ -49,15 +52,19 @@ const SupportCard = () => {
           </FormControl>
           <FormControl>
             <FormLabel>Message</FormLabel>
-            <Textarea type="Message"  placeholder="Enter your e-mail..."/>
+            <Textarea type="Message"  placeholder="Write your message..."/>
           </FormControl>
-          <Checkbox defaultChecked> I agree with
+          <Checkbox defaultChecked>
+            <Text fontSize="xs">
+             I agree with
             <Box as="span" color="p.purple">Terms & Conditions</Box>
+            </Text>
           </Checkbox>
           <Stack>
             <Button>Send a Message</Button>
             <Button colorScheme="gray">Book a Meeting</Button>
           </Stack>
+        </Stack>
       </Card>
     </Flex>
   );
