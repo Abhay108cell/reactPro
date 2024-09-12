@@ -8,6 +8,9 @@ import {
   FormControl,
   FormLabel,
   Input,
+  Textarea,
+  Checkbox,
+  Box,
 } from "@chakra-ui/react";
 import React from "react";
 import { IoMail } from "react-icons/io5";
@@ -43,6 +46,13 @@ const SupportCard = () => {
             <FormLabel>Email</FormLabel>
             <Input type="Email"  placeholder="Enter your e-mail..."/>
           </FormControl>
+          <FormControl>
+            <FormLabel>Message</FormLabel>
+            <Textarea type="Message"  placeholder="Enter your e-mail..."/>
+          </FormControl>
+          <Checkbox defaultChecked> I agree with
+            <Box as="span" color="p.purple">Terms & Conditions</Box>
+          </Checkbox>
       </Card>
     </Flex>
   );
