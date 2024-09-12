@@ -18,7 +18,12 @@ import { IoMail } from "react-icons/io5";
 
 const SupportCard = () => {
   return (
-    <Flex gap={6}>
+    <Flex gap={6}
+    flexDir={{
+      base: "column",
+      xl: "row",
+    }}
+    >
       <Stack maxWidth="380px" >
         <Icon as={IoMail} boxSize={6} color="p.purple" />
         <Text fontWeight="sm" as="h1" textStyle="h2">
@@ -36,7 +41,12 @@ const SupportCard = () => {
         <Text fontWeight="medium" fontSize="sm">
           You will receive response within 24 hours of time of submit.
         </Text>
-        <HStack>
+        <HStack
+         flexDir={{
+          base: "column",
+          md: "row",
+        }}
+        >
           <FormControl>
             <FormLabel>Name</FormLabel>
             <Input type="Name"  placeholder="Enter your name..."/>
