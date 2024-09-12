@@ -108,8 +108,13 @@ export const theme  = extendTheme({
       baseStyle: {
         fontWeight: "bold",
         borderRadius: "10px",
-      }
-    }
+      },
+    },
+    FormLabel: {
+      baseStyle: {
+        fontSize: "sm",
+      },
+    },
   }
 
 },

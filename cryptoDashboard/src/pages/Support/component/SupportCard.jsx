@@ -11,6 +11,7 @@ import {
   Textarea,
   Checkbox,
   Box,
+  Button,
 } from "@chakra-ui/react";
 import React from "react";
 import { IoMail } from "react-icons/io5";
@@ -53,6 +54,10 @@ const SupportCard = () => {
           <Checkbox defaultChecked> I agree with
             <Box as="span" color="p.purple">Terms & Conditions</Box>
           </Checkbox>
+          <Stack>
+            <Button>Send a Message</Button>
+            <Button colorScheme="gray">Book a Meeting</Button>
+          </Stack>
       </Card>
     </Flex>
   );
