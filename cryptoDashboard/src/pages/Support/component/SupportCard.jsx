@@ -18,8 +18,8 @@ import { IoMail } from "react-icons/io5";
 
 const SupportCard = () => {
   return (
-    <Flex>
-      <Stack >
+    <Flex gap={6}>
+      <Stack maxWidth="380px" >
         <Icon as={IoMail} boxSize={6} color="p.purple" />
         <Text fontWeight="sm" as="h1" textStyle="h2">
           Contact Us
@@ -30,7 +30,7 @@ const SupportCard = () => {
         </Text>
       </Stack>
       
-      <Card p="6" borderRadius="1rem">
+      <Card p="6" borderRadius="1rem" flexGrow={1}>
         <Stack spacing={6}>
 
         <Text fontWeight="medium" fontSize="sm">
@@ -61,8 +61,8 @@ const SupportCard = () => {
             </Text>
           </Checkbox>
           <Stack>
-            <Button>Send a Message</Button>
-            <Button colorScheme="gray">Book a Meeting</Button>
+            <Button fontSize="sm">Send a Message</Button>
+            <Button fontSize="sm" colorScheme="gray">Book a Meeting</Button>
           </Stack>
         </Stack>
       </Card>
