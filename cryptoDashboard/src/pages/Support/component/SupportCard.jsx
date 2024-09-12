@@ -31,10 +31,18 @@ const SupportCard = () => {
         </Text>
         <HStack>
           <FormControl>
-            <FormLabel>Email address</FormLabel>
-            <Input type="email" />
+            <FormLabel>Name</FormLabel>
+            <Input type="Name"  placeholder="Enter your name..."/>
+          </FormControl>
+          <FormControl>
+            <FormLabel>Surname</FormLabel>
+            <Input type="Surname"  placeholder="Enter your surname..."/>
           </FormControl>
         </HStack>
+          <FormControl>
+            <FormLabel>Email</FormLabel>
+            <Input type="Email"  placeholder="Enter your e-mail..."/>
+          </FormControl>
       </Card>
     </Flex>
   );
