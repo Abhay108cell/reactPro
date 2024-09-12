@@ -1,4 +1,19 @@
 import React from 'react'
+import {
+  
+  Text,
+  Stack,
+  Card,
+  HStack,
+  FormControl,
+  FormLabel,
+  Input,
+  Textarea,
+  Checkbox,
+  Box,
+  Button,
+} from "@chakra-ui/react";
+
 
 const ContactCard = () => {
   return (

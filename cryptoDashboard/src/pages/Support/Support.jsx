@@ -1,11 +1,12 @@
-import React from 'react'
+
 import DashboardLayout from '../../components/DashboardLayout'
 import SupportCard from './component/SupportCard'
+import ContactCard from './component/ContactCard'
 
 const Support = () => {
   return (
     <DashboardLayout>
-      <SupportCard/>
+      <SupportCard leftComponent={<ContactCard/>}/>
     </DashboardLayout>
   )
 }
