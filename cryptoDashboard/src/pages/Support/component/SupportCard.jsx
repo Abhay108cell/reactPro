@@ -1,30 +1,17 @@
-import {
-  Flex,
-  Icon,
-  Text,
-  Stack,
-  Card,
-  HStack,
-  FormControl,
-  FormLabel,
-  Input,
-  Textarea,
-  Checkbox,
-  Box,
-  Button,
-} from "@chakra-ui/react";
+import { Flex, Icon, Text, Stack } from "@chakra-ui/react";
 import React from "react";
 import { IoMail } from "react-icons/io5";
 
-const SupportCard = () => {
+const SupportCard = ({leftComponent}) => {
   return (
-    <Flex gap={6}
-    flexDir={{
-      base: "column",
-      xl: "row",
-    }}
+    <Flex
+      gap={6}
+      flexDir={{
+        base: "column",
+        xl: "row",
+      }}
     >
-      <Stack maxWidth="380px" >
+      <Stack maxWidth="380px">
         <Icon as={IoMail} boxSize={6} color="p.purple" />
         <Text fontWeight="sm" as="h1" textStyle="h2">
           Contact Us
@@ -34,8 +21,7 @@ const SupportCard = () => {
           us.
         </Text>
       </Stack>
-      
-      
+      {leftComponent}
     </Flex>
   );
 };
