@@ -2,7 +2,7 @@ import { Flex, Icon, Text, Stack } from "@chakra-ui/react";
 import React from "react";
 import { IoMail } from "react-icons/io5";
 
-const SupportCard = ({leftComponent}) => {
+const SupportCard = ({leftComponent, icon, title, text}) => {
   return (
     <Flex
       gap={6}
@@ -12,12 +12,12 @@ const SupportCard = ({leftComponent}) => {
       }}
     >
       <Stack maxWidth="380px">
-        <Icon as={IoMail} boxSize={6} color="p.purple" />
+        <Icon as={icon} boxSize={6} color="p.purple" />
         <Text fontWeight="sm" as="h1" textStyle="h2">
-          Contact Us
+          {title}
         </Text>
         <Text fontSize="sm" color="black.60">
-          Have a question or just want to know more? Feel free to reach out to
+          {text}
           us.
         </Text>
       </Stack>
