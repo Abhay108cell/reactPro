@@ -3,9 +3,17 @@ import { HStack, Icon, Stack, Text, Heading, Box } from "@chakra-ui/react";
 import { RxDashboard } from "react-icons/rx";
 import { BsArrowDownUp } from "react-icons/bs";
 import { BiSupport } from "react-icons/bi";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Sidenav = () => {
+
+     const location= useLocation()
+     console.log(location);
+     
+     const isActiveLink = (link) =>{
+      return location.pathname === link
+     }
+
   const navLinks = [
     {
       icon: RxDashboard,
