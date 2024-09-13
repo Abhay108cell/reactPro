@@ -18,7 +18,12 @@ const Support = () => {
       />
       <SupportCard
         icon={BiSolidMessageRounded}
-        leftComponent={<InfoCard />}
+        leftComponent={<InfoCard 
+          imgURL="public\Visual.svg"
+        text="Learn more about Loans – Keep your Bitcoin, access it’s value without selling it"
+        tagText="Contact"
+        inverted={true}
+        />}
         title={"Live Chat"}
         text={
           " Don’t have time to wait for the answer? Chat with us now."

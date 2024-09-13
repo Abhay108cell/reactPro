@@ -21,7 +21,10 @@ const SupportCard = ({leftComponent, icon, title, text}) => {
           us.
         </Text>
       </Stack>
+      <Box maxWidth="550px">
       {leftComponent}
+
+      </Box>
     </Flex>
   );
 };
