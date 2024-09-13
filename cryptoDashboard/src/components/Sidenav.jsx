@@ -51,11 +51,12 @@ const Sidenav = () => {
               borderRadius="10px"
               py="3"
               px="4"
+              bg={isActiveLink("/support") ? "#f3f3f7" : "transparent"}
+              color={isActiveLink("/support") ? "#171717" : "#797E82"}
               _hover={{
                 bg: "#f3f3f7",
                 color: "#171717",
               }}
-              color="#797E82"
             >
               <Icon as={nav.icon} />
               <Text fontWeight="medium" fontSize="14px">
