@@ -29,6 +29,7 @@ const Sidenav = () => {
 
   return (
     <Stack
+
     bg="white"
     justifyContent="space-between" 
     boxShadow={{
@@ -51,8 +52,8 @@ const Sidenav = () => {
               borderRadius="10px"
               py="3"
               px="4"
-              bg={isActiveLink("/support") ? "#f3f3f7" : "transparent"}
-              color={isActiveLink("/support") ? "#171717" : "#797E82"}
+              bg={isActiveLink(nav.link) ? "#f3f3f7" : "transparent"}
+              color={isActiveLink(nav.link) ? "#171717" : "#797E82"}
               _hover={{
                 bg: "#f3f3f7",
                 color: "#171717",
@@ -71,9 +72,12 @@ const Sidenav = () => {
       <Box mt="6" mx="3" mb="6">
           <Link to="/support">
           <HStack
+
           borderRadius="10px"
           py="3"
           px="4"
+          bg={isActiveLink("/support") ? "#f3f3f7" : "transparent"}
+          color={isActiveLink("/support") ? "#171717" : "#797E82"}
           _hover={{
             bg: "#f3f3f7",
           }}
