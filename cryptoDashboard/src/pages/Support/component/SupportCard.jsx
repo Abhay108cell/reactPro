@@ -21,7 +21,7 @@ const SupportCard = ({leftComponent, icon, title, text}) => {
           us.
         </Text>
       </Stack>
-      <Box maxWidth="550px">
+      <Box maxWidth="550px" w="full">
       {leftComponent}
 
       </Box>

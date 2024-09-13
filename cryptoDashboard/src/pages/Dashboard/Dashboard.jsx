@@ -2,13 +2,14 @@ import React from 'react'
 import DashboardLayout from '../../components/DashboardLayout'
 import PortfolioSection from './components/PortfolioSection'
 import PriceSection from './components/PriceSection'
-import { Grid, GridItem } from '@chakra-ui/react'
+import { Grid, GridItem, Stack } from '@chakra-ui/react'
 import Transaction from './components/Transaction'
 import InfoCard from './components/InfoCard'
 
 const Dashboard = ({}) => {
   return <DashboardLayout title="Dashboard">
-      <Grid
+     <Stack spacing="80px">
+     <Grid
       gridTemplateColumns={{
         base: "repeat(1, 1fr)",
         xl: "repeat(2, 1fr)",
@@ -45,6 +46,7 @@ const Dashboard = ({}) => {
         />
         </GridItem>
       </Grid>
+     </Stack>
   </DashboardLayout>
 }
 
