@@ -1,10 +1,16 @@
-import { Card } from '@chakra-ui/react'
-import React from 'react'
+import { Card, Container, Center } from "@chakra-ui/react";
+import React from "react";
 
 const Signup1 = () => {
   return (
-    <Card p="4" borderRadius="1rem" maxW="408px">Signup1</Card>
-  )
-}
+    <Container>
+      <Center>
+        <Card p="4" borderRadius="1rem" maxW="408px">
+          Signup1
+        </Card>
+      </Center>
+    </Container>
+  );
+};
 
-export default Signup1
+export default Signup1;
