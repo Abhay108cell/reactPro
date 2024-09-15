@@ -10,6 +10,7 @@ import {
   Flex,
   Checkbox,
   Button,
+  Link,
 } from "@chakra-ui/react";
 import React from "react";
 
@@ -53,6 +54,7 @@ const Signup1 = () => {
               </Text>
               </Checkbox>
               <Button>Create Account</Button>
+              <Text textStyle="p3" color="black.60" textAlign="center">Already have an account ? <Link to="/login">Log In</Link></Text>
           </Stack>
         </Card>
       </Center>
