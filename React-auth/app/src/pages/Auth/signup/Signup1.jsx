@@ -9,6 +9,7 @@ import {
   FormLabel,
   Flex,
   Checkbox,
+  Button,
 } from "@chakra-ui/react";
 import React from "react";
 
@@ -21,7 +22,7 @@ const Signup1 = () => {
           <Text textStyle="p2" color="black.60" mt="4">
             Create a free account by filling data below.
           </Text>
-          <Stack mt="10">
+          <Stack mt="10" spacing={6}>
             <Flex gap="4">
               <FormControl>
                 <FormLabel htmlFor="name">Name</FormLabel>
@@ -45,12 +46,13 @@ const Signup1 = () => {
                 <Input for="repeatPassword" type="password" placeholder="Enter your repeat Password..." />
               </FormControl>
               <Checkbox>
-              <Text fontSize="sm">
+              <Text textStyle="p3">
               I agree with <Text as="span" color="p.purple">
                   Terms and Conditions
                 </Text>
               </Text>
               </Checkbox>
+              <Button>Create Account</Button>
           </Stack>
         </Card>
       </Center>
