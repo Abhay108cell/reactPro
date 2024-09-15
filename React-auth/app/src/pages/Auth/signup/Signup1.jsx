@@ -31,6 +31,10 @@ const Signup1 = () => {
                 <Input for="surname" placeholder="Enter your surname..." />
               </FormControl>
             </Flex>
+            <FormControl>
+                <FormLabel htmlFor="email">Email</FormLabel>
+                <Input for="email" type="email" placeholder="Enter your email..." />
+              </FormControl>
           </Stack>
         </Card>
       </Center>
