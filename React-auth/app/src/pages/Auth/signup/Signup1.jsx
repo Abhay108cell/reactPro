@@ -8,6 +8,7 @@ import {
   Input,
   FormLabel,
   Flex,
+  Checkbox,
 } from "@chakra-ui/react";
 import React from "react";
 
@@ -41,8 +42,13 @@ const Signup1 = () => {
               </FormControl>
             <FormControl>
                 <FormLabel htmlFor="repeatPassword">Repeat Password</FormLabel>
-                <Input for="repeatPassword" type="repeatPassword" placeholder="Enter your repeat Password..." />
+                <Input for="repeatPassword" type="password" placeholder="Enter your repeat Password..." />
               </FormControl>
+              <Checkbox>
+                I agree with <Text as="span" color="p.purple">
+                  Terms and Conditions
+                </Text>
+              </Checkbox>
           </Stack>
         </Card>
       </Center>
