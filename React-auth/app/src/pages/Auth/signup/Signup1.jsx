@@ -45,9 +45,11 @@ const Signup1 = () => {
                 <Input for="repeatPassword" type="password" placeholder="Enter your repeat Password..." />
               </FormControl>
               <Checkbox>
-                I agree with <Text as="span" color="p.purple">
+              <Text fontSize="sm">
+              I agree with <Text as="span" color="p.purple">
                   Terms and Conditions
                 </Text>
+              </Text>
               </Checkbox>
           </Stack>
         </Card>
