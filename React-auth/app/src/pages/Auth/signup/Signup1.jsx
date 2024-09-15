@@ -36,12 +36,12 @@ const Signup1 = () => {
                 <Input for="email" type="email" placeholder="Enter your email..." />
               </FormControl>
             <FormControl>
-                <FormLabel htmlFor="password">password</FormLabel>
+                <FormLabel htmlFor="password">Password</FormLabel>
                 <Input for="password" type="password" placeholder="Enter your password..." />
               </FormControl>
             <FormControl>
-                <FormLabel htmlFor="repeatPassword">repeatPassword</FormLabel>
-                <Input for="repeatPassword" type="repeatPassword" placeholder="Enter your repeatPassword..." />
+                <FormLabel htmlFor="repeatPassword">Repeat Password</FormLabel>
+                <Input for="repeatPassword" type="repeatPassword" placeholder="Enter your repeat Password..." />
               </FormControl>
           </Stack>
         </Card>
