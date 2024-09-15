@@ -10,9 +10,9 @@ import {
   Flex,
   Checkbox,
   Button,
-  Link,
 } from "@chakra-ui/react";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Signup1 = () => {
   return (
@@ -54,7 +54,7 @@ const Signup1 = () => {
               </Text>
               </Checkbox>
               <Button>Create Account</Button>
-              <Text textStyle="p3" color="black.60" textAlign="center">Already have an account ? <Link to="/login">Log In</Link></Text>
+              <Text textStyle="p3" color="black.60" textAlign="center">Already have an account ? <Link to="/signin"><Text as="span" color="p.purple">Log In</Text></Link></Text>
           </Stack>
         </Card>
       </Center>
