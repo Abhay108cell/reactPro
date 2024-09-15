@@ -35,6 +35,14 @@ const Signup1 = () => {
                 <FormLabel htmlFor="email">Email</FormLabel>
                 <Input for="email" type="email" placeholder="Enter your email..." />
               </FormControl>
+            <FormControl>
+                <FormLabel htmlFor="password">password</FormLabel>
+                <Input for="password" type="password" placeholder="Enter your password..." />
+              </FormControl>
+            <FormControl>
+                <FormLabel htmlFor="repeatPassword">repeatPassword</FormLabel>
+                <Input for="repeatPassword" type="repeatPassword" placeholder="Enter your repeatPassword..." />
+              </FormControl>
           </Stack>
         </Card>
       </Center>
