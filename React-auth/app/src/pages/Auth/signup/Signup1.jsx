@@ -13,7 +13,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { Link } from "react-router-dom";
-import {Formik, Form, Field} from Formik;
+import {Formik, Form, Field} from formik;
 
 const Signup1 = () => {
   return (
@@ -32,6 +32,11 @@ const Signup1 = () => {
             password: "",
             repeatPassword: "",
            }}
+
+           onSubmit={(values)=>{
+            console.log(values)
+           }}
+
           >
           <Stack mt="10" spacing={6}>
             <Flex gap="4">
