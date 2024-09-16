@@ -24,7 +24,15 @@ const Signup1 = () => {
           <Text textStyle="p2" color="black.60" mt="4">
             Create a free account by filling data below.
           </Text>
-          <Formik>
+          <Formik
+           initialValue={{
+            name: "",
+            surname: "",
+            email: "",
+            password: "",
+            repeatPassword: "",
+           }}
+          >
           <Stack mt="10" spacing={6}>
             <Flex gap="4">
               <FormControl>
