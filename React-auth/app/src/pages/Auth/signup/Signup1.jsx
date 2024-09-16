@@ -38,7 +38,7 @@ const Signup1 = () => {
            }}
 
           >
-            <Form>
+            {()=>(<Form>
             <Stack mt="10" spacing={6}>
             <Flex gap="4">
               <FormControl>
@@ -72,7 +72,8 @@ const Signup1 = () => {
               <Button type="submit">Create Account</Button>
               <Text textStyle="p3" color="black.60" textAlign="center">Already have an account ? <Link to="/signin"><Text as="span" color="p.purple">Log In</Text></Link></Text>
           </Stack>
-            </Form>
+            </Form>)}
+            
           
           </Formik>
         </Card>
