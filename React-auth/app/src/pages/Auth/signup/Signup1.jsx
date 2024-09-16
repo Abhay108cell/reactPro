@@ -32,6 +32,11 @@ const Signup1 = () => {
             password: "",
             repeatPassword: "",
            }}
+
+           onSubmit={(values)=>{
+            console.log(values)
+           }}
+
           >
           <Stack mt="10" spacing={6}>
             <Flex gap="4">
