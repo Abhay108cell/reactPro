@@ -26,22 +26,8 @@ const Signup1 = () => {
           <Text textStyle="p2" color="black.60" mt="4">
             Create a free account by filling data below.
           </Text>
-          <Formik
-           initialValue={{
-            name: "",
-            surname: "",
-            email: "",
-            password: "",
-            repeatPassword: "",
-           }}
-
-           onSubmit={(values)=>{
-            console.log(values)
-           }}
-
-          >
-            {()=>(<Form>
-            <Stack mt="10" spacing={6}>
+          <Formik>
+          <Stack mt="10" spacing={6}>
             <Flex gap="4">
               <FormControl>
                 <FormLabel htmlFor="name">Name</FormLabel>
