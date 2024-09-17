@@ -30,11 +30,13 @@ const Signup1 = () => {
               <Form>
                 <Stack mt="10" spacing={6}>
                   <Flex gap="4">
-                    <Field name="name" >
-                      <FormControl>
-                        <FormLabel htmlFor="name">Name</FormLabel>
-                        <Input for="name" placeholder="Enter your name..." />
-                      </FormControl>
+                    <Field name="name">
+                      {({field, meta}) => (
+                        <FormControl>
+                          <FormLabel htmlFor="name">Name</FormLabel>
+                          <Input for="name" placeholder="Enter your name..." />
+                        </FormControl>
+                      )}
                     </Field>
 
                     <FormControl>
