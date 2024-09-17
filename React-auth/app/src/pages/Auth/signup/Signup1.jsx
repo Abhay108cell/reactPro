@@ -32,9 +32,12 @@ const Signup1 = () => {
                   <Flex gap="4">
                     <Field name="name">
                       {({field, meta}) => (
-                        <FormControl>
+                        <FormControl isInvalid={!!(meta.error && meta.touched)}>
                           <FormLabel htmlFor="name">Name</FormLabel>
-                          <Input for="name" placeholder="Enter your name..." />
+                          <Input
+                          {...field} 
+                          for="name"
+                           placeholder="Enter your name..." />
                         </FormControl>
                       )}
                     </Field>
