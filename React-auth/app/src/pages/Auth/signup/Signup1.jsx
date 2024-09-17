@@ -29,7 +29,7 @@ const Signup1 = () => {
             {() => (
               <Form>
                 <Stack mt="10" spacing={6}>
-                <Flex gap="4">
+                  <Flex gap="4">
                     <Field name="name">
                       {({ field, meta }) => (
                         <FormControl isInvalid={!!(meta.error && meta.touched)}>
@@ -57,32 +57,50 @@ const Signup1 = () => {
                       )}
                     </Field>
                   </Flex>
-                  <FormControl>
-                    <FormLabel htmlFor="email">Email</FormLabel>
-                    <Input
-                      for="email"
-                      type="email"
-                      placeholder="Enter your email..."
-                    />
-                  </FormControl>
-                  <FormControl>
-                    <FormLabel htmlFor="password">Password</FormLabel>
-                    <Input
-                      for="password"
-                      type="password"
-                      placeholder="Enter your password..."
-                    />
-                  </FormControl>
-                  <FormControl>
-                    <FormLabel htmlFor="repeatPassword">
-                      Repeat Password
-                    </FormLabel>
-                    <Input
-                      for="repeatPassword"
-                      type="password"
-                      placeholder="Enter your repeat Password..."
-                    />
-                  </FormControl>
+                  <Field name="email">
+                    {({ field, meta }) => (
+                      <FormControl isInvalid={!!(meta.error && meta.touched)}>
+                        <FormLabel htmlFor="email">Email</FormLabel>
+                        <Input
+                          {...field}
+                          name="email"
+                          type="email"
+                          placeholder="Enter your email...."
+                        />{" "}
+                        <FormErrorMessage>{meta.error}</FormErrorMessage>
+                      </FormControl>
+                    )}
+                  </Field>
+                  <Field name="password">
+                    {({ field, meta }) => (
+                      <FormControl isInvalid={!!(meta.error && meta.touched)}>
+                        <FormLabel htmlFor="password">Password</FormLabel>
+                        <Input
+                          {...field}
+                          name="password"
+                          type="password"
+                          placeholder="Enter your password...."
+                        />{" "}
+                        <FormErrorMessage>{meta.error}</FormErrorMessage>
+                      </FormControl>
+                    )}
+                  </Field>
+                  <Field name="repeatPassword">
+                    {({ field, meta }) => (
+                      <FormControl isInvalid={!!(meta.error && meta.touched)}>
+                        <FormLabel htmlFor="repeatPassword">
+                          Repeat Password
+                        </FormLabel>
+                        <Input
+                          {...field}
+                          name="repeatPassword"
+                          type="password"
+                          placeholder="Enter your repeatPassword...."
+                        />{" "}
+                        <FormErrorMessage>{meta.error}</FormErrorMessage>
+                      </FormControl>
+                    )}
+                  </Field>
                   <Checkbox>
                     <Text textStyle="p3">
                       I agree with{" "}
