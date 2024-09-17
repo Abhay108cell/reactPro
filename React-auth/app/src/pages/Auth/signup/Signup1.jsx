@@ -41,14 +41,17 @@ const Signup1 = () => {
                         </FormControl>
                       )}
                     </Field>
-
-                    <FormControl>
-                      <FormLabel htmlFor="surname">surname</FormLabel>
-                      <Input
-                        for="surname"
-                        placeholder="Enter your surname..."
-                      />
-                    </FormControl>
+                    <Field name="name">
+                      {({field, meta}) => (
+                        <FormControl isInvalid={!!(meta.error && meta.touched)}>
+                          <FormLabel htmlFor="surname">surname</FormLabel>
+                          <Input
+                          {...field} 
+                          for="surname"
+                        placeholder="Enter your surname..."/>
+                        </FormControl>
+                      )}
+                    </Field>
                   </Flex>
                   <FormControl>
                     <FormLabel htmlFor="email">Email</FormLabel>
