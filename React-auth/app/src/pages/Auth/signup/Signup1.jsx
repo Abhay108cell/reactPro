@@ -29,26 +29,30 @@ const Signup1 = () => {
             {() => (
               <Form>
                 <Stack mt="10" spacing={6}>
-                  <Flex gap="4">
+                <Flex gap="4">
                     <Field name="name">
-                      {({field, meta}) => (
+                      {({ field, meta }) => (
                         <FormControl isInvalid={!!(meta.error && meta.touched)}>
                           <FormLabel htmlFor="name">Name</FormLabel>
                           <Input
-                          {...field} 
-                          for="name"
-                           placeholder="Enter your name..." />
+                            {...field}
+                            name="name"
+                            placeholder="Enter your name...."
+                          />
+                          <FormErrorMessage>{meta.error}</FormErrorMessage>
                         </FormControl>
                       )}
                     </Field>
-                    <Field name="name">
-                      {({field, meta}) => (
+                    <Field name="surname">
+                      {({ field, meta }) => (
                         <FormControl isInvalid={!!(meta.error && meta.touched)}>
-                          <FormLabel htmlFor="surname">surname</FormLabel>
+                          <FormLabel htmlFor="surname">Surname</FormLabel>
                           <Input
-                          {...field} 
-                          for="surname"
-                        placeholder="Enter your surname..."/>
+                            {...field}
+                            name="surname"
+                            placeholder="Enter your surname...."
+                          />{" "}
+                          <FormErrorMessage>{meta.error}</FormErrorMessage>
                         </FormControl>
                       )}
                     </Field>
