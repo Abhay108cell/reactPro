@@ -19,65 +19,34 @@ import { Formik, Form, Field } from "formik";
 
 const Signin = () => {
   const signinVaildationScheme = object({
-    name: string().required("Name is Required"),
-    surname: string().required("Surname is Required"),
     email: string().email("Invalid Email").required("Email is Required"),
-    password: string().min(6, "password must be at least 6 charcters").required("Password is Required"),
-    repeatPassword: string().oneOf([ref("password")], "Passwords do not match"),
-
-  })
+    password: string()
+      .min(6, "password must be at least 6 charcters")
+      .required("Password is Required"),
+  });
   return (
     <Container>
       <Center minHeight="100vh">
         <Card p="6" borderRadius="1rem" w="456px">
-          <Text fontWeight="medium" textStyle="h1">Welcome to Crypto App</Text>
+          <Text fontWeight="medium" textStyle="h1">
+            Welcome to Crypto App
+          </Text>
           <Text textStyle="p2" color="black.60" mt="4">
-            Create a free account by filling data below.
+            Enter your credentials to access the account.
           </Text>
           <Formik
-          initialValues={{
-            name:"",
-            surname:"",
-            email:"",
-            password:"",
-            confirmPassword:"",
+            initialValues={{
+              email: "",
+              password: "",
             }}
-            onSubmit={(values)=>{
+            onSubmit={(values) => {
               console.log(values);
             }}
-      validationSchema={signinVaildationScheme}
+            validationSchema={signinVaildationScheme}
           >
             {() => (
               <Form>
                 <Stack mt="10" spacing={6}>
-                  <Flex gap="4">
-                    <Field name="name">
-                      {({ field, meta }) => (
-                        <FormControl isInvalid={!!(meta.error && meta.touched)}>
-                          <FormLabel htmlFor="name">Name</FormLabel>
-                          <Input
-                            {...field}
-                            name="name"
-                            placeholder="Enter your name...."
-                          />
-                          <FormErrorMessage>{meta.error}</FormErrorMessage>
-                        </FormControl>
-                      )}
-                    </Field>
-                     <Field name="surname">
-                      {({ field, meta }) => (
-                        <FormControl isInvalid={!!(meta.error && meta.touched)}>
-                          <FormLabel htmlFor="surname">Surname</FormLabel>
-                          <Input
-                            {...field}
-                            name="surname"
-                            placeholder="Enter your surname...."
-                          />{" "}
-                          <FormErrorMessage>{meta.error}</FormErrorMessage>
-                        </FormControl>
-                      )}
-                    </Field>
-                  </Flex>
                   <Field name="email">
                     {({ field, meta }) => (
                       <FormControl isInvalid={!!(meta.error && meta.touched)}>
@@ -106,22 +75,7 @@ const Signin = () => {
                       </FormControl>
                     )}
                   </Field>
-                  <Field name="repeatPassword">
-                    {({ field, meta }) => (
-                      <FormControl isInvalid={!!(meta.error && meta.touched)}>
-                        <FormLabel htmlFor="repeatPassword">
-                          Repeat Password
-                        </FormLabel>
-                        <Input
-                          {...field}
-                          name="repeatPassword"
-                          type="password"
-                          placeholder="Enter your repeatPassword...."
-                        />{" "}
-                        <FormErrorMessage>{meta.error}</FormErrorMessage>
-                      </FormControl>
-                    )}
-                  </Field>
+
                   <Checkbox>
                     <Text textStyle="p3">
                       I agree with{" "}
