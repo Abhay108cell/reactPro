@@ -17,8 +17,8 @@ import { Link } from "react-router-dom";
 import { object, string, ref } from "yup";
 import { Formik, Form, Field } from "formik";
 
-const Signup1 = () => {
-  const signUpVaildationScheme = object({
+const Signin = () => {
+  const signinVaildationScheme = object({
     name: string().required("Name is Required"),
     surname: string().required("Surname is Required"),
     email: string().email("Invalid Email").required("Email is Required"),
@@ -45,7 +45,7 @@ const Signup1 = () => {
             onSubmit={(values)=>{
               console.log(values);
             }}
-      validationSchema={signUpVaildationScheme}
+      validationSchema={signinVaildationScheme}
           >
             {() => (
               <Form>
@@ -149,4 +149,4 @@ const Signup1 = () => {
   );
 };
 
-export default Signup1;
+export default Signin;
