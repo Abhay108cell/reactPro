@@ -8,6 +8,7 @@ import {
   Input,
   FormLabel,
   Flex,
+  HStack,
   Checkbox,
   Button,
   FormErrorMessage,
@@ -75,15 +76,14 @@ const Signin = () => {
                       </FormControl>
                     )}
                   </Field>
-
-                  <Checkbox>
+                      <HStack>
+                      <Checkbox>
                     <Text textStyle="p3">
-                      I agree with{" "}
-                      <Text as="span" color="p.purple">
-                        Terms and Conditions
-                      </Text>
+                      Remember me
                     </Text>
                   </Checkbox>
+                      </HStack>
+                  
                   <Button type="submit">Create Account</Button>
                   <Text textStyle="p3" color="black.60" textAlign="center">
                     Already have an account ?{" "}
