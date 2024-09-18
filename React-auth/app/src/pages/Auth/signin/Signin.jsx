@@ -84,7 +84,7 @@ const Signin = () => {
                   </Checkbox>
                   <Text>
                     <Link to="/forget-password">
-                    <Text as="span" color="p.purple">Forget password?</Text>
+                    <Text textStyle="p3" as="span" color="p.purple">Forget password?</Text>
                     </Link>
                   </Text>
                       </HStack>
