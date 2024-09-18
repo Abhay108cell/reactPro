@@ -82,6 +82,11 @@ const Signin = () => {
                       Remember me
                     </Text>
                   </Checkbox>
+                  <Text>
+                    <Link to="/forget-password">
+                    <Text as="span" color="p.purple">Forget password?</Text>
+                    </Link>
+                  </Text>
                       </HStack>
                   
                   <Button type="submit">Create Account</Button>
