@@ -41,6 +41,10 @@ const Signup1 = () => {
             password:"",
             confirmPassword:"",
             }}
+            onSubmit={(values)=>{
+              console.log(values);
+            }}
+      validationSchema={signUpVaildationScheme}
           >
             {() => (
               <Form>
