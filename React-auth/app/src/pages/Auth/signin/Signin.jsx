@@ -76,17 +76,17 @@ const Signin = () => {
                       </FormControl>
                     )}
                   </Field>
-                      <HStack>
+                      <HStack justify="space-between">
                       <Checkbox>
                     <Text textStyle="p3">
                       Remember me
                     </Text>
                   </Checkbox>
-                  <Text>
+                 
                     <Link to="/forget-password">
                     <Text textStyle="p3" as="span" color="p.purple">Forget password?</Text>
                     </Link>
-                  </Text>
+                
                       </HStack>
                   
                   <Button type="submit">Create Account</Button>
