@@ -13,10 +13,18 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { Link } from "react-router-dom";
-
+import { object, string, ref } from "yup";
 import { Formik, Form, Field } from "formik";
 
 const Signup1 = () => {
+  const signUpVaildationScheme = object({
+    name: string().required("Name is Required"),
+    surname: string().required("Surname is Required"),
+    email: string().email("Invalid Email").required("Email is Required"),
+    password: string().min(6, "password must be at least 6 charcters").required("Password is Required"),
+    repeatPassword: string().oneOf([ref("password")], "Passwords do not match"),
+
+  })
   return (
     <Container>
       <Center minHeight="100vh">
@@ -25,7 +33,15 @@ const Signup1 = () => {
           <Text textStyle="p2" color="black.60" mt="4">
             Create a free account by filling data below.
           </Text>
-          <Formik>
+          <Formik
+          initialValues={{
+            name:"",
+            surname:"",
+            email:"",
+            password:"",
+            confirmPassword:"",
+            }}
+          >
             {() => (
               <Form>
                 <Stack mt="10" spacing={6}>
