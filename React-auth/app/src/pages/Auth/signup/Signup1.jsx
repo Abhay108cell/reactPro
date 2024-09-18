@@ -10,6 +10,7 @@ import {
   Flex,
   Checkbox,
   Button,
+  FormErrorMessage,
 } from "@chakra-ui/react";
 import React from "react";
 import { Link } from "react-router-dom";
@@ -28,7 +29,7 @@ const Signup1 = () => {
   return (
     <Container>
       <Center minHeight="100vh">
-        <Card p="6" borderRadius="1rem" W="456px">
+        <Card p="6" borderRadius="1rem" w="456px">
           <Text textStyle="h1">Welcome to Crypto App</Text>
           <Text textStyle="p2" color="black.60" mt="4">
             Create a free account by filling data below.
@@ -63,7 +64,7 @@ const Signup1 = () => {
                         </FormControl>
                       )}
                     </Field>
-                    <Field name="surname">
+                     <Field name="surname">
                       {({ field, meta }) => (
                         <FormControl isInvalid={!!(meta.error && meta.touched)}>
                           <FormLabel htmlFor="surname">Surname</FormLabel>
