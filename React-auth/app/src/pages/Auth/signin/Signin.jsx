@@ -90,6 +90,9 @@ const Signin = () => {
                       </HStack>
                   
                   <Button type="submit">Login</Button>
+                  <Link to="/signup1">
+                      <Button w="full">Create Account</Button>
+                    </Link>
                   <Text textStyle="p3" color="black.60" textAlign="center">
                     Already have an account ?{" "}
                     <Link to="/signin">
