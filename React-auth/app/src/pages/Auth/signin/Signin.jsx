@@ -12,6 +12,7 @@ import {
   Checkbox,
   Button,
   FormErrorMessage,
+  Box,
 } from "@chakra-ui/react";
 import React from "react";
 import { Link } from "react-router-dom";
@@ -88,19 +89,14 @@ const Signin = () => {
                     </Link>
                 
                       </HStack>
+                  <Box>
+                  <Button w="full" type="submit">Login</Button>
+                  <Link to="/singup">
+                      <Button variant="outline" mt="3"w="full">Create Account</Button>
+                    </Link>
+                  </Box>
                   
-                  <Button type="submit">Login</Button>
-                  <Link to="/signup1">
-                      <Button w="full">Create Account</Button>
-                    </Link>
-                  <Text textStyle="p3" color="black.60" textAlign="center">
-                    Already have an account ?{" "}
-                    <Link to="/signin">
-                      <Text as="span" color="p.purple">
-                        Log In
-                      </Text>
-                    </Link>
-                  </Text>
+                
                 </Stack>
               </Form>
             )}
