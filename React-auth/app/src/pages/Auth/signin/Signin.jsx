@@ -16,7 +16,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { Link } from "react-router-dom";
-import { object, string, ref } from "yup";
+import { object, string } from "yup";
 import { Formik, Form, Field } from "formik";
 
 const Signin = () => {
