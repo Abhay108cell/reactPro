@@ -1,7 +1,7 @@
 import { Card as ChakraCard } from '@chakra-ui/react'
 import React from 'react'
 
-const Card = () => {
+const Card = ({children}) => {
   return (
     <ChakraCard
     bg={{
@@ -22,6 +22,7 @@ const Card = () => {
     }}
     w="456px"
   >
+    {children}
     </ChakraCard>
   )
 }
