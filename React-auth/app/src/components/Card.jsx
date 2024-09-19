@@ -1,8 +1,9 @@
+import { Card as ChakraCard } from '@chakra-ui/react'
 import React from 'react'
 
 const Card = () => {
   return (
-    <Card
+    <ChakraCard
     bg={{
       base: "transparent",
       md: "white",
@@ -21,7 +22,7 @@ const Card = () => {
     }}
     w="456px"
   >
-    </Card>
+    </ChakraCard>
   )
 }
 
