@@ -27,12 +27,27 @@ const Signin = () => {
       .required("Password is Required"),
   });
   return (
-    <Container>
+    <Container bg="white">
       <Center minHeight="100vh">
-        <Card p="6" borderRadius={{
-          base: "none",
-          md: "1rem",
-        }} w="456px">
+        <Card
+          bg={{
+            base: "transparent",
+            md: "white",
+          }}
+          p={{
+            base: "0",
+            md: "6",
+          }}
+          borderRadius={{
+            base: "none",
+            md: "1rem",
+          }}
+          boxShadow={{
+            base: "none",
+            md: "0 4px 20px rgba(0, 0, 0, 0.05)",
+          }}
+          w="456px"
+        >
           <Text fontWeight="medium" textStyle="h1">
             Welcome to Crypto App
           </Text>
@@ -80,26 +95,27 @@ const Signin = () => {
                       </FormControl>
                     )}
                   </Field>
-                      <HStack justify="space-between">
-                      <Checkbox>
-                    <Text textStyle="p3">
-                      Remember me
-                    </Text>
-                  </Checkbox>
-                 
+                  <HStack justify="space-between">
+                    <Checkbox>
+                      <Text textStyle="p3">Remember me</Text>
+                    </Checkbox>
+
                     <Link to="/forget-password">
-                    <Text textStyle="p3" as="span" color="p.purple">Forget password?</Text>
+                      <Text textStyle="p3" as="span" color="p.purple">
+                        Forget password?
+                      </Text>
                     </Link>
-                
-                      </HStack>
+                  </HStack>
                   <Box>
-                  <Button w="full" type="submit">Login</Button>
-                  <Link to="/signup">
-                      <Button variant="outline" mt="3"w="full">Create Account</Button>
+                    <Button w="full" type="submit">
+                      Login
+                    </Button>
+                    <Link to="/signup">
+                      <Button variant="outline" mt="3" w="full">
+                        Create Account
+                      </Button>
                     </Link>
                   </Box>
-                  
-                
                 </Stack>
               </Form>
             )}
