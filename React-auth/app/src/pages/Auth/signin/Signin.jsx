@@ -29,7 +29,10 @@ const Signin = () => {
   return (
     <Container>
       <Center minHeight="100vh">
-        <Card p="6" borderRadius="1rem" w="456px">
+        <Card p="6" borderRadius={{
+          base: "none",
+          md: "1rem",
+        }} w="456px">
           <Text fontWeight="medium" textStyle="h1">
             Welcome to Crypto App
           </Text>
@@ -91,7 +94,7 @@ const Signin = () => {
                       </HStack>
                   <Box>
                   <Button w="full" type="submit">Login</Button>
-                  <Link to="/singup">
+                  <Link to="/signup">
                       <Button variant="outline" mt="3"w="full">Create Account</Button>
                     </Link>
                   </Box>
