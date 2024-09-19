@@ -1,5 +1,4 @@
 import {
-  Card,
   Container,
   Center,
   Text,
@@ -16,6 +15,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { object, string, ref } from "yup";
 import { Formik, Form, Field } from "formik";
+import Card from "../../../components/Card";
 
 const Signup = () => {
   const signUpVaildationScheme = object({
@@ -29,7 +29,7 @@ const Signup = () => {
   return (
     <Container>
       <Center minHeight="100vh">
-        <Card p="6" borderRadius="1rem" w="456px">
+        <Card>
           <Text fontWeight="medium" textStyle="h1">Welcome to Crypto App</Text>
           <Text textStyle="p2" color="black.60" mt="4">
             Create a free account by filling data below.
