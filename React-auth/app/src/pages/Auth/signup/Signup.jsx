@@ -27,7 +27,7 @@ const Signup = () => {
 
   })
   return (
-    <Container>
+    <Container bg="white">
       <Center minHeight="100vh">
         <Card>
           <Text fontWeight="medium" textStyle="h1">Welcome to Crypto App</Text>
