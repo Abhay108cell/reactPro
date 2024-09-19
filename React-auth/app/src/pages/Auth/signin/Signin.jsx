@@ -1,5 +1,4 @@
 import {
-  Card,
   Container,
   Center,
   Text,
@@ -18,7 +17,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { object, string } from "yup";
 import { Formik, Form, Field } from "formik";
-
+import Card from "../../../components/Card";
 const Signin = () => {
   const signinVaildationScheme = object({
     email: string().email("Invalid Email").required("Email is Required"),
@@ -29,25 +28,7 @@ const Signin = () => {
   return (
     <Container bg="white">
       <Center minHeight="100vh">
-        <Card
-          bg={{
-            base: "transparent",
-            md: "white",
-          }}
-          p={{
-            base: "0",
-            md: "6",
-          }}
-          borderRadius={{
-            base: "none",
-            md: "1rem",
-          }}
-          boxShadow={{
-            base: "none",
-            md: "0 4px 20px rgba(0, 0, 0, 0.05)",
-          }}
-          w="456px"
-        >
+        <Card>
           <Text fontWeight="medium" textStyle="h1">
             Welcome to Crypto App
           </Text>
