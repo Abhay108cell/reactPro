@@ -17,7 +17,7 @@ import { Link } from "react-router-dom";
 import { object, string, ref } from "yup";
 import { Formik, Form, Field } from "formik";
 
-const Signup1 = () => {
+const Signup = () => {
   const signUpVaildationScheme = object({
     name: string().required("Name is Required"),
     surname: string().required("Surname is Required"),
@@ -149,4 +149,4 @@ const Signup1 = () => {
   );
 };
 
-export default Signup1;
+export default Signup;
