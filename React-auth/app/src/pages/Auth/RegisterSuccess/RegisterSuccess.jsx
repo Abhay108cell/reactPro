@@ -1,14 +1,14 @@
 import React from "react";
 import Card from "../../../components/Card";
 import { Box, Button, Center, Icon, Text, VStack } from "@chakra-ui/react";
-import { MdEmail } from "react-icons/md";
+import { BsPatchCheckFill } from "react-icons/bs";
 
 const RegisterSuccess = () => {
   return (
    <Center minH="100vh">
      <Card>
       <VStack spacing={6}>
-        <Icon as={MdEmail} boxSize="48px" color="p.purple" />
+        <Icon as={BsPatchCheckFill} boxSize="48px" color="green" />
         <Text  textStyle="h4" color="p.black" fontWeight="medium">
         Successfully Registration
         </Text>
