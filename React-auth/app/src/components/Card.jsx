@@ -11,7 +11,7 @@ const Card = ({children}) => {
     p={{
       base: "0",
       md: "6",
-    }}
+    }} 
     borderRadius={{
       base: "none",
       md: "1rem",
