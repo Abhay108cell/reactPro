@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "../../../components/Card";
-import { Icon, Text, VStack } from "@chakra-ui/react";
+import { Button, Icon, Text, VStack } from "@chakra-ui/react";
 import { MdEmail } from "react-icons/md";
 
 const RegisterEmailVerify = () => {
@@ -11,10 +11,11 @@ const RegisterEmailVerify = () => {
         <Text textStyle="h4" color="p.black">
           Email Verification
         </Text>
-        <Text textStyle="p2" color="p.black">
+        <Text textStyle="p2" color="black.60">
           We have sent you an email verification abhay@gmail . If you didn’t
           receive it, click the button below.
         </Text>
+        <Button variant="outline">Re-send Email</Button>
       </VStack>
     </Card>
   );
