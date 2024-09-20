@@ -2,6 +2,7 @@ import React from "react";
 import Card from "../../../components/Card";
 import { Box, Button, Center, Icon, Text, VStack } from "@chakra-ui/react";
 import { BsPatchCheckFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const RegisterSuccess = () => {
   return (
@@ -15,7 +16,12 @@ const RegisterSuccess = () => {
         <Text textAlign="center" textStyle="p2" color="black.60">
         Hurray! You have successfully created your account. Enter the app to explore all it’s features.
         </Text>
+       <Box w="full">
+       <Link to="/signin">
         <Button w="full" >Enter the app</Button>
+        </Link>
+       </Box>
+       
       </VStack>
     </Card>
    </Center>
