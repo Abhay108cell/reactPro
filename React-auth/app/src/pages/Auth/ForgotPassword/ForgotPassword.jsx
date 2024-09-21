@@ -1,24 +1,103 @@
 import React from "react";
 import Card from "../../../components/Card";
-import { Box, Button, Center, Icon, Text, VStack } from "@chakra-ui/react";
-import { MdEmail } from "react-icons/md";
+import {
+  Container,
+  Center,
+  Text,
+  Stack,
+  FormControl,
+  Input,
+  FormLabel,
+  Flex,
+  HStack,
+  Checkbox,
+  Button,
+  FormErrorMessage,
+  Box,
+} from "@chakra-ui/react";
+import { Link } from "react-router-dom";
+import { object, string } from "yup";
+import { Formik, Form, Field } from "formik";
 
 const ForgotPassword = () => {
   return (
-   <Center minH="100vh">
-     <Card>
-      <VStack spacing={6}>
-        <Icon as={MdEmail} boxSize="48px" color="p.purple" />
-        <Text  textStyle="h4" color="p.black" fontWeight="medium">
-          Email Verification
+    <Center minH="100vh">
+      <Card>
+        <Text fontWeight="medium" textStyle="h1">
+          Forgot Password
         </Text>
-        <Text textAlign="center" textStyle="p2" color="black.60">
-          We have sent you an email verification <Box as="b" color="p.black">abhay@gmail.com</Box> . If you didn’t receive it, click the button below.
+        <Text textStyle="p2" color="black.60" mt="4">
+          Enter your email address for which account you want to reset your
+          password.
         </Text>
-        <Button w="full" variant="outline">Re-send Email</Button>
-      </VStack>
-    </Card>
-   </Center>
+        <Formik
+          initialValues={{
+            email: "",
+            
+          }}
+          onSubmit={(values) => {
+            console.log(values);
+          }}
+          // validationSchema={signinVaildationScheme}
+        >
+          {() => (
+            <Form>
+              <Stack mt="10" spacing={6}>
+                <Field name="email">
+                  {({ field, meta }) => (
+                    <FormControl isInvalid={!!(meta.error && meta.touched)}>
+                      <FormLabel htmlFor="email">Email</FormLabel>
+                      <Input
+                        {...field}
+                        name="email"
+                        type="email"
+                        placeholder="Enter your email...."
+                      />{" "}
+                      <FormErrorMessage>{meta.error}</FormErrorMessage>
+                    </FormControl>
+                  )}
+                </Field>
+                <Field name="password">
+                  {({ field, meta }) => (
+                    <FormControl isInvalid={!!(meta.error && meta.touched)}>
+                      <FormLabel htmlFor="password">Password</FormLabel>
+                      <Input
+                        {...field}
+                        name="password"
+                        type="password"
+                        placeholder="Enter your password...."
+                      />{" "}
+                      <FormErrorMessage>{meta.error}</FormErrorMessage>
+                    </FormControl>
+                  )}
+                </Field>
+                <HStack justify="space-between">
+                  <Checkbox>
+                    <Text textStyle="p3">Remember me</Text>
+                  </Checkbox>
+
+                  <Link to="/forget-password">
+                    <Text textStyle="p3" as="span" color="p.purple">
+                      Forget password?
+                    </Text>
+                  </Link>
+                </HStack>
+                <Box>
+                  <Button w="full" type="submit">
+                    Login
+                  </Button>
+                  <Link to="/signup">
+                    <Button variant="outline" mt="3" w="full">
+                      Create Account
+                    </Button>
+                  </Link>
+                </Box>
+              </Stack>
+            </Form>
+          )}
+        </Formik>
+      </Card>
+    </Center>
   );
 };
 
