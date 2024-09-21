@@ -10,12 +10,13 @@ const ForgotPasswordSend = () => {
       <VStack spacing={6}>
         <Icon as={MdEmail} boxSize="48px" color="p.purple" />
         <Text  textStyle="h4" color="p.black" fontWeight="medium">
-          Email Verification
+         Successfully Sent
         </Text>
         <Text textAlign="center" textStyle="p2" color="black.60">
-          We have sent you an email verification <Box as="b" color="p.black">abhay@gmail.com</Box> . If you didn’t receive it, click the button below.
+          We have sent you an email verification <Box as="b" color="p.black">abhay@gmail.com</Box> Please follow the instructions from the email. We have sent you an
+          email verification to{" "}
         </Text>
-        <Button w="full" variant="outline">Re-send Email</Button>
+        
       </VStack>
     </Card>
    </Center>
