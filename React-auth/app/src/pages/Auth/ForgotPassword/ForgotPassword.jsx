@@ -57,41 +57,9 @@ const ForgotPassword = () => {
                     </FormControl>
                   )}
                 </Field>
-                <Field name="password">
-                  {({ field, meta }) => (
-                    <FormControl isInvalid={!!(meta.error && meta.touched)}>
-                      <FormLabel htmlFor="password">Password</FormLabel>
-                      <Input
-                        {...field}
-                        name="password"
-                        type="password"
-                        placeholder="Enter your password...."
-                      />{" "}
-                      <FormErrorMessage>{meta.error}</FormErrorMessage>
-                    </FormControl>
-                  )}
-                </Field>
-                <HStack justify="space-between">
-                  <Checkbox>
-                    <Text textStyle="p3">Remember me</Text>
-                  </Checkbox>
-
-                  <Link to="/forget-password">
-                    <Text textStyle="p3" as="span" color="p.purple">
-                      Forget password?
-                    </Text>
-                  </Link>
-                </HStack>
-                <Box>
                   <Button w="full" type="submit">
                     Login
                   </Button>
-                  <Link to="/signup">
-                    <Button variant="outline" mt="3" w="full">
-                      Create Account
-                    </Button>
-                  </Link>
-                </Box>
               </Stack>
             </Form>
           )}
