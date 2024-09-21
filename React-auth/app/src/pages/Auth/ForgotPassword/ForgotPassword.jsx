@@ -29,9 +29,9 @@ const ForgotPassword = () => {
     <Center minH="100vh">
       <Card>
         <Link to="/signin">
-        <Icon as={FaArrowLeft}/>
+        <Icon as={FaArrowLeft} boxSize="6" />
         </Link>
-        <Text fontWeight="medium" textStyle="h1">
+        <Text mt="4" fontWeight="medium" textStyle="h1">
           Forgot Password
         </Text>
         <Text textStyle="p2" color="black.60" mt="4">
@@ -50,7 +50,7 @@ const ForgotPassword = () => {
         >
           {() => (
             <Form>
-              <Stack mt="10" spacing={6}>
+              <Stack mt="8" spacing={6}>
                 <Field name="email">
                   {({ field, meta }) => (
                     <FormControl isInvalid={!!(meta.error && meta.touched)}>
