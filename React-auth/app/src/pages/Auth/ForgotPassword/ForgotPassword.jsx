@@ -20,15 +20,15 @@ import { object, string } from "yup";
 import { Formik, Form, Field } from "formik";
 
 const ForgotPassword = () => {
-  const signinVaildationScheme = object({
+  const ForgotPasswordVaildationScheme = object({
     email: string().email("Invalid Email").required("Email is Required"),
-    password: string()
-      .min(6, "password must be at least 6 charcters")
-      .required("Password is Required"),
   });
   return (
     <Center minH="100vh">
       <Card>
+        <Link>
+        <Icon as={}/>
+        </Link>
         <Text fontWeight="medium" textStyle="h1">
           Forgot Password
         </Text>
@@ -44,7 +44,7 @@ const ForgotPassword = () => {
           onSubmit={(values) => {
             console.log(values);
           }}
-          validationSchema={signinVaildationScheme}
+          validationSchema={ForgotPasswordVaildationScheme}
         >
           {() => (
             <Form>
