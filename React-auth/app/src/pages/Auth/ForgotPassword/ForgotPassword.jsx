@@ -14,10 +14,12 @@ import {
   Button,
   FormErrorMessage,
   Box,
+  Icon,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { object, string } from "yup";
 import { Formik, Form, Field } from "formik";
+import { FaArrowLeft } from "react-icons/fa";
 
 const ForgotPassword = () => {
   const ForgotPasswordVaildationScheme = object({
@@ -26,8 +28,8 @@ const ForgotPassword = () => {
   return (
     <Center minH="100vh">
       <Card>
-        <Link>
-        <Icon as={}/>
+        <Link to="/signin">
+        <Icon as={FaArrowLeft}/>
         </Link>
         <Text fontWeight="medium" textStyle="h1">
           Forgot Password
