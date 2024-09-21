@@ -6,7 +6,12 @@ import { MdEmail } from "react-icons/md";
 const ForgotPasswordSend = () => {
   return (
    <Center minH="100vh">
-     <Card>
+     <Card
+      p={{
+        base: "0",
+        md: "10",
+      }} 
+     >
       <VStack spacing={6}>
         <Icon as={MdEmail} boxSize="48px" color="p.purple" />
         <Text  textStyle="h4" color="p.black" fontWeight="medium">
