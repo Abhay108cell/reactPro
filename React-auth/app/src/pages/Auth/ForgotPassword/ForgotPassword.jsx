@@ -26,7 +26,8 @@ const ForgotPassword = () => {
     email: string().email("Invalid Email").required("Email is Required"),
   });
   return (
-    <Center minH="100vh">
+    <Container>
+      <Center minH="100vh">
       <Card>
         <Link to="/signin">
         <Icon as={FaArrowLeft} boxSize="6" />
@@ -74,6 +75,7 @@ const ForgotPassword = () => {
         </Formik>
       </Card>
     </Center>
+    </Container>
   );
 };
 
