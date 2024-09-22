@@ -28,53 +28,70 @@ const ResetPassword = () => {
   return (
     <Container>
       <Center minH="100vh">
-      <Card>
-        <Link to="/signin">
-        <Icon as={FaArrowLeft} boxSize="6" />
-        </Link>
-        <Text mt="4" fontWeight="medium" textStyle="h1">
-          Forgot Password
-        </Text>
-        <Text textStyle="p2" color="black.60" mt="4">
-          Enter your email address for which account you want to reset your
-          password.
-        </Text>
-        <Formik
-          initialValues={{
-            email: "",
-            
-          }}
-          onSubmit={(values) => {
-            console.log(values);
-          }}
-          validationSchema={ResetPasswordVaildationScheme}
-        >
-          {() => (
-            <Form>
-              <Stack mt="8" spacing={6}>
-                <Field name="email">
-                  {({ field, meta }) => (
-                    <FormControl isInvalid={!!(meta.error && meta.touched)}>
-                      <FormLabel htmlFor="email">Email</FormLabel>
-                      <Input
-                        {...field}
-                        name="email"
-                        type="email"
-                        placeholder="Enter your email...."
-                      />{" "}
-                      <FormErrorMessage>{meta.error}</FormErrorMessage>
-                    </FormControl>
-                  )}
-                </Field>
+        <Card>
+          <Link to="/signin">
+            <Icon as={FaArrowLeft} boxSize="6" />
+          </Link>
+          <Text mt="4" fontWeight="medium" textStyle="h1">
+            Forgot Password
+          </Text>
+          <Text textStyle="p2" color="black.60" mt="4">
+            Enter your email address for which account you want to reset your
+            password.
+          </Text>
+          <Formik
+            initialValues={{
+              password: "",
+              confirmPassword: "",
+            }}
+            onSubmit={(values) => {
+              console.log(values);
+            }}
+            validationSchema={ResetPasswordVaildationScheme}
+          >
+            {() => (
+              <Form>
+                <Stack mt="8" spacing={6}>
+                  <Field name="password">
+                    {({ field, meta }) => (
+                      <FormControl isInvalid={!!(meta.error && meta.touched)}>
+                        <FormLabel htmlFor="password">Password</FormLabel>
+                        <Input
+                          {...field}
+                          name="password"
+                          type="password"
+                          placeholder="Enter your password...."
+                        />{" "}
+                        <FormErrorMessage>{meta.error}</FormErrorMessage>
+                      </FormControl>
+                    )}
+                  </Field>
+                  <Field name="repeatPassword">
+                    {({ field, meta }) => (
+                      <FormControl isInvalid={!!(meta.error && meta.touched)}>
+                        <FormLabel htmlFor="repeatPassword">
+                          Repeat Password
+                        </FormLabel>
+                        <Input
+                          {...field}
+                          name="repeatPassword"
+                          type="password"
+                          placeholder="Enter your repeatPassword...."
+                        />{" "}
+                        <FormErrorMessage>{meta.error}</FormErrorMessage>
+                      </FormControl>
+                    )}
+                  </Field>
+
                   <Button w="full" type="submit">
                     Reset Password
                   </Button>
-              </Stack>
-            </Form>
-          )}
-        </Formik>
-      </Card>
-    </Center>
+                </Stack>
+              </Form>
+            )}
+          </Formik>
+        </Card>
+      </Center>
     </Container>
   );
 };
