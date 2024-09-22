@@ -8,9 +8,10 @@ const ForgotPasswordSend = () => {
    <Center minH="100vh">
      <Card
       p={{
-        base: "0",
+        base: "4",
         md: "10",
       }} 
+      showCard={true}
      >
       <VStack spacing={6}>
         <Icon as={MdEmail} boxSize="48px" color="p.purple" />

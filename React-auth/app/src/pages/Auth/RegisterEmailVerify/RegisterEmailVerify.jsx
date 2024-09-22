@@ -6,7 +6,15 @@ import { MdEmail } from "react-icons/md";
 const RegisterEmailVerify = () => {
   return (
    <Center minH="100vh">
-     <Card>
+     <Card
+       p={{
+         base: "4",
+         md: "10",
+       }} 
+       showCard={true}
+
+     
+     >
       <VStack spacing={6}>
         <Icon as={MdEmail} boxSize="48px" color="p.purple" />
         <Text  textStyle="h4" color="p.black" fontWeight="medium">
