@@ -10,6 +10,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { BsPatchCheckFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const ResetPasswordSuccess = () => {
   return (
