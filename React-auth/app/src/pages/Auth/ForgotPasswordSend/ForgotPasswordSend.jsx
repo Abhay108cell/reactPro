@@ -9,7 +9,7 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import { MdEmail } from "react-icons/md";
+import { BsPatchCheckFill } from "react-icons/bs";
 
 const ForgotPasswordSend = () => {
   return (
@@ -23,7 +23,7 @@ const ForgotPasswordSend = () => {
           showCard={true}
         >
           <VStack spacing={6}>
-            <Icon as={MdEmail} boxSize="48px" color="p.purple" />
+            <Icon as={BsPatchCheckFill} boxSize="48px" color="green" />
             <Text textStyle="h4" color="p.black" fontWeight="medium">
               Successfully Sent
             </Text>
