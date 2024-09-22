@@ -28,13 +28,14 @@ const ResetPasswordSuccess = () => {
               Password Reset Done
             </Text>
             <Text textAlign="center" textStyle="p2" color="black.60">
-              We have sent you an email verification{" "}
-              <Box as="b" color="p.black">
-                abhay@gmail.com
-              </Box>{" "}
-              Please follow the instructions from the email. We have sent you an
-              email verification to{" "}
+             Now You can access your Account
             </Text>
+            <Box>
+              <Link to="/signin">
+              <Button w="full">signin</Button>
+              </Link>
+            </Box>
+            
           </VStack>
         </Card>
       </Center>
