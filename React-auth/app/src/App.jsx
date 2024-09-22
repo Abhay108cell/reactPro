@@ -46,6 +46,10 @@ const router = createBrowserRouter([
     path: "/Forgot-Password-send",
     element: <ForgotPasswordSend />,
   },
+  {
+    path: "/Reset-Success",
+    element: <ResetPasswordSuccess />,
+  },
 ]);
 
 function App() {

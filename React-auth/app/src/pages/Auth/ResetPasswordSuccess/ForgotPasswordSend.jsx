@@ -30,7 +30,7 @@ const ResetPasswordSuccess = () => {
             <Text textAlign="center" textStyle="p2" color="black.60">
              Now You can access your Account
             </Text>
-            <Box>
+            <Box w="full">
               <Link to="/signin">
               <Button w="full">signin</Button>
               </Link>
