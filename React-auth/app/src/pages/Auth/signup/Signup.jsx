@@ -40,7 +40,7 @@ const Signup = () => {
             surname:"",
             email:"",
             password:"",
-            confirmPassword:"",
+            repeatPassword:"",
             }}
             onSubmit={(values)=>{
               console.log(values);
