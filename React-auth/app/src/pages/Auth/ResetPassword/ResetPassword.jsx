@@ -23,7 +23,8 @@ import { FaArrowLeft } from "react-icons/fa";
 
 const ResetPassword = () => {
   const ResetPasswordVaildationScheme = object({
-    email: string().email("Invalid Email").required("Email is Required"),
+    password: string().min(6, "password must be at least 6 charcters").required("Password is Required"),
+    repeatPassword: string().oneOf([ref("password")], "Passwords do not match")
   });
   return (
     <Container>
@@ -42,7 +43,7 @@ const ResetPassword = () => {
           <Formik
             initialValues={{
               password: "",
-              confirmPassword: "",
+              repeatPassword: "",
             }}
             onSubmit={(values) => {
               console.log(values);
