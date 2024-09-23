@@ -17,7 +17,7 @@ import {
   Icon,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import { object, string } from "yup";
+import { object, string, ref } from "yup";
 import { Formik, Form, Field } from "formik"; 
 const ResetPassword = () => {
   const ResetPasswordVaildationScheme = object({
