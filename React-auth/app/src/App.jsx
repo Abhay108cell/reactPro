@@ -11,6 +11,9 @@ import ForgotPassword from "./pages/Auth/ForgotPassword/ForgotPassword";
 import ForgotPasswordSend from "./pages/Auth/ForgotPasswordSend/ForgotPasswordSend";
 import ResetPasswordSuccess from "./pages/Auth/ResetPasswordSuccess/ForgotPasswordSend";
 import ResetPassword from "./pages/Auth/ResetPassword/ResetPassword";
+import {
+  QueryClientProvider,
+} from '@tanstack/react-query'
 const router = createBrowserRouter([
   {
     path: "/",
@@ -61,7 +64,9 @@ const router = createBrowserRouter([
 function App() {
   return (
     <>
+      <QueryClientProvider client={queryClient}>
       <RouterProvider router={router} />
+    </QueryClientProvider>
     </>
   );
 }
