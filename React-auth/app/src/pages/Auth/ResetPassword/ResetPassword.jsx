@@ -18,9 +18,7 @@ import {
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { object, string } from "yup";
-import { Formik, Form, Field } from "formik";
-import { FaArrowLeft } from "react-icons/fa";
-
+import { Formik, Form, Field } from "formik"; 
 const ResetPassword = () => {
   const ResetPasswordVaildationScheme = object({
     password: string().min(6, "password must be at least 6 charcters").required("Password is Required"),
@@ -30,15 +28,12 @@ const ResetPassword = () => {
     <Container>
       <Center minH="100vh">
         <Card>
-          <Link to="/signin">
-            <Icon as={FaArrowLeft} boxSize="6" />
-          </Link>
+          
           <Text mt="4" fontWeight="medium" textStyle="h1">
-            Forgot Password
+            Reset Password
           </Text>
           <Text textStyle="p2" color="black.60" mt="4">
-            Enter your email address for which account you want to reset your
-            password.
+            Enter your new password.
           </Text>
           <Formik
             initialValues={{
@@ -56,7 +51,7 @@ const ResetPassword = () => {
                   <Field name="password">
                     {({ field, meta }) => (
                       <FormControl isInvalid={!!(meta.error && meta.touched)}>
-                        <FormLabel htmlFor="password">Password</FormLabel>
+                        <FormLabel htmlFor="password">New Password</FormLabel>
                         <Input
                           {...field}
                           name="password"
@@ -71,7 +66,7 @@ const ResetPassword = () => {
                     {({ field, meta }) => (
                       <FormControl isInvalid={!!(meta.error && meta.touched)}>
                         <FormLabel htmlFor="repeatPassword">
-                          Repeat Password
+                          Repeat New Password
                         </FormLabel>
                         <Input
                           {...field}
