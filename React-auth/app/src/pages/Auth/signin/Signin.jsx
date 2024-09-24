@@ -18,13 +18,24 @@ import { Link } from "react-router-dom";
 import { object, string } from "yup";
 import { Formik, Form, Field } from "formik";
 import Card from "../../../components/Card";
+import { useMutation } from "@tanstack/react-query";
+import { signinUser } from "../../../Api/Query/userQuery";
+
+const signinVaildationScheme = object({
+  email: string().email("Invalid Email").required("Email is Required"),
+  password: string()
+    .min(6, "password must be at least 6 charcters")
+    .required("Password is Required"),
+});
 const Signin = () => {
-  const signinVaildationScheme = object({
-    email: string().email("Invalid Email").required("Email is Required"),
-    password: string()
-      .min(6, "password must be at least 6 charcters")
-      .required("Password is Required"),
-  });
+  
+  useMutation({
+    mutationKey: ["signin"],
+    mutationFn: signinUser
+  })
+
+  
+
   return (
     <Container bg="white">
       <Center minHeight="100vh">
