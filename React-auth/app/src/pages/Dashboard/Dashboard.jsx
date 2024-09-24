@@ -6,12 +6,14 @@ import Transactions from "./components/Transactions";
 import InfoCard from "./components/InfoCard";
 import { useEffect } from "react";
 import { fetchExample } from "../../Api/Query/exampleQuery";
+import { useQuery } from "@tanstack/react-query";
 
 const Dashboard = ({}) => {
- const data =  useEffect(()=>{
-    fetchExample()
-  },[]);
-  console.log(data);
+
+  useQuery({
+    queryKey: ["example"],
+    queryFn: fetchExample,
+  })
   
   return (
     <DashboardLayout title="Dashboard">
