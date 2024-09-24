@@ -28,13 +28,15 @@ const signinVaildationScheme = object({
     .required("Password is Required"),
 });
 const Signin = () => {
-  
+  const {mutate, isLoading, error, isError} = 
   useMutation({
     mutationKey: ["signin"],
     mutationFn: signinUser
   })
 
-  
+  if (isError) {
+    return <Box>{error.message}</Box>
+  }
 
   return (
     <Container bg="white">
@@ -99,7 +101,7 @@ const Signin = () => {
                     </Link>
                   </HStack>
                   <Box>
-                    <Button w="full" type="submit">
+                    <Button isLoading={isLoading} w="full" type="submit">
                       Login
                     </Button>
                     <Link to="/signup">
