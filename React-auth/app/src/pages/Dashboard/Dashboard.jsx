@@ -10,7 +10,7 @@ import { useQuery } from "@tanstack/react-query";
 
 const Dashboard = ({}) => {
 
-  useQuery({
+  const example = useQuery({
     queryKey: ["example"],
     queryFn: fetchExample,
   })
