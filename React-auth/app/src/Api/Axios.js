@@ -1,5 +1,8 @@
 import axios from  'axios';
 
 const Axios = axios.create({
-  baseURL: 'https://localhost:9000',
+  baseURL: process.env.VITE_BACKEND_URL,
+  withCredentials: true,
 })
+
+export default Axios;
