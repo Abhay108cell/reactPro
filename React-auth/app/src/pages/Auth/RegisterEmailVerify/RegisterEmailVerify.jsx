@@ -7,10 +7,12 @@ import {
   Container,
   Icon,
   Text,
+  useToast,
   VStack,
 } from "@chakra-ui/react";
 import { MdEmail } from "react-icons/md";
 import { useLocation } from "react-router-dom";
+import { useMutation } from "@tanstack/react-query";
 
 const RegisterEmailVerify = () => {
   const location = useLocation(); 
@@ -18,6 +20,27 @@ const RegisterEmailVerify = () => {
   if (email === "") {
     return <Center h="100vh">Invalid Email</Center>
   }
+
+  const toast = useToast();
+  const {mutate, isLoading,} = useMutation({
+    mutationKey: ["signup"],
+    mutationFn: signupUser,
+    onSuccess: (data) => {
+      navigate("/Register-Email-Verify",{
+        state:  {email}
+      })
+    },
+    onError: (error) =>{
+      toast({
+        title: "signup Error",
+        description: error.message,
+        status: "error",
+        });
+    }
+  })
+
+
+
   return (
     <Container>
       <Center minH="100vh">
