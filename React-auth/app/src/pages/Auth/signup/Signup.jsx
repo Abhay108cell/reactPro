@@ -13,26 +13,31 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { object, string, ref } from "yup";
 import { Formik, Form, Field } from "formik";
 import Card from "../../../components/Card";
 import { useMutation } from "@tanstack/react-query";
 
+const signUpVaildationScheme = object({
+  name: string().required("Name is Required"),
+  surname: string().required("Surname is Required"),
+  email: string().email("Invalid Email").required("Email is Required"),
+  password: string().min(6, "password must be at least 6 charcters").required("Password is Required"),
+  repeatPassword: string().oneOf([ref("password")], "Passwords do not match"),
+})
+
 const Signup = () => {
-  const signUpVaildationScheme = object({
-    name: string().required("Name is Required"),
-    surname: string().required("Surname is Required"),
-    email: string().email("Invalid Email").required("Email is Required"),
-    password: string().min(6, "password must be at least 6 charcters").required("Password is Required"),
-    repeatPassword: string().oneOf([ref("password")], "Passwords do not match"),
-  })
+ 
+const navigate = useNavigate();
 
   const toast = useToast();
   const {mutate, isLoading,} = useMutation({
     mutationKey: ["signup"],
     mutationFn: signupUser,
-    onSuccess: (data) => {},
+    onSuccess: (data) => {
+      navigate("/Register-Email-Verify")
+    },
     onError: (error) =>{
       toast({
         title: "signup Error",
