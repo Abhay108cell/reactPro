@@ -10,8 +10,11 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { MdEmail } from "react-icons/md";
+import { useLocation } from "react-router-dom";
 
 const RegisterEmailVerify = () => {
+  const location = useLocation(); 
+  const email = location.state.email ?? "text@gmail.com"
   return (
     <Container>
       <Center minH="100vh">
