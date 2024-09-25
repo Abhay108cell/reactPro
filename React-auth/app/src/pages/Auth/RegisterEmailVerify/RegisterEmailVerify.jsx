@@ -7,24 +7,26 @@ import {
   Container,
   Icon,
   Text,
+  useQuery,
   useToast,
   VStack,
 } from "@chakra-ui/react";
 import { MdEmail } from "react-icons/md";
 import { useLocation } from "react-router-dom";
-import { useMutation } from "@tanstack/react-query";
+// import { useMutation } from "@tanstack/react-query";
 
 const RegisterEmailVerify = () => {
+  const toast = useToast();
+
   const location = useLocation(); 
   const email = location.state?.email ?? ""
   if (email === "") {
     return <Center h="100vh">Invalid Email</Center>
   }
 
-  const toast = useToast();
-  const {mutate, isLoading,} = useMutation({
-    mutationKey: ["signup"],
-    mutationFn: signupUser,
+  const {mutate, isLoading,} = useQuery({
+    querykey: ["Register-Email-Verify"],
+    QueryFn: signupUser,
     onSuccess: (data) => {
       navigate("/Register-Email-Verify",{
         state:  {email}
