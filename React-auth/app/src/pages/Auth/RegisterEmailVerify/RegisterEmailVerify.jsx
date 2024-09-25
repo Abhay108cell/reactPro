@@ -14,7 +14,10 @@ import { useLocation } from "react-router-dom";
 
 const RegisterEmailVerify = () => {
   const location = useLocation(); 
-  const email = location.state.email ?? "text@gmail.com"
+  const email = location.state?.email ?? ""
+  if (email === "") {
+    return <Center h="100vh">Invalid Email</Center>
+  }
   return (
     <Container>
       <Center minH="100vh">
@@ -28,7 +31,7 @@ const RegisterEmailVerify = () => {
           <VStack spacing={6}>
             <Icon as={MdEmail} boxSize="48px" color="p.purple" />
             <Text textStyle="h4" color="p.black" fontWeight="medium">
-              Email Verification
+             {email}
             </Text>
             <Text textAlign="center" textStyle="p2" color="black.60">
               We have sent you an email verification{" "}
