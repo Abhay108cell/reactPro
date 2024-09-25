@@ -12,12 +12,13 @@ import {
   FormErrorMessage,
   useToast,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { object, string, ref } from "yup";
 import { Formik, Form, Field } from "formik";
 import Card from "../../../components/Card";
 import { useMutation } from "@tanstack/react-query";
+import { signupUser } from "../../../Api/Query/userQuery";
 
 const signUpVaildationScheme = object({
   name: string().required("Name is Required"),
@@ -28,6 +29,8 @@ const signUpVaildationScheme = object({
 })
 
 const Signup = () => {
+
+  const [email, setEmail] = useState("")
  
 const navigate = useNavigate();
 
@@ -70,6 +73,7 @@ const navigate = useNavigate();
                 email: values.email,
                 password: values.password,
               });
+              setEmail(values.email)
             }}
       validationSchema={signUpVaildationScheme}
           >
