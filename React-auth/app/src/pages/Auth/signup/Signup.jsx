@@ -10,12 +10,14 @@ import {
   Checkbox,
   Button,
   FormErrorMessage,
+  useToast,
 } from "@chakra-ui/react";
 import React from "react";
 import { Link } from "react-router-dom";
 import { object, string, ref } from "yup";
 import { Formik, Form, Field } from "formik";
 import Card from "../../../components/Card";
+import { useMutation } from "@tanstack/react-query";
 
 const Signup = () => {
   const signUpVaildationScheme = object({
@@ -24,8 +26,22 @@ const Signup = () => {
     email: string().email("Invalid Email").required("Email is Required"),
     password: string().min(6, "password must be at least 6 charcters").required("Password is Required"),
     repeatPassword: string().oneOf([ref("password")], "Passwords do not match"),
-
   })
+
+  const toast = useToast();
+  const {mutate, isLoading,} = useMutation({
+    mutationKey: ["signup"],
+    mutationFn: signupUser,
+    onSuccess: (data) => {},
+    onError: (error) =>{
+      toast({
+        title: "signup Error",
+        description: error.message,
+        status: "error",
+        });
+    }
+  })
+
   return (
     <Container bg="white">
       <Center minHeight="100vh">
@@ -43,7 +59,12 @@ const Signup = () => {
             repeatPassword:"",
             }}
             onSubmit={(values)=>{
-              console.log(values);
+              mutate({
+                firstName: values.name,
+                lastName: values.surname,
+                email: values.email,
+                password: values.password,
+              });
             }}
       validationSchema={signUpVaildationScheme}
           >
@@ -130,7 +151,9 @@ const Signup = () => {
                       </Text>
                     </Text>
                   </Checkbox>
-                  <Button type="submit">Create Account</Button>
+                  <Button
+                  isLoading= {isLoading}
+                   type="submit">Create Account</Button>
                   <Text textStyle="p3" color="black.60" textAlign="center">
                     Already have an account ?{" "}
                     <Link to="/signin">
