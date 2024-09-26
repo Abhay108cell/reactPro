@@ -69,13 +69,14 @@ const navigate = useNavigate();
             repeatPassword:"",
             }}
             onSubmit={(values)=>{
+              setEmail(values.email)
               mutate({
                 firstName: values.name,
                 lastName: values.surname,
                 email: values.email,
                 password: values.password,
               });
-              setEmail(values.email)
+              
             }}
       validationSchema={signUpVaildationScheme}
           >

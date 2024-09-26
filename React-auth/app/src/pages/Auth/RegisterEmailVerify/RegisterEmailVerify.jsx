@@ -19,6 +19,8 @@ import { useLocation } from "react-router-dom";
 const RegisterEmailVerify = () => {
   const toast = useToast();
 
+  console.log(location);
+  
   const location = useLocation();
   const email = location.state?.email ?? "";
   if (email === "") {
