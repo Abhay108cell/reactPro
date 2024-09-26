@@ -28,9 +28,8 @@ const RegisterEmailVerify = () => {
     querykey: ["sendVerificationEmail"],
     QueryFn: ()=> sendVerificationEmail({email}),
     onSuccess: (data) => {
-      // navigate("/Register-Email-Verify",{
-      //   state:  {email}
-      // })
+      console.log(data);
+      
     },
     onError: (error) =>{
       toast({
@@ -48,7 +47,7 @@ const RegisterEmailVerify = () => {
     <Container>
       <Center minH="100vh">
        {
-        isSuccess &  <Card
+        isSuccess && ( <Card
         p={{
           base: "4",
           md: "10",
@@ -71,7 +70,7 @@ const RegisterEmailVerify = () => {
             Re-send Email
           </Button>
         </VStack>
-      </Card>
+      </Card>)
        }
       </Center>
     </Container>
