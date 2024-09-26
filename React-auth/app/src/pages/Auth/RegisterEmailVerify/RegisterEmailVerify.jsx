@@ -14,7 +14,7 @@ import {
 } from "@chakra-ui/react";
 import { MdEmail } from "react-icons/md";
 import { useLocation } from "react-router-dom";
-// import { useMutation } from "@tanstack/react-query";
+import { useMutation } from "@tanstack/react-query";
 
 const RegisterEmailVerify = () => {
   const toast = useToast();
@@ -26,11 +26,11 @@ const RegisterEmailVerify = () => {
   if (email === "") {
     return <Center h="100vh">Invalid Email</Center>;
   }
-
-  const { isSuccess, isLoading } = useQuery({
-    querykey: ["sendVerificationEmail"],
-    QueryFn: () => sendVerificationEmail({ email }),
-    onSuccess: (data) => {
+ 
+  const { isSuccess, isLoading } = useMutation({
+    mutationkey: ["sendVerificationEmail"],
+    mutationFn: sendVerificationEmail,
+    onSettled: (data) => {
       console.log(data);
     },
     onError: (error) => {

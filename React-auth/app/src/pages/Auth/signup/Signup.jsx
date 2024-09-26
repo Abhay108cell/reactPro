@@ -39,9 +39,13 @@ const navigate = useNavigate();
     mutationKey: ["signup"],
     mutationFn: signupUser,
     onSuccess: (data) => {
+      console.log(email);
+      
+     if (email !== "") {
       navigate("/Register-Email-Verify",{
         state:  {email}
       })
+     }
     },
     onError: (error) =>{
       toast({
