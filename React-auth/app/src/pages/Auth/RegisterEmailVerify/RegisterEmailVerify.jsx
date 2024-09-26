@@ -27,7 +27,7 @@ const RegisterEmailVerify = () => {
     return <Center h="100vh">Invalid Email</Center>;
   }
  
-  const { isSuccess, isLoading } = useMutation({
+  const { mutate, isSuccess, isLoading } = useMutation({
     mutationkey: ["sendVerificationEmail"],
     mutationFn: sendVerificationEmail,
     onSettled: (data) => {
@@ -72,7 +72,11 @@ const RegisterEmailVerify = () => {
                 </Box>{" "}
                 . If you didn’t receive it, click the button below.
               </Text>
-              <Button w="full" variant="outline">
+              <Button w="full" variant="outline"
+              onClick={()=>{
+                mutate(email)
+              }}
+              >
                 Re-send Email
               </Button>
             </VStack>
