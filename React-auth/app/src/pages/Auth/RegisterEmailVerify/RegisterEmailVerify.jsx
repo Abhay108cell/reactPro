@@ -15,6 +15,7 @@ import {
 import { MdEmail } from "react-icons/md";
 import { useLocation } from "react-router-dom";
 import { useMutation } from "@tanstack/react-query";
+import { useEffect } from "react";
 
 const RegisterEmailVerify = () => {
   const toast = useToast();
@@ -42,6 +43,12 @@ const RegisterEmailVerify = () => {
     },
     enabled: !!email,
   });
+
+
+  useEffect(()=>{
+    mutate({email});
+  },[email])
+
 
   if (isLoading) {
     <Center h="100vh">
@@ -74,7 +81,7 @@ const RegisterEmailVerify = () => {
               </Text>
               <Button w="full" variant="outline"
               onClick={()=>{
-                mutate(email)
+                mutate({email})
               }}
               >
                 Re-send Email
