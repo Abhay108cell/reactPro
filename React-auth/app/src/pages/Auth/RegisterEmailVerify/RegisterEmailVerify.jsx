@@ -24,9 +24,9 @@ const RegisterEmailVerify = () => {
     return <Center h="100vh">Invalid Email</Center>
   }
 
-  const {mutate, isLoading,} = useQuery({
+  const { isSuccess, isLoading,} = useQuery({
     querykey: ["sendVerificationEmail"],
-    QueryFn: sendVerificationEmail(email),
+    QueryFn: ()=> sendVerificationEmail({email}),
     onSuccess: (data) => {
       // navigate("/Register-Email-Verify",{
       //   state:  {email}
@@ -38,7 +38,8 @@ const RegisterEmailVerify = () => {
         description: error.message,
         status: "error",
         });
-    }
+    },
+    enabled: !!email
   })
 
 
@@ -46,30 +47,32 @@ const RegisterEmailVerify = () => {
   return (
     <Container>
       <Center minH="100vh">
-        <Card
-          p={{
-            base: "4",
-            md: "10",
-          }}
-          showCard={true}
-        >
-          <VStack spacing={6}>
-            <Icon as={MdEmail} boxSize="48px" color="p.purple" />
-            <Text textStyle="h4" color="p.black" fontWeight="medium">
-             {email}
-            </Text>
-            <Text textAlign="center" textStyle="p2" color="black.60">
-              We have sent you an email verification{" "}
-              <Box as="b" color="p.black">
-                abhay@gmail.com
-              </Box>{" "}
-              . If you didn’t receive it, click the button below.
-            </Text>
-            <Button w="full" variant="outline">
-              Re-send Email
-            </Button>
-          </VStack>
-        </Card>
+       {
+        isSuccess &  <Card
+        p={{
+          base: "4",
+          md: "10",
+        }}
+        showCard={true}
+      >
+        <VStack spacing={6}>
+          <Icon as={MdEmail} boxSize="48px" color="p.purple" />
+          <Text textStyle="h4" color="p.black" fontWeight="medium">
+           {email}
+          </Text>
+          <Text textAlign="center" textStyle="p2" color="black.60">
+            We have sent you an email verification{" "}
+            <Box as="b" color="p.black">
+              abhay@gmail.com
+            </Box>{" "}
+            . If you didn’t receive it, click the button below.
+          </Text>
+          <Button w="full" variant="outline">
+            Re-send Email
+          </Button>
+        </VStack>
+      </Card>
+       }
       </Center>
     </Container>
   );
