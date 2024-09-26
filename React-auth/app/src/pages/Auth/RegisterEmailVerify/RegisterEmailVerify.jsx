@@ -20,7 +20,7 @@ import { useEffect } from "react";
 const RegisterEmailVerify = () => {
   const toast = useToast();
 
-  console.log(location);
+  // console.log(location);
   
   const location = useLocation();
   const email = location.state?.email ?? "";
@@ -44,22 +44,14 @@ const RegisterEmailVerify = () => {
     enabled: !!email,
   });
 
-
   useEffect(()=>{
     mutate({email});
-  },[email])
+  },[email ])
 
-
-  if (isLoading) {
-    <Center h="100vh">
-      <Spinner />
-    </Center>;
-  }
 
   return (
     <Container>
       <Center minH="100vh">
-        {isSuccess && (
           <Card
             p={{
               base: "4",
@@ -83,12 +75,13 @@ const RegisterEmailVerify = () => {
               onClick={()=>{
                 mutate({email})
               }}
+              isLoading={isLoading}
               >
                 Re-send Email
               </Button>
             </VStack>
           </Card>
-        )}
+
       </Center>
     </Container>
   );
