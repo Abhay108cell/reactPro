@@ -25,12 +25,12 @@ const RegisterEmailVerify = () => {
   }
 
   const {mutate, isLoading,} = useQuery({
-    querykey: ["Register-Email-Verify"],
-    QueryFn: signupUser,
+    querykey: ["sendVerificationEmail"],
+    QueryFn: sendVerificationEmail(email),
     onSuccess: (data) => {
-      navigate("/Register-Email-Verify",{
-        state:  {email}
-      })
+      // navigate("/Register-Email-Verify",{
+      //   state:  {email}
+      // })
     },
     onError: (error) =>{
       toast({
