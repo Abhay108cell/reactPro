@@ -43,7 +43,7 @@ const navigate = useNavigate();
      if (email !== "") {
       navigate("/Register-Email-Verify",{
         state:  {email}
-      })
+      });
      }
     },
     onError: (error) =>{
