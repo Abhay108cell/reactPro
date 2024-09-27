@@ -14,6 +14,8 @@ import { Link, useParams } from "react-router-dom";
 
 const RegisterSuccess = () => {
   const params = useParams()
+  console.log(params);
+  
   return (
     <Container>
       <Center minH="100vh">
