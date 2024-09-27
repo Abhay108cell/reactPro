@@ -24,6 +24,8 @@ const RegisterEmailVerify = () => {
   
   const location = useLocation();
   const email = location.state?.email ?? "";
+  console.log(location);
+  
   if (email === "") {
     return <Center h="100vh">Invalid Email</Center>;
   }
