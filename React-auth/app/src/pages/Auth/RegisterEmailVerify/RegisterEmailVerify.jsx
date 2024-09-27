@@ -29,6 +29,8 @@ const RegisterEmailVerify = () => {
     mutationKey: ["send-verification-email"],
     mutationFn: sendVerificationEmail,
     onSuccess: (data) => {
+      console.log(data);
+      
       toast({
         title: "Verification Sent",
         description: "Please check your email",
