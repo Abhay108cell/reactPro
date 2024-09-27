@@ -16,7 +16,7 @@ export const signinUser = async ({password, email}) =>{
 }
 export const sendVerificationEmail = async ({ email, }) =>{
   try {
-    const {data} = await Axios.post(`${USER_URL}/send-verification-mail`,{
+    const {data} = await Axios.post(`${USER_URL}/signin`,{
       
       email,
       
@@ -28,7 +28,7 @@ export const sendVerificationEmail = async ({ email, }) =>{
 }
 export const signupUser = async ({email, }) =>{
   try {
-    const {data} = await Axios.post(`${USER_URL}/signup`,{
+    const {data} = await Axios.post(`${USER_URL}/signin`,{
       password,
       email,
       firstName,

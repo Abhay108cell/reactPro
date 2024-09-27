@@ -10,9 +10,10 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { BsPatchCheckFill } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const RegisterSuccess = () => {
+  const params = useParams()
   return (
     <Container>
       <Center minH="100vh">
