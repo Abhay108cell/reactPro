@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Card from "../../../components/Card";
 import {
   Box,
@@ -6,84 +6,76 @@ import {
   Center,
   Container,
   Icon,
-  Spinner,
   Text,
-  useQuery,
   useToast,
   VStack,
 } from "@chakra-ui/react";
 import { MdEmail } from "react-icons/md";
 import { useLocation } from "react-router-dom";
 import { useMutation } from "@tanstack/react-query";
-import { useEffect } from "react";
+import { sendVerificationEmail } from "../../../Api/Query/userQuery";
 
 const RegisterEmailVerify = () => {
   const toast = useToast();
-
-  // console.log(location);
   
   const location = useLocation();
   const email = location.state?.email ?? "";
-  console.log(location );
   
   if (email === "") {
     return <Center h="100vh">Invalid Email</Center>;
   }
- 
+
   const { mutate, isSuccess, isLoading } = useMutation({
-    mutationkey: ["sendVerificationEmail"],
+    mutationKey: ["send-verification-email"],
     mutationFn: sendVerificationEmail,
-    onSettled: (data) => {
-      console.log(data);
+    onSuccess: (data) => {
+      toast({
+        title: "Verification Sent",
+        description: "Please check your email",
+        status: "success",
+      });
     },
     onError: (error) => {
       toast({
-        title: "signup Error",
+        title: "Error",
         description: error.message,
         status: "error",
       });
     },
-    enabled: !!email,
   });
 
-  useEffect(()=>{
-    mutate({email});
-  },[email ])
-
+  useEffect(() => {
+    mutate({ email });
+  }, [email, mutate]);
 
   return (
     <Container>
       <Center minH="100vh">
-          <Card
-            p={{
-              base: "4",
-              md: "10",
-            }}
-            showCard={true}
-          >
-            <VStack spacing={6}>
-              <Icon as={MdEmail} boxSize="48px" color="p.purple" />
-              <Text textStyle="h4" color="p.black" fontWeight="medium">
+        <Card p={{ base: "4", md: "10" }} showCard={true}>
+          <VStack spacing={6}>
+            <Icon as={MdEmail} boxSize="48px" color="p.purple" />
+            <Text textStyle="h4" color="p.black" fontWeight="medium">
+              {email}
+            </Text>
+            <Text textAlign="center" textStyle="p2" color="black.60">
+              We have sent an email verification to{" "}
+              <Box as="b" color="p.black">
                 {email}
-              </Text>
-              <Text textAlign="center" textStyle="p2" color="black.60">
-                We have sent you an email verification{" "}
-                <Box as="b" color="p.black">
-                  abhay@gmail.com
-                </Box>{" "}
-                . If you didn’t receive it, click the button below.
-              </Text>
-              <Button w="full" variant="outline"
-              onClick={()=>{
-                mutate({email})
+              </Box>
+              . If you didn’t receive it, click the button below.
+            </Text>
+            <Button
+              w="full"
+              variant="outline"
+              onClick={() => {
+                mutate({ email });
               }}
               isLoading={isLoading}
-              >
-                Re-send Email
-              </Button>
-            </VStack>
-          </Card>
-
+            >
+              Re-send Email
+            </Button>
+          </VStack>
+        </Card>
       </Center>
     </Container>
   );
