@@ -5,7 +5,7 @@ const USER_URL = "/user"
 
 export const signinUser = async ({password, email}) =>{
   try {
-    const data = await Axios.post(`${USER_URL}/signin`,{
+    const {data} = await Axios.post(`${USER_URL}/signin`,{
       password,
       email
     })
@@ -16,7 +16,7 @@ export const signinUser = async ({password, email}) =>{
 }
 export const sendVerificationEmail = async ({ email, }) =>{
   try {
-    const data = await Axios.post(`${USER_URL}/send-verification-mail`,{
+    const {data} = await Axios.post(`${USER_URL}/send-verification-mail`,{
       
       email,
       
@@ -28,7 +28,7 @@ export const sendVerificationEmail = async ({ email, }) =>{
 }
 export const signupUser = async ({email, }) =>{
   try {
-    const {data} = await Axios.post(`${USER_URL}/signin`,{
+    const {data} = await Axios.post(`${USER_URL}/signup`,{
       password,
       email,
       firstName,
@@ -40,13 +40,11 @@ export const signupUser = async ({email, }) =>{
   }
 }
 
-export const signupUser = async ({token }) =>{
+export const verfiyEmailAddressSignup = async ({token,password }) =>{
   try {
     const {data} = await Axios.post(`${USER_URL}/verfiy-user-mail`,{
-      password,
-      email,
-      firstName,
-      lastName
+     token,
+     password
     })
     return data
   } catch (error) {
