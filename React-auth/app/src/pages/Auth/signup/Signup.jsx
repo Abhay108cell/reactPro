@@ -25,7 +25,7 @@ const signUpVaildationScheme = object({
   surname: string().required("Surname is Required"),
   email: string().email("Invalid Email").required("Email is Required"),
   password: string().min(6, "password must be at least 6 charcters").required("Password is Required"),
-  repeatPassword: string().oneOf([ref("password")], "Passwords do not match"),
+  repeatPassword: string().oneOf([ref("password"),null], "Passwords do not match").required("Repeat password is required"),
 })
 
 const Signup = () => {
@@ -39,8 +39,7 @@ const navigate = useNavigate();
     mutationKey: ["signup"],
     mutationFn: signupUser,
     onSuccess: (data) => {
-      console.log(email);
-      
+
      if (email !== "") {
       navigate("/Register-Email-Verify",{
         state:  {email}
