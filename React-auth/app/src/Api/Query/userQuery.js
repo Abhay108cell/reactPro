@@ -1,53 +1,56 @@
-import Axios from "../Axios"
+import Axios from "../Axios";
 
-const USER_URL = "/user"
+const USER_URL = "/user";
 
-
-export const signinUser = async ({password, email}) =>{
+// Sign in User
+export const signinUser = async ({ password, email }) => {
   try {
-    const {data} = await Axios.post(`${USER_URL}/signin`,{
+    const { data } = await Axios.post(`${USER_URL}/signin`, {
       password,
-      email
-    })
-    return data
-  } catch (error) {
-    throw Error(error.response.data.message)
-  }
-}
-export const sendVerificationEmail = async ({ email, }) =>{
-  try {
-    const {data} = await Axios.post(`${USER_URL}/signin`,{
-      
       email,
-      
-    })
-    return data
+    });
+    return data;
   } catch (error) {
-    throw Error(error.response.data.message)
+    throw new Error(error.response?.data?.message || "Signin failed");
   }
-}
-export const signupUser = async ({email, }) =>{
+};
+
+// Send Verification Email
+export const sendVerificationEmail = async ({ email }) => {
   try {
-    const {data} = await Axios.post(`${USER_URL}/signin`,{
+    const { data } = await Axios.post(`${USER_URL}/send-verification-email`, {
+      email,
+    });
+    return data;
+  } catch (error) {
+    throw new Error(error.response?.data?.message || "Failed to send verification email");
+  }
+};
+
+// Sign Up User
+export const signupUser = async ({ password, email, firstName, lastName }) => {
+  try {
+    const { data } = await Axios.post(`${USER_URL}/signup`, {
       password,
       email,
       firstName,
-      lastName
-    })
-    return data
+      lastName,
+    });
+    return data;
   } catch (error) {
-    throw Error(error.response.data.message)
+    throw new Error(error.response?.data?.message || "Signup failed");
   }
-}
+};
 
-export const verfiyEmailAddressSignup = async ({token,password }) =>{
+// Verify Email Address during Signup
+export const verfiyEmailAddressSignup = async ({ token, password }) => {
   try {
-    const {data} = await Axios.post(`${USER_URL}/verfiy-user-mail`,{
-     token,
-     password
-    })
-    return data
+    const { data } = await Axios.post(`${USER_URL}/verify-user-email`, {
+      token,
+      password,
+    });
+    return data;
   } catch (error) {
-    throw Error(error.response.data.message)
+    throw new Error(error.response?.data?.message || "Email verification failed");
   }
-}
+};
