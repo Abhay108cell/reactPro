@@ -11,11 +11,16 @@ import {
 } from "@chakra-ui/react";
 import { BsPatchCheckFill } from "react-icons/bs";
 import { Link, useParams } from "react-router-dom";
+import { useMutation } from "@tanstack/react-query";
 
 const RegisterSuccess = () => {
   const {token} = useParams()
   console.log(params);
   
+const {mutate, isSuccess, isLoading} = useMutation({
+  mutationKey: ["ver"]
+})
+
   return (
     <Container>
       <Center minH="100vh">
