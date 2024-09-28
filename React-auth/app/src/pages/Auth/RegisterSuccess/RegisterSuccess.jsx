@@ -8,13 +8,13 @@ import {
   Icon,
   Spinner,
   Text,
-  useQuery,
   useToast,
   VStack,
 } from "@chakra-ui/react";
 import { BsPatchCheckFill } from "react-icons/bs";
 import { Link,  useNavigate, useParams } from "react-router-dom";
 import { verfiyEmailAddressSignup } from "../../../Api/Query/userQuery";
+import { useQuery } from "@tanstack/react-query";
 ;
 
 const RegisterSuccess = () => {
@@ -22,8 +22,8 @@ const RegisterSuccess = () => {
 const {toast} = useToast ()
 const navigate = useNavigate()
 const { isSuccess, isLoading} = useQuery({
-  mutationKey: ["verify-email-token"],
-  mutationFn: ()=>verfiyEmailAddressSignup({token}),
+  queryKey: ["verify-email-token"],
+  queryFn: ()=>verfiyEmailAddressSignup({token}),
   enabled: !!token,
    onError: (error) => {
     toast({
