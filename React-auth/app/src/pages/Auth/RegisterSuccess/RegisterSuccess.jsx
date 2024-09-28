@@ -7,18 +7,21 @@ import {
   Container,
   Icon,
   Text,
+  useQuery,
   VStack,
 } from "@chakra-ui/react";
 import { BsPatchCheckFill } from "react-icons/bs";
 import { Link, useParams } from "react-router-dom";
-import { useMutation } from "@tanstack/react-query";
+import { useMutation, useQueries } from "@tanstack/react-query";
 
 const RegisterSuccess = () => {
   const {token} = useParams()
   console.log(params);
   
-const {mutate, isSuccess, isLoading} = useMutation({
-  mutationKey: ["ver"]
+const {mutate, isSuccess, isLoading} = useQuery({
+  mutationKey: ["verify-email-token"],
+  mutationFn: ()=>verfiyEmailAddressSignup({token}),
+  enabled: !!token,
 })
 
   return (
