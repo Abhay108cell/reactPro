@@ -42,7 +42,7 @@ function App() {
       element: <RegisterEmailVerify />,
     },
     {
-      path: "/Register-Success",
+      path: "/email-verify/:token",
       element: <RegisterSuccess />,
     },
     {
