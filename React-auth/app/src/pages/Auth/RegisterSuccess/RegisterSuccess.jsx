@@ -13,7 +13,7 @@ import { BsPatchCheckFill } from "react-icons/bs";
 import { Link, useParams } from "react-router-dom";
 
 const RegisterSuccess = () => {
-  const params = useParams()
+  const {token} = useParams()
   console.log(params);
   
   return (
