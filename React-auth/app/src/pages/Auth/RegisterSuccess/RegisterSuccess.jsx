@@ -18,8 +18,8 @@ import { useQuery } from "@tanstack/react-query";
 ;
 
 const RegisterSuccess = () => {
+  const {toast} = useToast ()
   const {token} = useParams()
-const {toast} = useToast ()
 const navigate = useNavigate()
 const { isSuccess, isLoading} = useQuery({
   queryKey: ["verify-email-token"],
@@ -27,7 +27,7 @@ const { isSuccess, isLoading} = useQuery({
   enabled: !!token,
    onError: (error) => {
     toast({
-      title: "Error",
+      title: "signUp Error",
       description: error.message,
       status: "error",
     });
