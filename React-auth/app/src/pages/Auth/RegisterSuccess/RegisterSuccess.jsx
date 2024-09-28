@@ -6,6 +6,7 @@ import {
   Center,
   Container,
   Icon,
+  Spinner,
   Text,
   useQuery,
   useToast,
@@ -18,7 +19,7 @@ import { useMutation, useQueries } from "@tanstack/react-query";
 const RegisterSuccess = () => {
   const {token} = useParams()
 const {toast} = useToast  
-const {mutate, isSuccess, isLoading} = useQuery({
+const { isSuccess, isLoading} = useQuery({
   mutationKey: ["verify-email-token"],
   mutationFn: ()=>verfiyEmailAddressSignup({token}),
   enabled: !!token,
@@ -31,10 +32,17 @@ const {mutate, isSuccess, isLoading} = useQuery({
   },
 })
 
+if (isLoading) return <Center h="100vh">
+<Spinner/>
+</Center> 
+  
+
   return (
     <Container>
       <Center minH="100vh">
-        <Card
+       {
+        isSuccess && (
+          <Card
           p={{
             base: "4",
             md: "10",
@@ -57,6 +65,8 @@ const {mutate, isSuccess, isLoading} = useQuery({
             </Box>
           </VStack>
         </Card>
+        )
+       }
       </Center>
     </Container>
   );
