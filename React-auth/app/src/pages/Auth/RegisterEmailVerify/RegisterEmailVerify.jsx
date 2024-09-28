@@ -11,15 +11,14 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { MdEmail } from "react-icons/md";
-import { useLocation } from "react-router-dom";
+import {  useParams } from "react-router-dom";
 import { useMutation } from "@tanstack/react-query";
 import { sendVerificationEmail } from "../../../Api/Query/userQuery";
 
 const RegisterEmailVerify = () => {
   const toast = useToast();
   
-  const location = useLocation();
-  const email = location.state?.email ?? "";
+  const  {email} = useParams()
   
   if (email === "") {
     return <Center h="100vh">Invalid Email</Center>;
