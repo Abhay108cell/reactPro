@@ -13,13 +13,15 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { BsPatchCheckFill } from "react-icons/bs";
-import { Link, Navigate, useParams } from "react-router-dom";
+import { Link,  useNavigate, useParams } from "react-router-dom";
 ;
 
 const RegisterSuccess = () => {
-  const {token} = useParams()
+  const params = useParams()
+  console.log(params);
+  
 const {toast} = useToast ()
-const navigate = Navigate()
+const navigate = useNavigate()
 const { isSuccess, isLoading} = useQuery({
   mutationKey: ["verify-email-token"],
   mutationFn: ()=>verfiyEmailAddressSignup({token}),
