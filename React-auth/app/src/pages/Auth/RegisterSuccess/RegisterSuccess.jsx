@@ -13,12 +13,13 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { BsPatchCheckFill } from "react-icons/bs";
-import { Link, useParams } from "react-router-dom";
-import { useMutation, useQueries } from "@tanstack/react-query";
+import { Link, Navigate, useParams } from "react-router-dom";
+;
 
 const RegisterSuccess = () => {
   const {token} = useParams()
-const {toast} = useToast  
+const {toast} = useToast ()
+const navigate = Navigate()
 const { isSuccess, isLoading} = useQuery({
   mutationKey: ["verify-email-token"],
   mutationFn: ()=>verfiyEmailAddressSignup({token}),
@@ -29,6 +30,7 @@ const { isSuccess, isLoading} = useQuery({
       description: error.message,
       status: "error",
     });
+    navigate('/signup')
   },
 })
 
