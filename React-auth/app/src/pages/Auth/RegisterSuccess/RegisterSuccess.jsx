@@ -14,12 +14,11 @@ import {
 } from "@chakra-ui/react";
 import { BsPatchCheckFill } from "react-icons/bs";
 import { Link,  useNavigate, useParams } from "react-router-dom";
+import { verfiyEmailAddressSignup } from "../../../Api/Query/userQuery";
 ;
 
 const RegisterSuccess = () => {
-  const params = useParams()
-  console.log(params);
-  
+  const {token} = useParams()
 const {toast} = useToast ()
 const navigate = useNavigate()
 const { isSuccess, isLoading} = useQuery({
@@ -36,9 +35,10 @@ const { isSuccess, isLoading} = useQuery({
   },
 })
 
-if (isLoading) return <Center h="100vh">
+if (isLoading) return 
+(<Center h="100vh">
 <Spinner/>
-</Center> 
+</Center> )
   
 
   return (
