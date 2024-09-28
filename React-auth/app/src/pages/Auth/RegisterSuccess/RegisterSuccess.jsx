@@ -8,6 +8,7 @@ import {
   Icon,
   Text,
   useQuery,
+  useToast,
   VStack,
 } from "@chakra-ui/react";
 import { BsPatchCheckFill } from "react-icons/bs";
@@ -16,12 +17,18 @@ import { useMutation, useQueries } from "@tanstack/react-query";
 
 const RegisterSuccess = () => {
   const {token} = useParams()
-  console.log(params);
-  
+const {toast} = useToast  
 const {mutate, isSuccess, isLoading} = useQuery({
   mutationKey: ["verify-email-token"],
   mutationFn: ()=>verfiyEmailAddressSignup({token}),
   enabled: !!token,
+   onError: (error) => {
+    toast({
+      title: "Error",
+      description: error.message,
+      status: "error",
+    });
+  },
 })
 
   return (
