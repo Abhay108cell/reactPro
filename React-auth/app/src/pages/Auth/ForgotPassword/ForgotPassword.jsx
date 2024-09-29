@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "../../../components/Card";
 import {
   Container,
@@ -29,6 +29,8 @@ const ForgotPassword = () => {
     email: string().email("Invalid Email").required("Email is Required"),
   });
 
+  const [email, setEmail] = useState("")
+
 const toast = useToast();
 const navigate = useNavigate()
 
@@ -37,7 +39,7 @@ const navigate = useNavigate()
     mutationFn: sendForgotmail,
     onSuccess: (data) => {
       console.log(data);
-     navigate("/forgot-success")
+     navigate(`/forgot-success/${email}`)
     },
     onError: (error) => {
       toast({
@@ -69,6 +71,7 @@ const navigate = useNavigate()
           }}
           onSubmit={(values) => {
             console.log(values);
+            setEmail((prev)=> values.email)
             mutate({email: values.email});
           }}
           validationSchema={ForgotPasswordVaildationScheme}
