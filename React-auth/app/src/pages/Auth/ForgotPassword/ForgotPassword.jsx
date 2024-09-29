@@ -15,16 +15,20 @@ import {
   FormErrorMessage,
   Box,
   Icon,
+  useToast,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { object, string } from "yup";
 import { Formik, Form, Field } from "formik";
 import { FaArrowLeft } from "react-icons/fa";
+import { useMutation } from "@tanstack/react-query";
 
 const ForgotPassword = () => {
   const ForgotPasswordVaildationScheme = object({
     email: string().email("Invalid Email").required("Email is Required"),
   });
+
+const toast = useToast
 
   const { mutate, isSuccess, isLoading } = useMutation({
     mutationKey: ["send-verification-email"],
