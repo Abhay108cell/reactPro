@@ -38,7 +38,7 @@ function App() {
       element: <Signin />,
     },
     {
-      path: "/Register-Email-Verify",
+      path: "/Register-Email-Verify/:email",
       element: <RegisterEmailVerify />,
     },
     {
