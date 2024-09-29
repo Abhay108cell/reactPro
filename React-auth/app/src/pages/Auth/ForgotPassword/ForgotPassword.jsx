@@ -17,7 +17,7 @@ import {
   Icon,
   useToast,
 } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
+import { Link,  useNavigate } from "react-router-dom";
 import { object, string } from "yup";
 import { Formik, Form, Field } from "formik";
 import { FaArrowLeft } from "react-icons/fa";
@@ -29,13 +29,15 @@ const ForgotPassword = () => {
     email: string().email("Invalid Email").required("Email is Required"),
   });
 
-const toast = useToast
+const toast = useToast();
+const navigate = useNavigate()
 
   const { mutate, isSuccess, isLoading } = useMutation({
     mutationKey: ["forgot-email"],
     mutationFn: sendForgotmail,
     onSuccess: (data) => {
       console.log(data);
+     navigate("")
     },
     onError: (error) => {
       toast({
