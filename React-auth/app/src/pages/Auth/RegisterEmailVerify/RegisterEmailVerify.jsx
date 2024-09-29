@@ -30,11 +30,6 @@ const RegisterEmailVerify = () => {
     onSuccess: (data) => {
       console.log(data);
       
-      toast({
-        title: "Verification Sent",
-        description: "Please check your email",
-        status: "success",
-      });
     },
     onError: (error) => {
       toast({
@@ -43,6 +38,7 @@ const RegisterEmailVerify = () => {
         status: "error",
       });
     },
+    enabled: !!email
   });
 
   useEffect(() => {
