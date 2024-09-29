@@ -38,9 +38,9 @@ const toast = useToast
       console.log(data);
       
       toast({
-        title: "Verification Sent",
-        description: "Please check your email",
-        status: "success",
+        title: "forgot Error",
+        description: error.message,
+        status: "error",
       });
     },
     onError: (error) => {
