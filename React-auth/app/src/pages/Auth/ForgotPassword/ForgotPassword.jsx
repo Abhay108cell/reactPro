@@ -22,6 +22,7 @@ import { object, string } from "yup";
 import { Formik, Form, Field } from "formik";
 import { FaArrowLeft } from "react-icons/fa";
 import { useMutation } from "@tanstack/react-query";
+import { sendForgotmail } from "../../../Api/Query/userQuery";
 
 const ForgotPassword = () => {
   const ForgotPasswordVaildationScheme = object({
@@ -31,8 +32,8 @@ const ForgotPassword = () => {
 const toast = useToast
 
   const { mutate, isSuccess, isLoading } = useMutation({
-    mutationKey: ["send-verification-email"],
-    mutationFn: sendVerificationEmail,
+    mutationKey: ["forgot-email"],
+    mutationFn: sendForgotmail,
     onSuccess: (data) => {
       console.log(data);
       
