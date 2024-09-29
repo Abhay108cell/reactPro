@@ -25,6 +25,28 @@ const ForgotPassword = () => {
   const ForgotPasswordVaildationScheme = object({
     email: string().email("Invalid Email").required("Email is Required"),
   });
+
+  const { mutate, isSuccess, isLoading } = useMutation({
+    mutationKey: ["send-verification-email"],
+    mutationFn: sendVerificationEmail,
+    onSuccess: (data) => {
+      console.log(data);
+      
+      toast({
+        title: "Verification Sent",
+        description: "Please check your email",
+        status: "success",
+      });
+    },
+    onError: (error) => {
+      toast({
+        title: "Error",
+        description: error.message,
+        status: "error",
+      });
+    },
+  });
+
   return (
     <Container>
       <Center minH="100vh">

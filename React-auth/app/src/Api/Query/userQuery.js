@@ -26,6 +26,16 @@ export const sendVerificationEmail = async ({ email }) => {
     throw new Error(error.response?.data?.message || "Failed to send verification email");
   }
 };
+export const sendForgotmail = async ({ email }) => {
+  try {
+    const { data } = await Axios.post(`${USER_URL}/forgot-password`, {
+      email,
+    });
+    return data;
+  } catch (error) {
+    throw new Error(error.response?.data?.message || "Failed to send verification email");
+  }
+};
 
 // Sign Up User
 export const signupUser = async ({ password, email, firstName, lastName }) => {
