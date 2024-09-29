@@ -37,7 +37,7 @@ const navigate = useNavigate()
     mutationFn: sendForgotmail,
     onSuccess: (data) => {
       console.log(data);
-     navigate("")
+     navigate("/forgot-success")
     },
     onError: (error) => {
       toast({
