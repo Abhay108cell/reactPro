@@ -41,9 +41,7 @@ const navigate = useNavigate();
     onSuccess: (data) => {
 
      if (email !== "") {
-      navigate("/Register-Email-Verify",{
-        state:  {email}
-      }); 
+      navigate(`/Register-Email-Verify/${email}`); 
      }
     },
     onError: (error) =>{
