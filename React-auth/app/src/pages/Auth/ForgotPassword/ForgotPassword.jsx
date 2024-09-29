@@ -36,12 +36,6 @@ const toast = useToast
     mutationFn: sendForgotmail,
     onSuccess: (data) => {
       console.log(data);
-      
-      toast({
-        title: "forgot Error",
-        description: error.message,
-        status: "error",
-      });
     },
     onError: (error) => {
       toast({
@@ -73,6 +67,7 @@ const toast = useToast
           }}
           onSubmit={(values) => {
             console.log(values);
+            mutate({email: values.email});
           }}
           validationSchema={ForgotPasswordVaildationScheme}
         >
