@@ -25,7 +25,7 @@ const RegisterEmailVerify = () => {
   }
 
   const { mutate, isSuccess, isLoading } = useMutation({
-    mutationKey: ["send-verification-email"],
+    mutationKey: ["send-verification-mail"],
     mutationFn: sendVerificationEmail,
     onSuccess: (data) => {
       console.log(data);
@@ -43,7 +43,7 @@ const RegisterEmailVerify = () => {
 
   useEffect(() => {
     mutate({ email });
-  }, [email, mutate]);
+  }, [email]);
 
   return (
     <Container>

@@ -72,7 +72,7 @@ const navigate = useNavigate()
           onSubmit={(values) => {
             console.log(values);
             setEmail((prev)=> values.email)
-            mutate({email: values.email});
+             mutate({email: values.email});
           }}
           validationSchema={ForgotPasswordVaildationScheme}
         >

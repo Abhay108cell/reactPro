@@ -40,7 +40,7 @@ const navigate = useNavigate();
     mutationFn: signupUser,
     onSuccess: (data) => {
 
-     if (email !== "") {
+     if (email) {
       navigate(`/Register-Email-Verify/${email}`); 
      }
     },
