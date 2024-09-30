@@ -54,7 +54,7 @@ function App() {
       element: <ForgotPasswordSend />,
     },
     {
-      path: "/Reset-password",
+      path: "/forgot-password-verify/:token",
       element: <ResetPassword />,
     },
     {

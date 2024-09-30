@@ -24,6 +24,32 @@ const ResetPassword = () => {
     password: string().min(6, "password must be at least 6 charcters").required("Password is Required"),
     repeatPassword: string().oneOf([ref("password")], "Passwords do not match")
   });
+
+
+  const {toast} = useToast ()
+  const {token} = useParams()
+const navigate = useNavigate()
+const { isSuccess, isLoading} = useQuery({
+  queryKey: ["verify-email-token"],
+  queryFn: ()=>verfiyEmailAddressSignup({token}),
+  enabled: !!token,
+   onError: (error) => {
+    toast({
+      title: "signUp Error",
+      description: error.message,
+      status: "error",
+    });
+    navigate('/signup')
+  },
+})
+
+if (isLoading) return 
+(<Center h="100vh">
+<Spinner/>
+</Center> )
+  
+
+
   return (
     <Container>
       <Center minH="100vh">
