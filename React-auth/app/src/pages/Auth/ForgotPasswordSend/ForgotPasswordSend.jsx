@@ -15,6 +15,7 @@ import { useParams } from "react-router-dom";
 
 const ForgotPasswordSend = () => {
   const params = useParams();
+  const {email} = useParams();
   return (
     <Container>
       <Center minH="100vh">
@@ -33,7 +34,7 @@ const ForgotPasswordSend = () => {
             <Text textAlign="center" textStyle="p2" color="black.60">
               We have sent you an email verification{" "}
               <Box as="b" color="p.black">
-                abhay@gmail.com
+                {email}
               </Box>{" "}
               Please follow the instructions from the email. We have sent you an
               email verification to{" "}
