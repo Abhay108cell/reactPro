@@ -50,7 +50,7 @@ function App() {
       element: <ForgotPassword />,
     },
     {
-      path: "/Forgot-Password-send",
+      path: "/Forgot-Password-send/:email",
       element: <ForgotPasswordSend />,
     },
     {

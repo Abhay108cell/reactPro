@@ -7,11 +7,13 @@ import {
   Container,
   Icon,
   Text,
+  useToast,
   VStack,
 } from "@chakra-ui/react";
 import { BsPatchCheckFill } from "react-icons/bs";
 
 const ForgotPasswordSend = () => {
+  const toast = useToast()
   return (
     <Container>
       <Center minH="100vh">
