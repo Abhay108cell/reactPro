@@ -32,7 +32,7 @@ const ResetPassword = () => {
   const { token } = useParams();
   const navigate = useNavigate();
   const { isSuccess, isLoading } = useQuery({
-    queryKey: ["verify-email-token"],
+    queryKey: ["verify-forgot-token"],
     queryFn: () => verfiyEmailAddressSignup({ token }),
     enabled: !!token,
     onError: (error) => {
