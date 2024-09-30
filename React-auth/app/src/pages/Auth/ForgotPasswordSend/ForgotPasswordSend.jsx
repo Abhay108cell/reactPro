@@ -11,9 +11,10 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { BsPatchCheckFill } from "react-icons/bs";
+import { useParams } from "react-router-dom";
 
 const ForgotPasswordSend = () => {
-  const toast = useToast()
+  const params = useParams();
   return (
     <Container>
       <Center minH="100vh">
