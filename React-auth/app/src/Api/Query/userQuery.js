@@ -53,7 +53,18 @@ export const signupUser = async ({ password, email, firstName, lastName }) => {
 };
 
 // Verify Email Address during Signup
-export const verfiyEmailAddressSignup = async ({ token, password }) => {
+export const verfiyEmailAddressSignup = async ({ token }) => {
+  try {
+    const { data } = await Axios.post(`${USER_URL}/verfiy-user-mail`, {
+      token,
+      password,
+    });
+    return data;
+  } catch (error) {
+    throw new Error(error.response?.data?.message || "Email verification failed");
+  }
+};
+export const verfiyForgot = async ({ token, password }) => {
   try {
     const { data } = await Axios.post(`${USER_URL}/verfiy-user-mail`, {
       token,
