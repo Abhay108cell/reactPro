@@ -17,7 +17,7 @@ import { sendVerificationEmail } from "../../../Api/Query/userQuery";
 
 const RegisterEmailVerify = () => {
   const toast = useToast();
-  
+  console.log(location);
   const  {email} = useParams()
   
   if (email === "") {
@@ -27,13 +27,13 @@ const RegisterEmailVerify = () => {
   const { mutate, isSuccess, isLoading } = useMutation({
     mutationKey: ["send-verification-mail"],
     mutationFn: sendVerificationEmail,
-    onSuccess: (data) => {
+    onSettled: (data) => {
       console.log(data);
       
     },
     onError: (error) => {
       toast({
-        title: "Error",
+        title: "signUp Error",
         description: error.message,
         status: "error",
       });

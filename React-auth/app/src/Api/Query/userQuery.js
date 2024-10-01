@@ -23,7 +23,7 @@ export const sendVerificationEmail = async ({ email }) => {
     });
     return data;
   } catch (error) {
-    throw new Error(error.response?.data?.message || "Failed to send verification email");
+    throw new Error(error.response.data.message);
   }
 };
 export const sendForgotmail = async ({ email }) => {
