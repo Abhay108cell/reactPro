@@ -57,7 +57,6 @@ export const verfiyEmailAddressSignup = async ({ token }) => {
   try {
     const { data } = await Axios.post(`${USER_URL}/verfiy-user-mail`, {
       token,
-      password,
     });
     return data;
   } catch (error) {
