@@ -22,6 +22,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { object, string, ref } from "yup";
 import { Formik, Form, Field } from "formik";
 import { useMutation } from "@tanstack/react-query";
+import { verfiyForgotToken } from "../../../Api/Query/userQuery";
 
 const ResetPasswordVaildationScheme = object({
   password: string()
@@ -50,10 +51,13 @@ const ResetPassword = () => {
     }
   });
 
-  if (isLoading) return;
-  <Center h="100vh">
+  if (isLoading) 
+    return(
+    <Center h="100vh">
     <Spinner />
-  </Center>;
+  </Center>
+  )
+  
 
   return (
     <Container>
