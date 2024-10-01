@@ -70,7 +70,7 @@ const ResetPassword = () => {
               repeatPassword: "",
             }}
             onSubmit={(values) => {
-              console.log(values);
+              mutate({token, password: values.password})
             }}
             validationSchema={ResetPasswordVaildationScheme}
           >
