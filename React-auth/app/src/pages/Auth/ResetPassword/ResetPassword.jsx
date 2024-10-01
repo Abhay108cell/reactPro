@@ -20,6 +20,7 @@ import {
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { object, string, ref } from "yup";
 import { Formik, Form, Field } from "formik";
+import { useMutation } from "@tanstack/react-query";
 
 const ResetPasswordVaildationScheme = object({
   password: string()
@@ -31,9 +32,9 @@ const ResetPassword = () => {
   const { toast } = useToast();
   const { token } = useParams();
   const navigate = useNavigate();
-  const { isSuccess, isLoading } = useQuery({
-    queryKey: ["verify-forgot-token"],
-    queryFn: () => verfiyForgotToken({ token }),
+  const { isSuccess, isLoading } = useMutation({
+    mutationKey: ["verify-forgot-token"],
+    mutationFn: () => verfiyForgotToken({ token, password }),
     enabled: !!token,
     onError: (error) => {
       toast({
