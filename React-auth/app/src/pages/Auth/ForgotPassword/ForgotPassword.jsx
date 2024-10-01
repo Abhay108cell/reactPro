@@ -37,13 +37,13 @@ const navigate = useNavigate()
   const { mutate, isSuccess, isLoading } = useMutation({
     mutationKey: ["forgot-email"],
     mutationFn: sendForgotmail,
-    onSuccess: (data) => {
+    onSettled: (data) => {
       console.log(data);
      navigate(`/forgot-success/${email}`)
     },
     onError: (error) => {
       toast({
-        title: "Error",
+        title: " Forgot Error",
         description: error.message,
         status: "error",
       });
