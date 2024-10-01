@@ -39,11 +39,11 @@ const navigate = useNavigate()
     mutationFn: sendForgotmail,
     onSettled: (data) => {
       console.log(data);
-     navigate(`/forgot-success/${email}`)
+     navigate(`/Forgot-Password-send/${email}`)
     },
     onError: (error) => {
       toast({
-        title: " Forgot Error",
+        title: " Forgot  Error",
         description: error.message,
         status: "error",
       });
