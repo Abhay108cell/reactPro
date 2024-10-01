@@ -16,6 +16,7 @@ import {
   Box,
   Icon,
   useToast,
+  Spinner,
 } from "@chakra-ui/react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { object, string, ref } from "yup";
@@ -32,7 +33,7 @@ const ResetPassword = () => {
   const { toast } = useToast();
   const { token } = useParams();
   const navigate = useNavigate();
-  const { mutate, isSuccess, isLoading } = useMutation({
+  const { mutate,  isLoading } = useMutation({
     mutationKey: ["verify-forgot-token"],
     mutationFn: () => verfiyForgotToken({ token, password }),
     enabled: !!token,
