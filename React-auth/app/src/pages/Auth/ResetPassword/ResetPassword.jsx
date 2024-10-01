@@ -32,7 +32,7 @@ const ResetPassword = () => {
   const { toast } = useToast();
   const { token } = useParams();
   const navigate = useNavigate();
-  const { isSuccess, isLoading } = useMutation({
+  const { mutate, isSuccess, isLoading } = useMutation({
     mutationKey: ["verify-forgot-token"],
     mutationFn: () => verfiyForgotToken({ token, password }),
     enabled: !!token,
@@ -44,6 +44,9 @@ const ResetPassword = () => {
       });
       navigate("/signup");
     },
+    onSettled: () =>{
+      navigate("/Reset-Success")
+    }
   });
 
   if (isLoading) return;
