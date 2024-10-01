@@ -33,7 +33,7 @@ const ResetPassword = () => {
   const navigate = useNavigate();
   const { isSuccess, isLoading } = useQuery({
     queryKey: ["verify-forgot-token"],
-    queryFn: () => verfiyEmailAddressSignup({ token }),
+    queryFn: () => verfiyForgotToken({ token }),
     enabled: !!token,
     onError: (error) => {
       toast({
