@@ -8,11 +8,16 @@ export  default function AuthProvider({children}){
   const [user, setUser] = useState(null);
   const [token, setToken] = useState(null);
 
-  const decodeToken = (token) =>{
+  const storeToken = (token) =>{
     const decodedToken = jwtDecode(token);
+      setUser(decodedToken)
   }
 
-  const login = () => {}
+  const login = (token) => {
+    if(token){
+      setToken(token);
+    }
+  }
   const logout = () => {
     setUser(null);
     setToken(null);
