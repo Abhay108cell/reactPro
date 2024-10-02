@@ -21,11 +21,11 @@ import { verfiyForgotToken } from "../../../Api/Query/userQuery";
 
 const ResetPasswordVaildationScheme = object({
   password: string()
-    .min(6, "password must be at least 6 charcters")
-    .required("Password is Required"),
-  repeatPassword: string()
-  .oneOf([ref("password")], "Passwords do not match")
-  .required("Repeat Password is Required"),
+  .min(6, "Password must be at least 6 characters")
+  .required("Password is required"),
+repeatPassword: string()
+  .oneOf([ref("password"), null], "Passwords must match")
+  .required("Repeat password is required"),
 });
 const ResetPassword = () => {
   const { toast } = useToast();
@@ -33,7 +33,7 @@ const ResetPassword = () => {
   const navigate = useNavigate();
   const { mutate, isLoading } = useMutation({
     mutationKey: ["verify-forgot-token"],
-    mutationFn: () => verfiyForgotToken,
+    mutationFn: verfiyForgotToken,
     enabled: !!token,
     onError: (error) => {
       toast({
