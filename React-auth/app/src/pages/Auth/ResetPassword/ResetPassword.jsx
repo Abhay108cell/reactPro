@@ -8,13 +8,8 @@ import {
   FormControl,
   Input,
   FormLabel,
-  Flex,
-  HStack,
-  Checkbox,
   Button,
   FormErrorMessage,
-  Box,
-  Icon,
   useToast,
   Spinner,
 } from "@chakra-ui/react";
@@ -28,15 +23,17 @@ const ResetPasswordVaildationScheme = object({
   password: string()
     .min(6, "password must be at least 6 charcters")
     .required("Password is Required"),
-  repeatPassword: string().oneOf([ref("password")], "Passwords do not match"),
+  repeatPassword: string()
+  .oneOf([ref("password")], "Passwords do not match")
+  .required("Repeat Password is Required"),
 });
 const ResetPassword = () => {
   const { toast } = useToast();
   const { token } = useParams();
   const navigate = useNavigate();
-  const { mutate,  isLoading } = useMutation({
+  const { mutate, isLoading } = useMutation({
     mutationKey: ["verify-forgot-token"],
-    mutationFn: () => verfiyForgotToken({ token, password }),
+    mutationFn: () => verfiyForgotToken,
     enabled: !!token,
     onError: (error) => {
       toast({
@@ -46,18 +43,17 @@ const ResetPassword = () => {
       });
       navigate("/signup");
     },
-    onSettled: () =>{
-      navigate("/Reset-Success")
-    }
+    onSettled: () => {
+      navigate("/Reset-Success");
+    },
   });
 
-  if (isLoading) 
-    return(
-    <Center h="100vh">
-    <Spinner />
-  </Center>
-  )
-  
+  if (isLoading)
+    return (
+      <Center h="100vh">
+        <Spinner />
+      </Center>
+    );
 
   return (
     <Container>
@@ -75,7 +71,7 @@ const ResetPassword = () => {
               repeatPassword: "",
             }}
             onSubmit={(values) => {
-              mutate({token, password: values.password})
+              mutate({ token, password: values.password });
             }}
             validationSchema={ResetPasswordVaildationScheme}
           >
