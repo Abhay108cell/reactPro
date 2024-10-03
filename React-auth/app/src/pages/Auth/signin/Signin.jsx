@@ -21,6 +21,7 @@ import { Formik, Form, Field } from "formik";
 import Card from "../../../components/Card";
 import { useMutation } from "@tanstack/react-query";
 import { signinUser } from "../../../Api/Query/userQuery";
+import useAuth from "../../../hookes/useAuth";
 
 const signinVaildationScheme = object({
   email: string().email("Invalid Email").required("Email is Required"),
@@ -30,12 +31,15 @@ const signinVaildationScheme = object({
 });
 const Signin = () => {
   const toast = useToast();
+  const {} = useAuth
   const {mutate, isLoading,} = useMutation({
     mutationKey: ["signin"],
     mutationFn: signinUser,
     onSuccess: (data) => {
       const {token} = data;
-      
+if (token) {
+  
+}
     },
     onError: (error) =>{
       toast({
