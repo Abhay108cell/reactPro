@@ -15,7 +15,11 @@ export default function AuthProvider({ children }) {
       const {exp} = jwtDecode(token);
       // console.log(decodedToken);
 
-      setCookie("")
+      setCookie("jwt", tokenStr,{
+        path: '/',
+        expires: new Date(exp * 1000),
+        
+      })
       
       // setUser(decodedToken);
     }
