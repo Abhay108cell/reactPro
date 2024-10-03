@@ -8,12 +8,14 @@ export default function AuthProvider({ children }) {
   const [token, setToken] = useState(null);
   const [cookies, setCookie, removeCookie] = useCookies();
 
-  const login = (token) => {
-    if (token) {
-      setToken(token);
+  const login = (tokenStr) => {
+    if (tokenStr) {
+      setToken(tokenStr);
       // setCookie('token', token, { path: '/' });
-      const decodedToken = jwtDecode(token);
-      console.log(decodedToken);
+      const {exp} = jwtDecode(token);
+      // console.log(decodedToken);
+
+      setCookie("")
       
       // setUser(decodedToken);
     }
