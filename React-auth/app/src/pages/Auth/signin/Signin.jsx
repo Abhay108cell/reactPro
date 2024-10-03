@@ -63,8 +63,8 @@ if (token) {
           </Text>
           <Formik
             initialValues={{
-              email: "",
-              password: "",
+              email: "test5@gmail.com",
+              password: "1234567",
             }}
             onSubmit={(values) => {
               mutate(values)
