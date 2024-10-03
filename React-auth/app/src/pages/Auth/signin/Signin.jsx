@@ -31,14 +31,14 @@ const signinVaildationScheme = object({
 });
 const Signin = () => {
   const toast = useToast();
-  const {} = useAuth
+  const {login} = useAuth
   const {mutate, isLoading,} = useMutation({
     mutationKey: ["signin"],
     mutationFn: signinUser,
     onSuccess: (data) => {
       const {token} = data;
 if (token) {
-  
+  login(token)
 }
     },
     onError: (error) =>{
