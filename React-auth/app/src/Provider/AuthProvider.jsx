@@ -21,8 +21,10 @@ export default function AuthProvider({ children }) {
           sameSite: true
         });
       }
-     
+      
+      return;
     }
+    logout()
   };
 
   const logout = () => {
