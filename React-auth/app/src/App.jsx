@@ -13,13 +13,16 @@ import ResetPasswordSuccess from "./pages/Auth/ResetPasswordSuccess/ForgotPasswo
 import ResetPassword from "./pages/Auth/ResetPassword/ResetPassword";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import ProtectiveRoute from "./components/Auth/ProtectiveRoute";
 
 function App() {
   const queryClient = new QueryClient();
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Dashboard />,
+      element: <ProtectiveRoute>
+        <Dashboard />
+      </ProtectiveRoute>
     },
     {
       path: "/transactions",

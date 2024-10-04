@@ -5,7 +5,8 @@ import { Navigate } from 'react-router-dom';
 const ProtectiveRoute = ({children}) => {
   const {token} = useAuth();
 
-  return <>{token ? children : <Navigate to="/signin" />}</>
+  // return <>{token ? children : <Navigate to="/signin" />}</>
+  return null;
 
 }
 
