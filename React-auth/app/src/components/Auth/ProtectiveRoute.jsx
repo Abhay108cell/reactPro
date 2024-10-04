@@ -1,6 +1,9 @@
 import React from 'react'
+import useAuth from '../../hookes/useAuth'
 
-const ProtectiveRoute = () => {
+const ProtectiveRoute = ({children}) => {
+  const {} = useAuth();
+
   return (
     <div>ProtectiveRoute</div>
   )
