@@ -12,7 +12,9 @@ import {
   MenuList,
 } from "@chakra-ui/react";
 import { FaBars, FaUserTie } from "react-icons/fa";
+import useAuth from "../hookes/useAuth";
 const TopNav = ({ title, onOpen }) => {
+  const {} = useAuth();
   return (
     <Box px="4" bg="white">
       <HStack maxW="70rem" h="16" justify="space-between" mx="auto">
