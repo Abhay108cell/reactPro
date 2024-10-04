@@ -11,13 +11,17 @@ export default function AuthProvider({ children }) {
   const login = (tokenStr) => {
     if (tokenStr) {
       setToken(tokenStr);
-      const { exp } = jwtDecode(token);
+      const { exp } = jwtDecode(tokenStr);
 
-      setCookie("jwt", tokenStr, {
-        path: "/",
-        expires: exp,
-        sameSite: true
-      });
+
+      if (exp) {
+        setCookie("jwt", tokenStr, {
+          path: "/",
+          maxAge: exp,
+          sameSite: true
+        });
+      }
+     
     }
   };
 
