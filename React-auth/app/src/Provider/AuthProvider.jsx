@@ -13,23 +13,22 @@ export default function AuthProvider({ children }) {
       setToken(tokenStr);
       const { exp } = jwtDecode(tokenStr);
 
-
       if (exp) {
         setCookie("jwt", tokenStr, {
           path: "/",
           maxAge: exp,
-          sameSite: true
+          sameSite: true,
         });
       }
-      
+
       return;
     }
-    logout()
+    logout();
   };
 
   const logout = () => {
-    setUser(null);
     setToken(null);
+    setUser(null);
     removeCookie("token", { path: "/" });
   };
 
