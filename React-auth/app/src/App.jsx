@@ -91,11 +91,15 @@ function App() {
     },
     {
       path: "/forgot-password-verify/:token",
-      element: <ResetPassword />,
+      element: <AlreadySigninRoute>
+        <ResetPassword />,
+      </AlreadySigninRoute>
     },
     {
       path: "/Reset-Success",
-      element: <ResetPasswordSuccess />,
+      element: <AlreadySigninRoute>
+        <ResetPasswordSuccess />,
+      </AlreadySigninRoute>
     },
   ]);
 
