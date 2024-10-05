@@ -14,27 +14,42 @@ import ResetPassword from "./pages/Auth/ResetPassword/ResetPassword";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import ProtectiveRoute from "./components/Auth/ProtectiveRoute";
+import AlreadySigninRoute from "./components/Auth/AlreadySigninRoute";
 
 function App() {
   const queryClient = new QueryClient();
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <ProtectiveRoute>
-        <Dashboard />
-      </ProtectiveRoute>
+      element: (
+        <ProtectiveRoute>
+          <Dashboard />
+        </ProtectiveRoute>
+      ),
     },
     {
       path: "/transactions",
-      element: <TransactionPage />,
+      element: (
+        <ProtectiveRoute>
+          <TransactionPage />,
+        </ProtectiveRoute>
+      ),
     },
     {
       path: "/support",
-      element: <Support />,
+      element: (
+        <ProtectiveRoute>
+          <Support />,
+        </ProtectiveRoute>
+      ),
     },
     {
       path: "/signup",
-      element: <Signup />,
+      element: (
+        <AlreadySigninRoute>
+          <Signup />,
+        </AlreadySigninRoute>
+      ),
     },
     {
       path: "/signin",
@@ -66,14 +81,11 @@ function App() {
     },
   ]);
 
-  
   return (
-    
-      <QueryClientProvider client={queryClient}>
-        <RouterProvider router={router} />
-        <ReactQueryDevtools initialIsOpen={false} />
-      </QueryClientProvider>
-    
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router} />
+      <ReactQueryDevtools initialIsOpen={false} />
+    </QueryClientProvider>
   );
 }
 
