@@ -53,23 +53,41 @@ function App() {
     },
     {
       path: "/signin",
-      element: <Signin />,
+      element: (
+        <AlreadySigninRoute>
+          <Signin />,
+        </AlreadySigninRoute>
+      ),
     },
     {
       path: "/Register-Email-Verify/:email",
-      element: <RegisterEmailVerify />,
+      element: (
+        <AlreadySigninRoute>
+          <RegisterEmailVerify />,
+        </AlreadySigninRoute>
+      ),
     },
     {
       path: "/email-verify/:token",
-      element: <RegisterSuccess />,
+      element: (
+        <AlreadySigninRoute>
+          <RegisterSuccess />,
+        </AlreadySigninRoute>
+      ),
     },
     {
       path: "/Forgot-Password",
-      element: <ForgotPassword />,
+      element: (
+        <AlreadySigninRoute>
+          <ForgotPassword />,
+        </AlreadySigninRoute>
+      ),
     },
     {
       path: "/Forgot-Password-send/:email",
-      element: <ForgotPasswordSend />,
+      element: <AlreadySigninRoute>
+        <ForgotPasswordSend />,
+      </AlreadySigninRoute>
     },
     {
       path: "/forgot-password-verify/:token",
