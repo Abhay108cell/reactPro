@@ -1,11 +1,11 @@
 import './index.css';  // Or the path to your CSS file
+import Header from './components/Header';
 
 function App() {
   return (
    <>
-   <div className="text-[150px]">
-    ram
-   </div>
+   
+   <Header/>
    </>
   );
 }
