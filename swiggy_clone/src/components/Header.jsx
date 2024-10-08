@@ -20,7 +20,7 @@ const Header = () => {
     visibility: toggle ? "visible" : "hidden"
    }}></div>
    <div onClick={(e)=>{
-    e.preventDefault();
+    e.stopPropagation()
    }} className="w-[400px] bg-white h-full absolute duration-[400px]"
    style={{
     left: toggle ? "0%": "-100%",
