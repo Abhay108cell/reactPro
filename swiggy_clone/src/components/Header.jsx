@@ -42,6 +42,12 @@ const Header = () => {
         <li>
           offers
         </li>
+        <li>
+          Help
+        </li>
+        <li>
+          signin
+        </li>
        </nav>
       </div>
     </header>
