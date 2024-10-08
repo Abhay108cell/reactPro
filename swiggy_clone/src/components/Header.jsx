@@ -10,7 +10,7 @@ const Header = () => {
        </div>
        <div className="">
         <span className='font-bold border-b-[3px] border-[black] '> Meerut</span>
-         Hapur, India <RxCaretDown />
+         Hapur, India <RxCaretDown fontSize={15} className='inline  text-[#fc8019]'  />
        </div>
       </div>
     </header>
