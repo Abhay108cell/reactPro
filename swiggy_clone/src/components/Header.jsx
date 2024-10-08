@@ -5,6 +5,7 @@ const Header = () => {
   const [toggle, setToggle] = useState(false)
   return (
    <>
+   <div className="black-overlay"></div>
     <header className='p-2 shadow-xl'>
       <div className="max-w-[1200px] mx-auto border border-red-500 flex items-center">
        <div className='w-[100px]'>
