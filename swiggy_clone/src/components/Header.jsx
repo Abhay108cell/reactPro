@@ -14,6 +14,7 @@ const Header = () => {
     opacity: toggle ?  1 : 0,
     visibility: toggle ? "visible" : "hidden"
    }}></div>
+   <div className="w-[400px] bg-white h-full absolute"></div>
     <header className='p-2 shadow-xl'>
       <div className="max-w-[1200px] mx-auto border border-red-500 flex items-center">
        <div className='w-[100px]'>
