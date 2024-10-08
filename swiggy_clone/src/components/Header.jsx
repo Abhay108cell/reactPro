@@ -1,4 +1,5 @@
 import React from 'react'
+import { RxCaretDown } from 'react-icons/rx'
 
 const Header = () => {
   return (
@@ -8,8 +9,8 @@ const Header = () => {
         <img src="images/logo.png" className='w-full' alt="" />
        </div>
        <div className="">
-        <span className='font-bold'> Meerut</span>
-         Hapur, India
+        <span className='font-bold border-b-[3px] border-[black] '> Meerut</span>
+         Hapur, India <RxCaretDown />
        </div>
       </div>
     </header>
