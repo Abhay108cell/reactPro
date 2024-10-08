@@ -14,7 +14,7 @@ const Header = () => {
     opacity: toggle ?  1 : 0,
     visibility: toggle ? "visible" : "hidden"
    }}></div>
-   <div className="w-[400px] bg-white h-full absolute"
+   <div className="w-[400px] bg-white h-full absolute duration-[600px]"
    style={{
     left: toggle ? "0%": "-100%",
    }}
