@@ -8,6 +8,10 @@ const Header = () => {
     setToggle(true)
   }
 
+  const hideSideMenu = () =>{
+    setToggle(false)
+  }
+
   return (
    <>
    <div className="black-overlay w-full h-full fixed duration-500" onClick={hideSideMenu}
