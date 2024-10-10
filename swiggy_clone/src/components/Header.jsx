@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { CiDiscount1 } from 'react-icons/ci'
 import { IoMdSearch } from 'react-icons/io'
 import { RxCaretDown } from 'react-icons/rx'
 
@@ -12,6 +13,22 @@ const Header = () => {
   const hideSideMenu = () =>{
     setToggle(false)
   }
+
+  const links = [
+    {
+      icon: <IoMdSearch />,
+      text: 'Search',
+    },
+    {
+      icon: <CiDiscount1 />,
+      text: 'Offers',
+    },
+    {
+      icon: "",
+      text: 'Help',
+    },
+
+  ]
 
   return (
    <>
@@ -36,7 +53,7 @@ const Header = () => {
         <span className='font-bold border-b-[3px] border-[black] '> Meerut</span>
          Hapur, India <RxCaretDown onClick={showSideMenu} fontSize={25} className='font-bold inline  text-[#fc8019] cursor-pointer'  />
        </div>
-       <nav className='flex list-none gap-4 ml-auto font-semibold text-[18px]'>
+       <nav className='flex list-none gap-7 ml-auto font-semibold text-[18px]'>
         <li icon={<IoMdSearch />
 }>
           Search
