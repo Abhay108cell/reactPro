@@ -27,6 +27,14 @@ const Header = () => {
       icon: "",
       text: 'Help',
     },
+    {
+      icon: "",
+      text: 'Signin',
+    },
+    {
+      icon: "",
+      text: 'Cart',
+    },
 
   ]
 
@@ -58,7 +66,7 @@ const Header = () => {
       {
         links.map((links, index) => {
           return (
-          <li className='flex hover:text-[#fc8019] items-center gap-2'>
+          <li key={index} className='flex hover:text-[#fc8019] items-center gap-2'>
                    {links.icon}
                    {links.text}
                   </li>)
