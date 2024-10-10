@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { CiDiscount1 } from 'react-icons/ci'
-import { IoMdSearch } from 'react-icons/io'
+import { FaCartArrowDown } from 'react-icons/fa'
+import { IoMdHelpCircle, IoMdSearch } from 'react-icons/io'
 import { RxCaretDown } from 'react-icons/rx'
 
 const Header = () => {
@@ -24,7 +25,7 @@ const Header = () => {
       text: 'Offers',
     },
     {
-      icon: "",
+      icon: <IoMdHelpCircle />,
       text: 'Help',
     },
     {
@@ -32,7 +33,7 @@ const Header = () => {
       text: 'Sign in',
     },
     {
-      icon: "",
+      icon: <FaCartArrowDown />,
       text: 'Cart',
     },
 
@@ -53,15 +54,15 @@ const Header = () => {
    }}
    ></div>
     <header className='p-2 shadow-xl'>
-      <div className="max-w-[1200px] mx-auto border border-red-500 flex items-center">
+      <div className="max-w-[1200px] mx-auto  flex items-center">
        <div className='w-[100px] '>
         <img src="images/logo.png" className='w-full' alt="" />
        </div>
        <div className="">
-        <span className='font-bold border-b-[3px] border-[black] '> Meerut</span>
+        <span className='font-bold border-b-[3px]  '> Meerut</span>
          Hapur, India <RxCaretDown onClick={showSideMenu} fontSize={25} className='font-bold inline  text-[#fc8019] cursor-pointer'  />
        </div>
-       <nav className='flex list-none gap-7 ml-auto font-semibold text-[18px]'>
+       <nav className='flex list-none gap-10 ml-auto font-semibold text-[18px]'>
 
       {
         links.map((links, index) => {
