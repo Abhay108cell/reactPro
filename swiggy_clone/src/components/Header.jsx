@@ -35,7 +35,7 @@ const Header = () => {
         <span className='font-bold border-b-[3px] border-[black] '> Meerut</span>
          Hapur, India <RxCaretDown onClick={showSideMenu} fontSize={25} className='font-bold inline  text-[#fc8019] cursor-pointer'  />
        </div>
-       <nav className='flex list-none gap-4 ml-auto'>
+       <nav className='flex list-none gap-4 ml-auto font-bold text-[18px]'>
         <li>
           Search
         </li>
