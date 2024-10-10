@@ -57,9 +57,11 @@ const Header = () => {
 
       {
         links.map((links, index) => {
-          <li className='flex items-center gap-2'>
-                    Search
-                  </li>
+          return (
+          <li className='flex hover:text-[#fc8019] items-center gap-2'>
+                   {links.icon}
+                   {links.text}
+                  </li>)
       }
     )
   }
