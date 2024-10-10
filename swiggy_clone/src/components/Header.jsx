@@ -54,22 +54,17 @@ const Header = () => {
          Hapur, India <RxCaretDown onClick={showSideMenu} fontSize={25} className='font-bold inline  text-[#fc8019] cursor-pointer'  />
        </div>
        <nav className='flex list-none gap-7 ml-auto font-semibold text-[18px]'>
-        <li icon={<IoMdSearch />
-}>
-          Search
-        </li>
-        <li>
-          offers
-        </li>
-        <li>
-          Help
-        </li>
-        <li>
-          signin
-        </li>
-        <li>
-          cart
-        </li>
+
+      {
+        links.map((links, index) => {
+          <li className='flex items-center gap-2'>
+                    Search
+                  </li>
+      }
+    )
+  }
+
+      
        </nav>
       </div>
     </header>
