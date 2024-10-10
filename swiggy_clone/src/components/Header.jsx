@@ -28,14 +28,14 @@ const Header = () => {
    ></div>
     <header className='p-2 shadow-xl'>
       <div className="max-w-[1200px] mx-auto border border-red-500 flex items-center">
-       <div className='w-[100px]'>
+       <div className='w-[100px] '>
         <img src="images/logo.png" className='w-full' alt="" />
        </div>
        <div className="">
         <span className='font-bold border-b-[3px] border-[black] '> Meerut</span>
          Hapur, India <RxCaretDown onClick={showSideMenu} fontSize={25} className='font-bold inline  text-[#fc8019] cursor-pointer'  />
        </div>
-       <nav className='flex'>
+       <nav className='flex list-none gap-4 ml-auto'>
         <li>
           Search
         </li>
