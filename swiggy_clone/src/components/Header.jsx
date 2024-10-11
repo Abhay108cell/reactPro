@@ -23,6 +23,7 @@ const Header = () => {
     {
       icon: <CiDiscount1 />,
       text: 'Offers',
+      sup: "New"
     },
     {
       icon: <IoMdHelpCircle />,
@@ -70,6 +71,7 @@ const Header = () => {
           <li key={index} className='flex cursor-pointer hover:text-[#fc8019] items-center gap-2'>
                    {links.icon}
                    {links.text}
+                   {links.sup}
                   </li>)
       }
     )
