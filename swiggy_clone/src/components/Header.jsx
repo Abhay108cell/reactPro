@@ -71,7 +71,8 @@ const Header = () => {
           <li key={index} className='flex cursor-pointer hover:text-[#fc8019] items-center gap-2'>
                    {links.icon}
                    {links.text}
-                   {links.sup}
+                  <sup>{links.sup}</sup>
+                   
                   </li>)
       }
     )
