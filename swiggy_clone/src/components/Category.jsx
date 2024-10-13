@@ -3,6 +3,7 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const Category = () => {
   const [categories, setCategory] = useState([]);
+  const [slide, setSlide] =  useState([0])
   const fetchCategory = async () => {
     const response = await fetch("http://localhost:5000/categories");
     const data = await response.json();
@@ -28,7 +29,11 @@ const Category = () => {
         </div>
         <div className="flex">
           {categories.map((category, index) => {
-            return <div key={index} className="w-[150px] shrink-0">
+            return <div 
+            style={{
+              transform: `translateX()`
+            }}
+            key={index} className="w-[150px] shrink-0 duration-500">
               <img src={"http://localhost:5000/images" + category.image} alt=""  />
             </div>;
           })}
