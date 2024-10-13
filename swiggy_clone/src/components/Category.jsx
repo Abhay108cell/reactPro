@@ -1,7 +1,15 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'
 
 const Category = () => {
+  const [categories, setCategory] = useState([]);
+  const fetchCategory = () =>{
+    useEffect(
+      ()=>{
+        fetchCategory();
+      },[]
+    )
+
   return (
     <>
     <div className="max-w-[1200px] mx-auto  ">
