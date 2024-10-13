@@ -4,7 +4,9 @@ import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'
 const Category = () => {
   const [categories, setCategory] = useState([]);
   const fetchCategory = async () =>{
-    const response =  await fetch('http://localhost:5000/categories')
+    const response =  await fetch('http://localhost:5000/categories');
+    const data = await response.json();
+    setCategory(data);
   }
     useEffect(
       ()=>{
