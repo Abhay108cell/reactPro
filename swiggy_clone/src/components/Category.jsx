@@ -28,7 +28,7 @@ const Category = () => {
         </div>
         <div className="flex">
           {categories.map((category, index) => {
-            return <div className="flex-grow shrink-0">
+            return <div key={index} className="w-[150px] shrink-0">
               <img src={"http://localhost:5000/images" + category.image} alt=""  />
             </div>;
           })}
