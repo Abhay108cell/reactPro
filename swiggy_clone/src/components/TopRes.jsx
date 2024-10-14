@@ -5,7 +5,8 @@ export default function TopRes() {
   const [data,setData] = useState([]);
 
   const fetchTopRestaurant = async () => {
-    const response()
+    const response = await fetch('http://localhost:5000/top-restaurant-chains')
+    
   }
 
   useEffect(
