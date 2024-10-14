@@ -56,7 +56,7 @@ setSlide(slide+3)
             </div>;
           })}
         </div>
-        <hr className="my-4 border-[10px]"/>
+        <hr className="my-6 border-[1px]"/>
       </div>
     </>
   );
