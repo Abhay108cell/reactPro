@@ -13,6 +13,20 @@ const Category = () => {
     fetchCategory();
   }, []);
 
+
+
+  
+  const nextSlide = ()=>{
+    if(categories.length - 8 == slide) return false;
+setSlide(slide+3)
+  }
+  const prevSlide = ()=>{
+    if(categories.length - 0 == slide) return false;
+
+    setSlide(slide- 3)
+
+  }
+
   return (
     <>
       <div className="max-w-[1200px] mx-auto  ">
@@ -42,6 +56,7 @@ const Category = () => {
             </div>;
           })}
         </div>
+        <hr className="my-4 border-[10px]"/>
       </div>
     </>
   );
