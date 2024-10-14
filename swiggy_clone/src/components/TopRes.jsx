@@ -1,4 +1,5 @@
 import React from 'react'
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'
 
 export default function TopRes() {
   return (
@@ -7,12 +8,12 @@ export default function TopRes() {
       <div className="text-[25px] font-bold">What's on your mind?</div>
       <div className="flex">
         <div className=" cursor-pointer flex justify-center items-center w-[30px] h-[30px] bg-[#e2e2e7] rounded-full mx-2 "
-        onClick={prevSlide}
+        
         >
           <FaArrowLeft />
         </div>
         <div className=" cursor-pointer flex justify-center items-center w-[30px] h-[30px] bg-[#e2e2e7] rounded-full mx-2"
-        onClick={nextSlide}
+        
         >
           <FaArrowRight  />
         </div>
