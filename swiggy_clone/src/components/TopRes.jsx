@@ -1,8 +1,19 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'
 
 export default function TopRes() {
-  const 
+  const [data,setData] = useState([]);
+
+  const fetchTopRestaurant = async () => {
+    const response()
+  }
+
+  useEffect(
+    () => {
+      fetchTopRestaurant()
+    },[]
+  )
+
   return (
     <div className="max-w-[1200px] mx-auto  ">
     <div className="flex my-3 items-center justify-between">
