@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'
+import Card from './Card';
 
 export default function TopRes() {
   const [data,setData] = useState([]);
