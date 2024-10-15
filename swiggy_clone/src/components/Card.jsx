@@ -8,10 +8,13 @@ export default function Card(props) {
       <div className="image-overlay absolute w-full h-full top-0 flex items-end p-2 text-[25px] font bold text-white tracking-tighter">
         {props.offer}
       </div>
-      <div>
+    </div>
+      <div className='mt-3 text-xl font-bold' >
         {props.title}
       </div>
-    </div>
+      <div>
+        {props.rating}
+      </div>
    </div>
   )
 }
