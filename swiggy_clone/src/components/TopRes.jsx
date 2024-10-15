@@ -34,11 +34,12 @@ export default function TopRes() {
         </div>
       </div>
     </div>
-    <div className="flex gap-5">
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
+    <div className="flex gap-5 overflow-hidden">
+     {
+      data.map((d, i) => {
+        return <Card {...d} key={i}  />
+        })
+     }
     </div>
     </div>
   )
