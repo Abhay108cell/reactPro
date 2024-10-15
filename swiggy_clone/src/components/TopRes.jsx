@@ -34,7 +34,10 @@ export default function TopRes() {
         </div>
       </div>
     </div>
-    <div className="flex">
+    <div className="flex gap-5">
+      <Card/>
+      <Card/>
+      <Card/>
       <Card/>
     </div>
     </div>
