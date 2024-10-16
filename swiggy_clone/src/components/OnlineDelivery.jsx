@@ -17,7 +17,7 @@ export default function OnlineDelivery() {
     <div className="max-w-[1200px] mx-auto  mb-[100px] ">
       <div className="flex my-3 items-center justify-between">
         <div className="text-[25px] font-bold">
-          Top Restaurant chains in Meerut
+          Restaurant with online food delivery in Meerut
         </div>
       </div>
     </div>
