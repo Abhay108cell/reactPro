@@ -15,7 +15,11 @@ export default function Card(props) {
       <div>
         {props.rating}
         <span className='ml-2'> {props.minTime} - {props.maxTime} mins</span>
-       
+    <div>
+      {props.name}
+      <br />
+      {props.place}
+    </div>
       </div>
    </div>
   )
