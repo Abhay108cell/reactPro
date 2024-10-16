@@ -18,7 +18,7 @@ export default function TopRes() {
   )
 
   return (
-    <div className="max-w-[1200px] mx-auto  mb-[100px] ">
+    <div className="max-w-[1200px] mx-auto  ">
     <div className="flex my-3 items-center justify-between">
       <div className="text-[25px] font-bold">Top Restaurant chains in Meerut</div>
       <div className="flex">
