@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Card from "./Card";
 
 export default function OnlineDelivery() {
   const [data, setData] = useState([]);
@@ -20,7 +21,17 @@ export default function OnlineDelivery() {
           Restaurant with online food delivery in Meerut
         </div>
       </div>
-      <div className="grid grid-cols-4 gap-3"></div>
+      <div className="grid grid-cols-4 gap-3">
+        {
+          data.map((d, i) => {
+            
+            return
+              <Card {...d}/>
+          }
+        )
+      }
+              
+      </div>
     </div>
   );
 }
