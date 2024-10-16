@@ -22,15 +22,10 @@ export default function OnlineDelivery() {
         </div>
       </div>
       <div className="grid grid-cols-4 gap-3">
-        {
-          data.map((d, i) => {
-            
-            return
-              <Card {...d}/>
-          }
-        )
-      }
-              
+        {data.map((d, i) => {
+          return(<Card {...d} />)
+          
+        })}
       </div>
     </div>
   );
