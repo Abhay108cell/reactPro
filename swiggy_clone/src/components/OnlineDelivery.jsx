@@ -20,6 +20,7 @@ export default function OnlineDelivery() {
           Restaurant with online food delivery in Meerut
         </div>
       </div>
+      <hr className="my-6 border-[1px]"/>
     </div>
   );
 }
