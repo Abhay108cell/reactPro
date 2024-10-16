@@ -41,6 +41,7 @@ export default function TopRes() {
         })
      }
     </div>
+    <hr className="my-6 border-[1px]"/>
     </div>
   )
 }
