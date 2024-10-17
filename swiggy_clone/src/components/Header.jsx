@@ -54,7 +54,7 @@ const Header = () => {
     left: toggle ? "0%": "-100%",
    }}
    ></div>
-    <header className='p-2 shadow-xl stick top-0 '>
+    <header className='p-2 shadow-xl stick top-0 text-[#686bt8] bg-white'>
       <div className="max-w-[1200px] mx-auto  flex items-center">
        <div className='w-[100px] '>
         <img src="images/logo.png" className='w-full' alt="" />
