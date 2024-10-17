@@ -42,7 +42,7 @@ const Header = () => {
 
   return (
    <>
-   <div className="stick top-0 black-overlay w-full h-full fixed duration-500" onClick={hideSideMenu}
+   <div className="black-overlay w-full h-full fixed duration-500" onClick={hideSideMenu}
     style={{
     opacity: toggle ?  1 : 0,
     visibility: toggle ? "visible" : "hidden"
@@ -54,7 +54,7 @@ const Header = () => {
     left: toggle ? "0%": "-100%",
    }}
    ></div>
-    <header className='p-2 shadow-xl'>
+    <header className='p-2 shadow-xl stick top-0 '>
       <div className="max-w-[1200px] mx-auto  flex items-center">
        <div className='w-[100px] '>
         <img src="images/logo.png" className='w-full' alt="" />
