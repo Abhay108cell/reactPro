@@ -37,7 +37,7 @@ export default function TopRes() {
     <div className="flex gap-5 overflow-hidden">
      {
       data.map((d, i) => {
-        return <Card {...d} key={i}  />
+        return <Card width="w-full md:w-[273px]"{...d} key={i}  />
         })
      }
     </div>
