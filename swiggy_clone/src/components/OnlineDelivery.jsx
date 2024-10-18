@@ -21,9 +21,9 @@ export default function OnlineDelivery() {
           Restaurant with online food delivery in Meerut
         </div>
       </div>
-      <div className="grid grid-cols-4 gap-3">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
         {data.map((d, i) => {
-          return(<Card {...d} />)
+          return(<Card  {...d} />)
           
         })}
       </div>
